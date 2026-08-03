@@ -1,0 +1,49 @@
+/*
+    GFG 160 Days DSA Challenge
+    Day 01 - Second Largest Element
+
+    Problem:
+    Given an array of positive integers, find the second largest
+    distinct element. If it does not exist, return -1.
+
+    Approach:
+    - Maintain two variables:
+        largest
+        secondLargest
+    - Traverse the array once.
+    - If current element is greater than largest:
+        secondLargest = largest
+        largest = current element
+    - Otherwise, if current element is smaller than largest but
+      greater than secondLargest:
+        update secondLargest.
+
+    Time Complexity: O(n)
+    Space Complexity: O(1)
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
+public:
+    int getSecondLargest(vector<int> &arr) {
+
+        int largest = -1;
+        int secondLargest = -1;
+
+        for (int x : arr) {
+
+            if (x > largest) {
+                secondLargest = largest;
+                largest = x;
+            }
+
+            else if (x < largest && x > secondLargest) {
+                secondLargest = x;
+            }
+        }
+
+        return secondLargest;
+    }
+};
