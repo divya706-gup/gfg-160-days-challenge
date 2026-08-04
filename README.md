@@ -16,7 +16,7 @@ Welcome to my repository for the **GFG 160 Days Challenge**! This repository tra
 
 | Progress Bar | Status |
 | :--- | :--- |
-| ![Progress](https://geeks-for-geeks-stats.vercel.app/api?username=YOUR_GFG_USERNAME) | **Day 1 / 160 Completed** |
+| ![Progress](https://geeks-for-geeks-stats.vercel.app/api?username=YOUR_GFG_USERNAME) | **Day 2 / 160 Completed** |
 
 ---
 
@@ -27,7 +27,7 @@ Welcome to my repository for the **GFG 160 Days Challenge**! This repository tra
 | Day | Topic / Problem Name | Solution | Complexity | Status |
 | :---: | :--- | :---: | :---: | :---: |
 | **Day 01** | [Second Largest Element](./Day%2001%20-%20Second%20Largest%20Element) | [Code](./Day%2001%20-%20Second%20Largest%20Element/solution.cpp) | $\mathcal{O}(N)$ | ✅ Completed |
-| **Day 02** | Move All Zeroes to End | — | — | ⏳ Pending |
+| *Day 02* | [Move All Zeroes to End](https://github.com/divya706-gup/gfg-160-days-challenge/tree/main/Day%2002%20-%20Move%20All%20Zeroes%20to%20End) | [Code](https://github.com/divya706-gup/gfg-160-days-challenge/tree/main/Day%2002%20-%20Move%20All%20Zeroes%20to%20End) | O(N) | ✅ Completed |
 | **Day 03** | Reverse an Array | — | — | ⏳ Pending |
 | **Day 04** | Rotate Array | — | — | ⏳ Pending |
 | **Day 05** | Next Permutation | — | — | ⏳ Pending |
