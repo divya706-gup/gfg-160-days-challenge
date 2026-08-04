@@ -1,0 +1,61 @@
+    Problem:
+    Given an array of non-negative integers, move all the zeroes
+    to the end while maintaining the relative order of the
+    non-zero elements. The operation must be performed in-place.
+
+    Example:
+    Input : [1, 2, 0, 4, 3, 0, 5, 0]
+    Output: [1, 2, 4, 3, 5, 0, 0, 0]
+
+    ------------------------------------------------------------
+    Intuition
+    ------------------------------------------------------------
+    Instead of moving every zero individually (which would require
+    multiple shifts), keep all non-zero elements together.
+
+    Maintain a pointer 'count' that indicates where the next
+    non-zero element should be placed.
+
+    After placing every non-zero element, simply fill the
+    remaining positions with zeroes.
+
+    ------------------------------------------------------------
+    Algorithm
+    ------------------------------------------------------------
+    1. Initialize count = 0.
+    2. Traverse the array.
+    3. If arr[i] != 0:
+          arr[count] = arr[i];
+          count++;
+    4. After traversal, fill remaining positions with 0.
+
+    ------------------------------------------------------------
+    Time Complexity : O(n)
+    Space Complexity: O(1)
+    ------------------------------------------------------------
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
+public:
+    void pushZerosToEnd(vector<int>& arr) {
+
+        int count = 0;
+
+        // Move all non-zero elements to the front
+        for (int i = 0; i < arr.size(); i++) {
+            if (arr[i] != 0) {
+                arr[count] = arr[i];
+                count++;
+            }
+        }
+
+        // Fill remaining positions with zeroes
+        while (count < arr.size()) {
+            arr[count] = 0;
+            count++;
+        }
+    }
+};
