@@ -8,15 +8,15 @@ Welcome to my repository for the **GFG 160 Days Challenge**! This repository tra
 
 * **Goal:** Solve 1 problem daily for 160 days to build strong DSA fundamentals and problem-solving consistency.
 * **Language:** C++ / Java / Python
-* **Platform:** [GeeksforGeeks](https://www.geeksforgeeks.org/)
+* **Platform:** [GeeksforGeeks](https://www.geeksforgeeks.org/batch/gfg-160-problems)
 
 ---
 
 ## 🚀 Progress Tracker
 
-| Progress Bar | Status |
+| Progress | Status |
 | :--- | :--- |
-| ![Progress](https://geeks-for-geeks-stats.vercel.app/api?username=YOUR_GFG_USERNAME) | **Day 3 / 160 Completed** |
+| 🟢🟢🟢⚪⚪⚪⚪... | **Day 3 / 160 Completed** |
 
 ---
 
@@ -26,9 +26,9 @@ Welcome to my repository for the **GFG 160 Days Challenge**! This repository tra
 
 | Day | Topic / Problem Name | Solution | Complexity | Status |
 | :---: | :--- | :---: | :---: | :---: |
-| **Day 01** | [Second Largest Element](./Day%2001%20-%20Second%20Largest%20Element) | [Code](./Day%2001%20-%20Second%20Largest%20Element/solution.cpp) | O(N) | ✅ Completed |
-| **Day 02** | [Move All Zeroes to End](./Day%2002%20-%20Move%20All%20Zeroes%20to%20End) | [Code](./Day%2002%20-%20Move%20All%20Zeroes%20to%20End) | O(N) | ✅ Completed |
-| **Day 03** | [Reverse an Array](./Day%2003%20-%20Reverse%20an%20Array) | [Code](./Day%2003%20-%20Reverse%20an%20Array) | O(N) | ✅ Completed |
+| **Day 01** | Second Largest Element | [Code](./Day%2001%20-%20Second%20Largest%20Element) | O(N) | ✅ Completed |
+| **Day 02** | Move All Zeroes to End | [Code](./Day%2002%20-%20Move%20All%20Zeroes%20to%20End) | O(N) | ✅ Completed |
+| **Day 03** | Reverse an Array | [Code](./Day%2003%20-%20Reverse%20an%20Array) | O(N) | ✅ Completed |
 | **Day 04** | Rotate Array | — | — | ⏳ Pending |
 | **Day 05** | Next Permutation | — | — | ⏳ Pending |
 | **Day 06** | Majority Element II | — | — | ⏳ Pending |
