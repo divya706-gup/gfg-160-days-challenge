@@ -7,7 +7,7 @@ Welcome to my repository for the **GFG 160 Days Challenge**! This repository tra
 ## 📌 Repository Overview
 
 * **Goal:** Solve 1 problem daily for 160 days to build strong DSA fundamentals and problem-solving consistency.
-* **Language:** C++ / Java / Python *(update with your main language)*
+* **Language:** C++ / Java / Python
 * **Platform:** [GeeksforGeeks](https://www.geeksforgeeks.org/)
 
 ---
@@ -16,7 +16,7 @@ Welcome to my repository for the **GFG 160 Days Challenge**! This repository tra
 
 | Progress Bar | Status |
 | :--- | :--- |
-| ![Progress](https://geeks-for-geeks-stats.vercel.app/api?username=YOUR_GFG_USERNAME) | **Day 2 / 160 Completed** |
+| ![Progress](https://geeks-for-geeks-stats.vercel.app/api?username=YOUR_GFG_USERNAME) | **Day 3 / 160 Completed** |
 
 ---
 
@@ -26,9 +26,9 @@ Welcome to my repository for the **GFG 160 Days Challenge**! This repository tra
 
 | Day | Topic / Problem Name | Solution | Complexity | Status |
 | :---: | :--- | :---: | :---: | :---: |
-| **Day 01** | [Second Largest Element](./Day%2001%20-%20Second%20Largest%20Element) | [Code](./Day%2001%20-%20Second%20Largest%20Element/solution.cpp) | $\mathcal{O}(N)$ | ✅ Completed |
-| *Day 02* | [Move All Zeroes to End](https://github.com/divya706-gup/gfg-160-days-challenge/tree/main/Day%2002%20-%20Move%20All%20Zeroes%20to%20End) | [Code](https://github.com/divya706-gup/gfg-160-days-challenge/tree/main/Day%2002%20-%20Move%20All%20Zeroes%20to%20End) | O(N) | ✅ Completed |
-| **Day 03** | Reverse an Array | — | — | ⏳ Pending |
+| **Day 01** | [Second Largest Element](./Day%2001%20-%20Second%20Largest%20Element) | [Code](./Day%2001%20-%20Second%20Largest%20Element/solution.cpp) | O(N) | ✅ Completed |
+| **Day 02** | [Move All Zeroes to End](./Day%2002%20-%20Move%20All%20Zeroes%20to%20End) | [Code](./Day%2002%20-%20Move%20All%20Zeroes%20to%20End) | O(N) | ✅ Completed |
+| **Day 03** | [Reverse an Array](./Day%2003%20-%20Reverse%20an%20Array) | [Code](./Day%2003%20-%20Reverse%20an%20Array) | O(N) | ✅ Completed |
 | **Day 04** | Rotate Array | — | — | ⏳ Pending |
 | **Day 05** | Next Permutation | — | — | ⏳ Pending |
 | **Day 06** | Majority Element II | — | — | ⏳ Pending |
@@ -40,7 +40,9 @@ Welcome to my repository for the **GFG 160 Days Challenge**! This repository tra
 
 ## 💡 Key Learnings & Takeaways
 
-* **Day 01:** Learned how to find the second largest element in a single pass without sorting, keeping time complexity strictly $\mathcal{O}(N)$.
+* **Day 01:** Learned how to find the second largest element in a single pass without sorting, keeping time complexity strictly O(N).
+* **Day 02:** Shifted non-zero elements forward maintaining order, filling remaining places with zeros in O(N) time.
+* **Day 03:** Reversed the array using two-pointer approach in O(N) time and O(1) space.
 
 ---
 
