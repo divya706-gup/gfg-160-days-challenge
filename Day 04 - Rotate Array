@@ -1,0 +1,54 @@
+/*
+    GFG 160 Days DSA Challenge
+    Day 04 - Rotate Array
+
+    Problem:
+    Given an array arr[], rotate the array to the left
+    by d positions.
+
+    Example:
+    Input:
+    arr = [1, 2, 3, 4, 5]
+    d = 2
+
+    Output:
+    [3, 4, 5, 1, 2]
+
+    Intuition:
+    After left rotating an array by d positions,
+    the first d elements move to the end.
+
+    C++ STL rotate() can perform this operation
+    efficiently in-place.
+
+    Since d can be greater than the size of the array,
+    normalize it using:
+
+        d = d % n
+
+    Approach:
+    1. Find the size n of the array.
+    2. Normalize d using d %= n.
+    3. Use rotate() with arr.begin() + d as
+       the new starting position.
+
+    Time Complexity: O(n)
+    Auxiliary Space: O(1)
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
+public:
+    void rotateArr(vector<int>& arr, int d) {
+
+        int n = arr.size();
+
+        d %= n;
+
+        rotate(arr.begin(),
+               arr.begin() + d,
+               arr.end());
+    }
+};
