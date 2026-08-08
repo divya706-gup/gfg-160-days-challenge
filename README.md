@@ -16,7 +16,7 @@ Welcome to my repository for the **GFG 160 Days Challenge**! This repository tra
 
 | Progress | Status |
 | :--- | :--- |
-| 🟢🟢🟢🟢🟢⚪⚪... | **Day 5 / 160 Completed** |
+| 🟢🟢🟢🟢🟢🟢⚪... | **Day 6 / 160 Completed** |
 
 ---
 
@@ -31,7 +31,7 @@ Welcome to my repository for the **GFG 160 Days Challenge**! This repository tra
 | **Day 03** | Reverse an Array | [Code](./Day%2003%20-%20Reverse%20an%20Array) | O(N) | ✅ Completed |
 | **Day 04** | Rotate Array | [Code](./Day%2004%20-%20Rotate%20Array) | O(N) | ✅ Completed |
 | Day 05 | Next Permutation | [Code](./Day%2005%20-%20Next%20Permutation/) | O(N) | ✅ Completed |
-| **Day 06** | Majority Element II | — | — | ⏳ Pending |
+| **Day 06** | Majority Element II |[Code](./Day%2006%20-%20Majority%20Element/) | O(N) | ✅ Completed |
 | **Day 07** | Stock Buy and Sell – Multiple Transaction | — | — | ⏳ Pending |
 
 ---
