@@ -16,7 +16,7 @@ Welcome to my repository for the **GFG 160 Days Challenge**! This repository tra
 
 | Progress | Status |
 | :--- | :--- |
-| 🟢🟢🟢🟢🟢🟢🟢... | **Day 7 / 160 Completed** |
+| 🟢🟢🟢🟢🟢🟢🟢🟢... | **Day 8 / 160 Completed** |
 
 ---
 
@@ -32,8 +32,8 @@ Welcome to my repository for the **GFG 160 Days Challenge**! This repository tra
 | **Day 04** | Rotate Array | [Code](./Day%2004%20-%20Rotate%20Array) | O(N) | ✅ Completed |
 | Day 05 | Next Permutation | [Code](./Day%2005%20-%20Next%20Permutation/) | O(N) | ✅ Completed |
 | **Day 06** | Majority Element II |[Code](./Day%2006%20-%20Majority%20Element/) | O(N) | ✅ Completed |
-| **Day 07** | Stock Buy and Sell – Multiple Transaction | [Code](./Day%2007%20-%20Stock%20Buy%20and%20Sell) | O(N) | ✅ Completed |
-
+| **Day 07** | Stock Buy and Sell – Multiple Transaction | [Code](./Day%2007%20-%20Stock%20Buy%20and%20Sell) | O(N) |✅ Completed |
+| **Day 08** | Stock Buy and Sell – Max one Transaction Allowed | [Code](./Day%2008%20-%20Stock%20Buy%20and%20Sell) | O(N) |✅ Completed |
 ---
 
 ## 💡 Key Learnings & Takeaways
@@ -45,6 +45,7 @@ Welcome to my repository for the **GFG 160 Days Challenge**! This repository tra
 * **Day 05:** Found the next lexicographical permutation in O(N) time by locating the pivot element, swapping it with the next greater element, and reversing the trailing subarray.
 * **Day 06:** Used Boyer-Moore’s Voting Algorithm to find elements appearing more than $\lfloor N/3 \rfloor$ times in $O(N)$ time and $O(1)$ space.
 * **Day 07:**Maximized profit by adding every positive price difference between consecutive days ($\text{prices}[i] - \text{prices}[i-1]$) in a single $O(N)$ pass.
+* **Day 08:** Tracked the minimum buy price while traversing the array to calculate potential profit ($\text{prices}[i] - \text{minPrice}$) and updated the maximum profit in a single $O(N)$ pass with $O(1)$ space.
 ---
 
 ## 🛠️ How to Use This Repo
