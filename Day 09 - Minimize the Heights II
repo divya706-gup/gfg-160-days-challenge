@@ -1,0 +1,63 @@
+/*
+    GFG 160 Days DSA Challenge
+    Day 09 - Minimize the Heights II
+
+    Problem:
+    Given an array of tower heights and an integer k,
+    increase or decrease every tower by exactly k.
+    Find the minimum possible difference between the
+    tallest and shortest towers.
+
+    Intuition:
+    Sort the array first.
+
+    For every possible split:
+    - Increase the towers on the left by k.
+    - Decrease the towers on the right by k.
+    
+    Then calculate the new minimum and maximum height
+    and keep the minimum difference.
+
+    Important:
+    A tower's height must not become negative.
+
+    Time Complexity: O(n log n)
+    Space Complexity: O(1) auxiliary space
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
+public:
+    int getMinDiff(vector<int>& arr, int k) {
+
+        int n = arr.size();
+
+        if (n == 1) {
+            return 0;
+        }
+
+        sort(arr.begin(), arr.end());
+
+        int ans = arr[n - 1] - arr[0];
+
+        int smallest = arr[0] + k;
+        int largest = arr[n - 1] - k;
+
+        for (int i = 0; i < n - 1; i++) {
+
+            int mn = min(smallest, arr[i + 1] - k);
+            int mx = max(largest, arr[i] + k);
+
+            // Height should not become negative
+            if (arr[i + 1] - k < 0) {
+                continue;
+            }
+
+            ans = min(ans, mx - mn);
+        }
+
+        return ans;
+    }
+};
