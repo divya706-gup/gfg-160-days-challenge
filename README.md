@@ -1,14 +1,7 @@
-# 🎯 GeeksforGeeks 160 Days Problem-Solving Challenge
+# 🎯 GeeksforGeeks 160 Days - Coding Challenge
 
-Welcome to my repository for the **GFG 160 Days Challenge**! This repository tracks my daily journey, code implementations, and key notes as I work through 160 days of Data Structures and Algorithms problems.
-
----
-
-## 📌 Repository Overview
-
-* **Goal:** Solve 1 problem daily for 160 days to build strong DSA fundamentals and problem-solving consistency.
-* **Language:** C++ / Java / Python
-* **Platform:** [GeeksforGeeks](https://www.geeksforgeeks.org/batch/gfg-160-problems)
+Welcome to my repository for the **GeeksforGeeks 160 Days Coding Challenge**! 🚀  
+Here, I document my daily progress, problem solutions, and key learnings as I solve algorithmic problems consistently over 160 days.
 
 ---
 
@@ -16,7 +9,7 @@ Welcome to my repository for the **GFG 160 Days Challenge**! This repository tra
 
 | Progress | Status |
 | :--- | :--- |
-| 🟢🟢🟢🟢🟢🟢🟢🟢... | **Day 8 / 160 Completed** |
+| 🟢🟢🟢🟢🟢🟢🟢🟢🟢... | **Day 09 / 160 Completed** |
 
 ---
 
@@ -30,10 +23,12 @@ Welcome to my repository for the **GFG 160 Days Challenge**! This repository tra
 | **Day 02** | Move All Zeroes to End | [Code](./Day%2002%20-%20Move%20All%20Zeroes%20to%20End) | O(N) | ✅ Completed |
 | **Day 03** | Reverse an Array | [Code](./Day%2003%20-%20Reverse%20an%20Array) | O(N) | ✅ Completed |
 | **Day 04** | Rotate Array | [Code](./Day%2004%20-%20Rotate%20Array) | O(N) | ✅ Completed |
-| Day 05 | Next Permutation | [Code](./Day%2005%20-%20Next%20Permutation/) | O(N) | ✅ Completed |
-| **Day 06** | Majority Element II |[Code](./Day%2006%20-%20Majority%20Element/) | O(N) | ✅ Completed |
-| **Day 07** | Stock Buy and Sell – Multiple Transaction | [Code](./Day%2007%20-%20Stock%20Buy%20and%20Sell) | O(N) |✅ Completed |
-| **Day 08** | Stock Buy and Sell – Max one Transaction Allowed | [Code](./Day%2008%20-%20Stock%20Buy%20and%20Sell) | O(N) |✅ Completed |
+| **Day 05** | Next Permutation | [Code](./Day%2005%20-%20Next%20Permutation/) | O(N) | ✅ Completed |
+| **Day 06** | Majority Element II | [Code](./Day%2006%20-%20Majority%20Element/) | O(N) | ✅ Completed |
+| **Day 07** | Stock Buy and Sell – Multiple Transaction | [Code](./Day%2007%20-%20Stock%20Buy%20and%20Sell) | O(N) | ✅ Completed |
+| **Day 08** | Stock Buy and Sell – Max One Transaction Allowed | [Code](./Day%2008%20-%20Stock%20Buy%20and%20Sell) | O(N) | ✅ Completed |
+| **Day 09** | Minimize the Heights II | [Code](./Day%2009%20-%20Minimize%20the%20Heights%20II) | O(N log N) | ✅ Completed |
+
 ---
 
 ## 💡 Key Learnings & Takeaways
@@ -44,8 +39,10 @@ Welcome to my repository for the **GFG 160 Days Challenge**! This repository tra
 * **Day 04:** Rotated the array by $d$ positions using the reversal algorithm in O(N) time and O(1) auxiliary space.
 * **Day 05:** Found the next lexicographical permutation in O(N) time by locating the pivot element, swapping it with the next greater element, and reversing the trailing subarray.
 * **Day 06:** Used Boyer-Moore’s Voting Algorithm to find elements appearing more than $\lfloor N/3 \rfloor$ times in $O(N)$ time and $O(1)$ space.
-* **Day 07:**Maximized profit by adding every positive price difference between consecutive days ($\text{prices}[i] - \text{prices}[i-1]$) in a single $O(N)$ pass.
+* **Day 07:** Maximized profit by adding every positive price difference between consecutive days ($\text{prices}[i] - \text{prices}[i-1]$) in a single $O(N)$ pass.
 * **Day 08:** Tracked the minimum buy price while traversing the array to calculate potential profit ($\text{prices}[i] - \text{minPrice}$) and updated the maximum profit in a single $O(N)$ pass with $O(1)$ space.
+* **Day 09:** Sorted the array and adjusted elements by $k$, keeping track of minimum and maximum possible values while ensuring no height becomes negative, running in $O(N \log N)$ time.
+
 ---
 
 ## 🛠️ How to Use This Repo
