@@ -1,0 +1,52 @@
+/*
+    GFG 160 Days DSA Challenge
+    Day 10 - Kadane's Algorithm
+
+    Problem:
+    Find the maximum sum of a subarray containing at least
+    one element.
+
+    Example:
+    Input  : [2, 3, -8, 7, -1, 2, 3]
+    Output : 11
+
+    Intuition:
+    At every element, decide whether it is better to:
+    1. Continue the current subarray, or
+    2. Start a new subarray from the current element.
+
+    So:
+        sum = max(sum + arr[i], arr[i])
+
+    Then keep track of the maximum sum found so far.
+
+    Approach:
+    - Initialize sum and result with the first element.
+    - Traverse the array from the second element.
+    - Update the current subarray sum.
+    - Update the maximum result.
+
+    Time Complexity: O(n)
+    Space Complexity: O(1)
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
+public:
+    int maxSubarraySum(vector<int>& arr) {
+
+        long long sum = arr[0];
+        long long result = arr[0];
+
+        for (int i = 1; i < arr.size(); i++) {
+
+            sum = max(sum + arr[i], (long long)arr[i]);
+
+            result = max(result, sum);
+        }
+
+        return result;
+    }
+};
