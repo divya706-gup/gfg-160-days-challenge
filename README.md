@@ -1,6 +1,7 @@
 # 🎯 GeeksforGeeks 160 Days - Coding Challenge
 
 Welcome to my repository for the **GeeksforGeeks 160 Days Coding Challenge**! 🚀
+
 Here, I document my daily progress, problem solutions, and key learnings as I solve algorithmic problems consistently over 160 days.
 
 ---
@@ -9,7 +10,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 
 | Progress | Status |
 | :--- | :--- |
-| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢... | **Day 10 / 160 Completed** |
+| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢... | **Day 11 / 160 Completed** |
 
 ---
 
@@ -29,6 +30,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 | **Day 08** | Stock Buy and Sell – Max One Transaction Allowed | [Code](./Day%2008%20-%20Stock%20Buy%20and%20Sell) | O(N) | ✅ Completed |
 | **Day 09** | Minimize the Heights II | [Code](./Day%2009%20-%20Minimize%20the%20Heights%20II) | O(N log N) | ✅ Completed |
 | **Day 10** | Kadane's Algorithm | [Code](./Day%2010%20-%20Kadane's%20Algorithm) | O(N) | ✅ Completed |
+| **Day 11** | Maximum Product Subarray | [Code](./Day%2011%20-%20Maximum%20Product%20Subarray) | O(N) | ✅ Completed |
 
 ---
 
@@ -44,3 +46,4 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 * **Day 08:** Tracked the minimum buy price while traversing the array to calculate potential profit ($\text{prices}[i] - \text{minPrice}$) and updated the maximum profit in a single $O(N)$ pass with $O(1)$ space.
 * **Day 09:** Sorted the array and adjusted elements by $k$, keeping track of minimum and maximum possible values while ensuring no height becomes negative, running in $O(N \log N)$ time.
 * **Day 10:** Implemented Kadane's Algorithm to find the maximum subarray sum in a single pass ($O(N)$ time and $O(1)$ space) by resetting current sum to 0 whenever it becomes negative.
+* **Day 11:** Tracked both maximum and minimum products at each step to account for negative numbers, achieving an optimal $O(N)$ time and $O(1)$ space solution.
