@@ -1,0 +1,60 @@
+/*
+    GFG 160 Days DSA Challenge
+    Day 11 - Maximum Product Subarray
+
+    Problem:
+    Find the maximum product of a contiguous subarray.
+
+    Example:
+    Input  : [-2, 6, -3, -10, 0, 2]
+    Output : 180
+
+    Intuition:
+    Negative numbers can change the sign of the product.
+    Therefore, we calculate the product from both directions:
+    Left to Right and Right to Left.
+
+    If the product becomes 0, reset it to 1 because zero
+    breaks the current subarray.
+
+    Approach:
+    1. Maintain leftToRight and rightToLeft products.
+    2. Reset the product when it becomes 0.
+    3. Multiply elements from both directions.
+    4. Keep track of the maximum product.
+
+    Time Complexity: O(n)
+    Space Complexity: O(1)
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
+public:
+    int maxProduct(vector<int>& arr) {
+
+        int n = arr.size();
+
+        int leftToRight = 1;
+        int rightToLeft = 1;
+        int maxProduct = INT_MIN;
+
+        for (int i = 0; i < n; i++) {
+
+            if (leftToRight == 0)
+                leftToRight = 1;
+
+            if (rightToLeft == 0)
+                rightToLeft = 1;
+
+            leftToRight *= arr[i];
+            rightToLeft *= arr[n - i - 1];
+
+            maxProduct = max(maxProduct,
+                             max(leftToRight, rightToLeft));
+        }
+
+        return maxProduct;
+    }
+};
