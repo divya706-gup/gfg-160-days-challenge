@@ -1,0 +1,63 @@
+/*
+    GFG 160 Days DSA Challenge
+    Day 12 - Maximum Circular Subarray Sum
+
+    Intuition:
+    There are two cases:
+
+    1. Normal maximum subarray:
+       Use Kadane's Algorithm.
+
+    2. Circular maximum subarray:
+       Maximum Circular Sum = Total Sum - Minimum Subarray Sum
+
+    We calculate both maximum and minimum subarray sums
+    using Kadane's Algorithm.
+
+    Important:
+    If all elements are negative, return max_kad directly
+    because totalSum - min_kad would give 0.
+
+    Time Complexity: O(n)
+    Space Complexity: O(1)
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
+public:
+    int maxCircularSum(vector<int>& arr) {
+
+        int n = arr.size();
+
+        int max_kad = arr[0];
+        int currMax = arr[0];
+
+        int min_kad = arr[0];
+        int currMin = arr[0];
+
+        int totalSum = arr[0];
+
+        for (int i = 1; i < n; i++) {
+
+            totalSum += arr[i];
+
+            // Maximum subarray sum
+            currMax = max(arr[i], currMax + arr[i]);
+            max_kad = max(max_kad, currMax);
+
+            // Minimum subarray sum
+            currMin = min(arr[i], currMin + arr[i]);
+            min_kad = min(min_kad, currMin);
+        }
+
+        // All elements are negative
+        if (max_kad < 0) {
+            return max_kad;
+        }
+
+        // Compare normal and circular maximum
+        return max(max_kad, totalSum - min_kad);
+    }
+};
