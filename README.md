@@ -10,8 +10,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 
 | Progress | Status |
 | :--- | :--- |
-| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢... | **Day 11 / 160 Completed** |
-
+| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢... | **Day 12 / 160 Completed** |
 ---
 
 ## 📅 Daily Problem Log
@@ -31,7 +30,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 | **Day 09** | Minimize the Heights II | [Code](./Day%2009%20-%20Minimize%20the%20Heights%20II) | O(N log N) | ✅ Completed |
 | **Day 10** | Kadane's Algorithm | [Code](./Day%2010%20-%20Kadane's%20Algorithm) | O(N) | ✅ Completed |
 | **Day 11** | Maximum Product Subarray | [Code](./Day%2011%20-%20Maximum%20Product%20Subarray) | O(N) | ✅ Completed |
-
+| **Day 12** | Maximum Circular Subarray Sum | [Code](./Day%2012%20-%20Maximum%20Circular%20Subarray%20Sum) | $O(N)$ | ✅ Completed |
 ---
 
 ## 💡 Key Learnings & Takeaways
@@ -47,3 +46,4 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 * **Day 09:** Sorted the array and adjusted elements by $k$, keeping track of minimum and maximum possible values while ensuring no height becomes negative, running in $O(N \log N)$ time.
 * **Day 10:** Implemented Kadane's Algorithm to find the maximum subarray sum in a single pass ($O(N)$ time and $O(1)$ space) by resetting current sum to 0 whenever it becomes negative.
 * **Day 11:** Tracked both maximum and minimum products at each step to account for negative numbers, achieving an optimal $O(N)$ time and $O(1)$ space solution.
+* **Day 12:** Calculated the maximum circular subarray sum in $O(N)$ time and $O(1)$ space by comparing the maximum normal subarray sum (using Kadane's algorithm) with the total sum minus the minimum subarray sum.
