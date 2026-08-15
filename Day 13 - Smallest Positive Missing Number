@@ -1,0 +1,61 @@
+/*
+    GFG 160 Days DSA Challenge
+    Day 13 - Smallest Positive Missing Number
+
+    Problem:
+    Find the smallest positive number missing from the array.
+
+    Example:
+    Input  : [2, -3, 4, 1, 1, 7]
+    Output : 3
+
+    Intuition:
+    Sort the array first.
+    Start looking for the positive number 1.
+
+    If the current element is smaller than target, ignore it.
+    If it is equal to target, move to the next target.
+    If it is greater than target, target is missing.
+
+    Approach:
+    1. Sort the array.
+    2. Initialize target = 1.
+    3. Traverse the sorted array.
+    4. Ignore elements smaller than target.
+    5. If arr[i] == target, increment target.
+    6. If arr[i] > target, stop because target is missing.
+
+    Time Complexity: O(n log n)
+    Space Complexity: O(1) auxiliary space
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
+public:
+    int missingNumber(vector<int>& arr) {
+
+        int n = arr.size();
+
+        sort(arr.begin(), arr.end());
+
+        int target = 1;
+
+        for (int i = 0; i < n; i++) {
+
+            if (arr[i] < target) {
+                continue;
+            }
+
+            if (arr[i] == target) {
+                target++;
+            }
+            else if (arr[i] > target) {
+                break;
+            }
+        }
+
+        return target;
+    }
+};
