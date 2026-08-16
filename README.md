@@ -10,7 +10,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 
 | Progress | Status |
 | :--- | :--- |
-| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢... | **Day 13 / 160 Completed** |
+| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢... | **Day 14 / 160 Completed** |
 ---
 
 ## 📅 Daily Problem Log
@@ -32,6 +32,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 | **Day 11** | Maximum Product Subarray | [Code](./Day%2011%20-%20Maximum%20Product%20Subarray) | O(N) | ✅ Completed |
 | **Day 12** | Maximum Circular Subarray Sum | [Code](./Day%2012%20-%20Maximum%20Circular%20Subarray%20Sum) | $O(N)$ | ✅ Completed |
 | **Day 13** | Smallest Positive Missing Number | [Code](./Day%2013%20-%20Smallest%20Positive%20Missing%20Number) | O(N) | ✅ Completed |
+| **Day 14** | Implement Atoi | [Code](./Day%2014%20-%20Implement%20Atoi) | O(N) | ✅ Completed |
 ---
 
 ## 💡 Key Learnings & Takeaways
@@ -49,3 +50,4 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 * **Day 11:** Tracked both maximum and minimum products at each step to account for negative numbers, achieving an optimal $O(N)$ time and $O(1)$ space solution.
 * **Day 12:** Calculated the maximum circular subarray sum in $O(N)$ time and $O(1)$ space by comparing the maximum normal subarray sum (using Kadane's algorithm) with the total sum minus the minimum subarray sum.
 * **Day 13:** Placed each positive number in its correct 1-based index position (`arr[i]` at `arr[i] - 1`) to find the first missing positive integer in $O(N)$ time and $O(1)$ auxiliary space.
+* **Day 14:** Converted a string to a 32-bit signed integer by handling leading spaces, signs (+/-), non-digit characters, and 32-bit integer overflow/underflow boundaries in $O(N)$ time complexity.
