@@ -1,0 +1,73 @@
+/*
+    GFG 160 Days DSA Challenge
+    Day 14 - Implement Atoi
+
+    Problem:
+    Convert a string into a 32-bit signed integer without
+    using built-in conversion functions.
+
+    Intuition:
+    Process the string step by step:
+    1. Ignore leading spaces.
+    2. Check the sign (+ or -).
+    3. Read consecutive digits.
+    4. Build the number using:
+           num = num * 10 + digit
+    5. Stop when a non-digit is encountered.
+    6. Handle INT_MIN and INT_MAX overflow.
+
+    Time Complexity: O(n)
+    Space Complexity: O(1)
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
+public:
+    int myAtoi(string s) {
+
+        int n = s.length();
+        int i = 0;
+
+        // Ignore leading whitespaces
+        while (i < n && s[i] == ' ') {
+            i++;
+        }
+
+        int sign = 1;
+
+        // Check sign
+        if (i < n && (s[i] == '-' || s[i] == '+')) {
+
+            if (s[i] == '-') {
+                sign = -1;
+            }
+
+            i++;
+        }
+
+        long long num = 0;
+
+        // Read digits
+        while (i < n && s[i] >= '0' && s[i] <= '9') {
+
+            int digit = s[i] - '0';
+
+            num = num * 10 + digit;
+
+            // Handle overflow
+            if (num * sign < INT_MIN) {
+                return INT_MIN;
+            }
+
+            if (num * sign > INT_MAX) {
+                return INT_MAX;
+            }
+
+            i++;
+        }
+
+        return num * sign;
+    }
+};
