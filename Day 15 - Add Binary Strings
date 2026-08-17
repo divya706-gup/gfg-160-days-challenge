@@ -1,0 +1,73 @@
+/*
+    GFG 160 Days DSA Challenge
+    Day 15 - Add Binary Strings
+
+    Problem:
+    Given two binary strings, find their binary sum.
+
+    Intuition:
+    Perform binary addition from right to left,
+    just like normal addition.
+
+    At every position:
+        sum = bit1 + bit2 + carry
+
+    Current bit:
+        sum % 2
+
+    New carry:
+        sum / 2
+
+    Since the result is built from right to left,
+    reverse it at the end.
+
+    Time Complexity: O(max(n, m))
+    Space Complexity: O(max(n, m))
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
+public:
+    string addBinary(string& s1, string& s2) {
+
+        int i = s1.length() - 1;
+        int j = s2.length() - 1;
+
+        int carry = 0;
+        int sum = 0;
+
+        string result = "";
+
+        while (i >= 0 || j >= 0 || carry) {
+
+            sum = carry;
+
+            if (i >= 0) {
+                sum += s1[i] - '0';
+                i--;
+            }
+
+            if (j >= 0) {
+                sum += s2[j] - '0';
+                j--;
+            }
+
+            result += (sum % 2) + '0';
+
+            carry = sum / 2;
+        }
+
+        reverse(result.begin(), result.end());
+
+        // Remove leading zeros
+        int pos = result.find_first_not_of('0');
+
+        if (pos == string::npos) {
+            return "0";
+        }
+
+        return result.substr(pos);
+    }
+};
