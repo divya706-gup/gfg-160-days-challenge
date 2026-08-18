@@ -1,0 +1,41 @@
+/*
+    GFG 160 Days DSA Challenge
+    Day 16 - Anagram
+
+    Problem:
+    Given two strings, determine whether they are anagrams.
+
+    Intuition:
+    Two strings are anagrams if they contain the same
+    characters with the same frequencies.
+
+    Since the order does not matter, sort both strings
+    and compare them.
+
+    Example:
+    s1 = "geeks"
+    s2 = "kseeg"
+
+    After sorting:
+    s1 = "eegks"
+    s2 = "eegks"
+
+    Therefore, they are anagrams.
+
+    Time Complexity: O(n log n)
+    Space Complexity: O(1) auxiliary space
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
+public:
+    bool areAnagrams(string& s1, string& s2) {
+
+        sort(s1.begin(), s1.end());
+        sort(s2.begin(), s2.end());
+
+        return s1 == s2;
+    }
+};
