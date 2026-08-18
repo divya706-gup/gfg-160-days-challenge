@@ -10,7 +10,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 
 | Progress | Status |
 | :--- | :--- |
-| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢... | **Day 15 / 160 Completed** |
+| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢... | **Day 16 / 160 Completed** |
 ---
 
 ## 📅 Daily Problem Log
@@ -34,6 +34,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 | **Day 13** | Smallest Positive Missing Number | [Code](./Day%2013%20-%20Smallest%20Positive%20Missing%20Number) | O(N) | ✅ Completed |
 | **Day 14** | Implement Atoi | [Code](./Day%2014%20-%20Implement%20Atoi) | O(N) | ✅ Completed |
 | **Day 15** | Add Binary Strings | [Code](./Day%2015%20-%20Add%20Binary%20Strings) | O(N) | ✅ Completed |
+| **Day 16** | Anagram | [Code](./Day%2016%20-%20Anagram) | O(N) | ✅ Completed |
 ---
 
 ## 💡 Key Learnings & Takeaways
@@ -53,3 +54,4 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 * **Day 13:** Placed each positive number in its correct 1-based index position (`arr[i]` at `arr[i] - 1`) to find the first missing positive integer in $O(N)$ time and $O(1)$ auxiliary space.
 * **Day 14:** Converted a string to a 32-bit signed integer by handling leading spaces, signs (+/-), non-digit characters, and 32-bit integer overflow/underflow boundaries in $O(N)$ time complexity.
 * **Day 15:** Added two binary strings from right to left using a two-pointer approach and a carry variable, ensuring leading zeros are trimmed from the final result in $O(N)$ time and space.
+* **Day 16:** Checked if two strings are anagrams of each other by maintaining a frequency count array of size 26 for lower-case English characters, incrementing for the first string and decrementing for the second string in $O(N)$ time and $O(1)$ auxiliary space.
