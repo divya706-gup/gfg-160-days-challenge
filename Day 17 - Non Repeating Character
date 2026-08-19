@@ -1,0 +1,46 @@
+/*
+    GFG 160 Days DSA Challenge
+    Day 17 - Non Repeating Character
+
+    Problem:
+    Find the first character in the string that does not repeat.
+    If no non-repeating character exists, return '$'.
+
+    Intuition:
+    First count the frequency of every character.
+    Then traverse the string again to find the first
+    character whose frequency is exactly 1.
+
+    Example:
+    Input  : "geeksforgeeks"
+    Output : 'f'
+
+    Time Complexity: O(n) average
+    Space Complexity: O(n)
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
+public:
+    char nonRepeatingChar(string &s) {
+
+        unordered_map<char, int> mp;
+        char ans;
+
+        // Count frequency
+        for (int i = 0; i < s.length(); i++) {
+            mp[s[i]]++;
+        }
+
+        // Find first non-repeating character
+        for (int i = 0; i < s.length(); i++) {
+            if (mp[s[i]] == 1) {
+                return s[i];
+            }
+        }
+
+        return '$';
+    }
+};
