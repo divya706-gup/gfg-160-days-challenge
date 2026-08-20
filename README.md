@@ -10,7 +10,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 
 | Progress | Status |
 | :--- | :--- |
-| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢... | **Day 17 / 160 Completed** |
+| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢... | **Day 18 / 160 Completed** |
 ---
 
 ## 📅 Daily Problem Log
@@ -36,6 +36,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 | **Day 15** | Add Binary Strings | [Code](./Day%2015%20-%20Add%20Binary%20Strings) | O(N) | ✅ Completed |
 | **Day 16** | Anagram | [Code](./Day%2016%20-%20Anagram) | O(N) | ✅ Completed |
 | **Day 17** | Non Repeating Character | [Code](./Day%2017%20-%20Non%20Repeating%20Character) | O(N) | ✅ Completed |
+| **Day 18** | Search Pattern | [Code](./Day%2018%20-%20Search%20Pattern) | O(N) | ✅ Completed |
 ---
 
 ## 💡 Key Learnings & Takeaways
@@ -57,3 +58,4 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 * **Day 15:** Added two binary strings from right to left using a two-pointer approach and a carry variable, ensuring leading zeros are trimmed from the final result in $O(N)$ time and space.
 * **Day 16:** Checked if two strings are anagrams of each other by maintaining a frequency count array of size 26 for lower-case English characters, incrementing for the first string and decrementing for the second string in $O(N)$ time and $O(1)$ auxiliary space.
 * **Day 17:** Counted character frequencies using a hash map or frequency array in $O(N)$ time, then made a second pass over the string to find the first character with a frequency of 1.
+* **Day 18:** Implemented the Knuth-Morris-Pratt (KMP) pattern matching algorithm by precomputing the Longest Prefix Suffix (LPS) array, enabling search in $O(N + M)$ time complexity.
