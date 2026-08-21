@@ -1,0 +1,79 @@
+/*
+    GFG 160 Days DSA Challenge
+    Day 19 - Min Chars to Add for Palindrome
+
+    Problem:
+    Find the minimum number of characters that need to be
+    added at the front of a string to make it a palindrome.
+
+    Intuition:
+    We need to find the longest palindromic prefix.
+
+    To find it efficiently:
+        1. Reverse the string.
+        2. Create:
+           s + "$" + reverse(s)
+        3. Build the LPS array.
+        4. The last LPS value gives the length of the
+           longest palindromic prefix.
+
+    Answer:
+        n - longestPalindromicPrefix
+
+    Time Complexity: O(n)
+    Space Complexity: O(n)
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
+public:
+
+    vector<int> computeArray(string& s) {
+
+        int i = 1;
+        int len = 0;
+        int n = s.length();
+
+        vector<int> lps(n);
+
+        lps[0] = 0;
+
+        while (i < n) {
+
+            if (s[i] == s[len]) {
+                len++;
+                lps[i] = len;
+                i++;
+            }
+            else {
+
+                if (len == 0) {
+                    lps[i] = 0;
+                    i++;
+                }
+                else {
+                    len = lps[len - 1];
+                }
+            }
+        }
+
+        return lps;
+    }
+
+    int minChar(string& s) {
+
+        int n = s.length();
+
+        string rev = s;
+
+        reverse(rev.begin(), rev.end());
+
+        string combinedstr = s + "$" + rev;
+
+        vector<int> lps = computeArray(combinedstr);
+
+        return n - lps.back();
+    }
+};
