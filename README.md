@@ -10,7 +10,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 
 | Progress | Status |
 | :--- | :--- |
-| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢... | **Day 19 / 160 Completed** |
+| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢... | **Day 20 / 160 Completed** |
 ---
 
 ## 📅 Daily Problem Log
@@ -38,6 +38,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 | **Day 17** | Non Repeating Character | [Code](./Day%2017%20-%20Non%20Repeating%20Character) | O(N) | ✅ Completed |
 | **Day 18** | Search Pattern | [Code](./Day%2018%20-%20Search%20Pattern) | O(N) | ✅ Completed |
 | **Day 19** | Min Chars to Add for Palindrome | [Code](./Day%2019%20-%20Min%20Chars%20to%20Add%20for%20Palindrome) | O(N) | ✅ Completed |
+| **Day 20** | Strings Rotations of Each Other | [Code](./Day%2020%20-%20Strings%20Rotations%20of%20Each%20Other) | O(N) | ✅ Completed |
 ---
 
 ## 💡 Key Learnings & Takeaways
@@ -61,3 +62,4 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 * **Day 17:** Counted character frequencies using a hash map or frequency array in $O(N)$ time, then made a second pass over the string to find the first character with a frequency of 1.
 * **Day 18:** Implemented the Knuth-Morris-Pratt (KMP) pattern matching algorithm by precomputing the Longest Prefix Suffix (LPS) array, enabling search in $O(N + M)$ time complexity.
 * **Day 19:** Computed the Longest Prefix Suffix (LPS) array of the string concatenated with its reverse (separated by a special character) to find the longest palindromic prefix in $O(N)$ time, determining the minimum characters needed to make the string a palindrome.
+* **Day 20:** Checked if string $s2$ is a rotation of $s1$ in $O(N)$ time by concatenating $s1$ with itself ($s1 + s1$) and searching for $s2$ within it using the KMP algorithm (or string search).
