@@ -10,7 +10,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 
 | Progress | Status |
 | :--- | :--- |
-| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢... | **Day 22 / 160 Completed** |
+| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢... | **Day 23 / 160 Completed** |
 ---
 
 ## 📅 Daily Problem Log
@@ -41,6 +41,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 | **Day 20** | Strings Rotations of Each Other | [Code](./Day%2020%20-%20Strings%20Rotations%20of%20Each%20Other) | O(N) | ✅ Completed |
 | **Day 21** | Sort 0s, 1s and 2s | [Code](./Day%2021%20-%20Sort%200s%2C%201s%20and%202s) | O(N) | ✅ Completed |
 | **Day 22** | Find H-Index | [Code](./Day%2022%20-%20Find%20H-Index) | O(N log N) | ✅ Completed |
+| **Day 23** | Count Inversions | [Code](./Day%2023%20-%20Count%20Inversions) | O(N log N) | ✅ Completed |
 ---
 
 ## 💡 Key Learnings & Takeaways
@@ -67,3 +68,4 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 * **Day 20:** Checked if string $s2$ is a rotation of $s1$ in $O(N)$ time by concatenating $s1$ with itself ($s1 + s1$) and searching for $s2$ within it using the KMP algorithm (or string search).
 * **Day 21:** Sorted an array containing only 0s, 1s, and 2s using frequency counting, rebuilding the array in ascending order in O(N) time and O(1) auxiliary space.
 * **Day 22:** Calculated the H-Index by sorting the citations array in descending order and finding the largest value $h$ where the paper count exceeds or equals $h$, running in $O(N \log N)$ time and $O(1)$ auxiliary space (or $O(N)$ time using frequency counting/bucket sort).
+* **Day 23:** Used a modified Merge Sort algorithm to count array inversions in $O(N \log N)$ time and $O(N)$ space by adding the remaining elements in the left subarray whenever an element from the right subarray is smaller.
