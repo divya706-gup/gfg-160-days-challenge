@@ -1,0 +1,121 @@
+# Day 23 — Count Inversions
+
+## Approach
+
+We use **Merge Sort** to count inversions efficiently.
+
+An inversion is a pair `(i, j)` where:
+
+* `i < j`
+* `arr[i] > arr[j]`
+
+### Steps
+
+1. Divide the array into two halves.
+2. Count inversions in the left half.
+3. Count inversions in the right half.
+4. While merging the two sorted halves:
+
+   * If `arr[i] <= arr[j]`, move the left element.
+   * Otherwise, `arr[i] > arr[j]`, so all elements from `i` to `m` form an inversion with `arr[j]`.
+   * Add `m - i + 1` to the answer.
+5. Merge both halves into a sorted array.
+
+### Example
+
+```text
+arr = [2, 4, 1, 3, 5]
+
+Inversions:
+(2,1)
+(4,1)
+(4,3)
+
+Answer = 3
+```
+
+## C++ Code
+
+```cpp
+class Solution {
+public:
+
+    int merge(vector<int>& arr, int l, int m, int r) {
+        
+        vector<int> temp;
+        
+        int i = l;
+        int j = m + 1;
+        int inv = 0;
+
+        while (i <= m && j <= r) {
+
+            if (arr[i] <= arr[j]) {
+                temp.push_back(arr[i]);
+                i++;
+            }
+            else {
+                temp.push_back(arr[j]);
+
+                // All remaining elements in left
+                // half will form inversions
+                inv += (m - i + 1);
+
+                j++;
+            }
+        }
+
+        // Remaining elements of left half
+        while (i <= m) {
+            temp.push_back(arr[i]);
+            i++;
+        }
+
+        // Remaining elements of right half
+        while (j <= r) {
+            temp.push_back(arr[j]);
+            j++;
+        }
+
+        // Copy sorted elements back
+        for (int k = l; k <= r; k++) {
+            arr[k] = temp[k - l];
+        }
+
+        return inv;
+    }
+
+
+    int mergeSort(vector<int>& arr, int l, int r) {
+
+        if (l >= r)
+            return 0;
+
+        int m = l + (r - l) / 2;
+
+        int inv = 0;
+
+        // Count inversions in left half
+        inv += mergeSort(arr, l, m);
+
+        // Count inversions in right half
+        inv += mergeSort(arr, m + 1, r);
+
+        // Count cross inversions
+        inv += merge(arr, l, m, r);
+
+        return inv;
+    }
+
+
+    int inversionCount(vector<int>& arr) {
+
+        return mergeSort(arr, 0, arr.size() - 1);
+    }
+};
+```
+
+### Complexity
+
+* **Time:** `O(n log n)`
+* **Space:** `O(n)`
