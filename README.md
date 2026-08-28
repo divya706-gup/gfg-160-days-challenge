@@ -10,7 +10,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 
 | Progress | Status |
 | :--- | :--- |
-| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢... | **Day 25 / 160 Completed** |
+| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢... | **Day 26 / 160 Completed** |
 ---
 
 ## 📅 Daily Problem Log
@@ -44,6 +44,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 | **Day 23** | Count Inversions | [Code](./Day%2023%20-%20Count%20Inversions) | O(N log N) | ✅ Completed |
 | **Day 24** | Overlapping Intervals | [Code](./Day%2024%20-%20Overlapping%20Intervals) | O(N log N) | ✅ Completed |
 | **Day 25** | Insert Interval | [Code](./Day%2025%20%E2%80%94%20Insert%20Interval) | O(N) | ✅ Completed |
+| **Day 26** | Non-Overlapping Intervals | [Code](./Day%2026%20-%20Non-Overlapping%20Intervals) | O(N log N) | ✅ Completed |
 ---
 
 ## 💡 Key Learnings & Takeaways
@@ -73,3 +74,4 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 * **Day 23:** Used a modified Merge Sort algorithm to count array inversions in $O(N \log N)$ time and $O(N)$ space by adding the remaining elements in the left subarray whenever an element from the right subarray is smaller.
 * **Day 24:** Sorted intervals by their starting times and merged overlapping ranges in a single pass by updating the end time of the current interval, running in O(N log N) time due to sorting and O(1) extra space (excluding output space).
 * **Day 25:** Inserted a new interval into a non-overlapping sorted interval list and merged overlapping intervals in a single pass in $O(N)$ time and $O(1)$ auxiliary space (excluding output array).
+* **Day 26:** Sorted intervals by their end times and used a greedy approach to keep track of the end time of the last non-overlapping interval, counting the minimum number of intervals to remove in $O(N \log N)$ time and $O(1)$ auxiliary space.
