@@ -1,0 +1,63 @@
+```cpp
+// Day 27 - Merge Without Extra Space
+
+// Approach:
+// 1. Treat both arrays as one combined sorted array.
+// 2. Use the Gap Method (Shell Sort idea).
+// 3. Compare elements that are 'gap' positions apart.
+// 4. Swap them if they are in the wrong order.
+// 5. Reduce the gap until it becomes 1.
+// 6. This merges both arrays without using extra space.
+
+// Time Complexity: O((n + m) log(n + m))
+// Space Complexity: O(1)
+
+class Solution {
+public:
+    void mergeArrays(vector<int>& a, vector<int>& b) {
+        
+        int n = a.size();
+        int m = b.size();
+
+        int gap = (n + m + 1) / 2;
+
+        while (gap > 0) {
+
+            int i = 0;
+            int j = gap;
+
+            while (j < n + m) {
+
+                // Both elements are in array a
+                if (i < n && j < n) {
+                    if (a[i] > a[j]) {
+                        swap(a[i], a[j]);
+                    }
+                }
+
+                // i is in a and j is in b
+                else if (i < n && j >= n) {
+                    if (a[i] > b[j - n]) {
+                        swap(a[i], b[j - n]);
+                    }
+                }
+
+                // Both elements are in array b
+                else {
+                    if (b[i - n] > b[j - n]) {
+                        swap(b[i - n], b[j - n]);
+                    }
+                }
+
+                i++;
+                j++;
+            }
+
+            if (gap == 1)
+                break;
+
+            gap = (gap + 1) / 2;
+        }
+    }
+};
+```
