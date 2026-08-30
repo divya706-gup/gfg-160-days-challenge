@@ -1,0 +1,26 @@
+// Day 28 - Number of Occurrence
+
+// Approach:
+// 1. Use an unordered_map to store the frequency of each element.
+// 2. Traverse the array and increase the frequency of every element.
+// 3. Return the frequency of the given target.
+// 4. If target is not present, map[target] returns 0.
+
+// Time Complexity: O(n)
+// Space Complexity: O(n)
+
+class Solution {
+public:
+    int countFreq(vector<int>& arr, int target) {
+        
+        unordered_map<int, int> mp;
+
+        // Store frequency of each element
+        for (int num : arr) {
+            mp[num]++;
+        }
+
+        // Return frequency of target
+        return mp[target];
+    }
+};
