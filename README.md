@@ -10,7 +10,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 
 | Progress | Status |
 | :--- | :--- |
-| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢... | **Day 28 / 160 Completed** |
+| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢... | **Day 29 / 160 Completed** |
 ---
 
 ## 📅 Daily Problem Log
@@ -47,6 +47,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 | **Day 26** | Non-Overlapping Intervals | [Code](./Day%2026%20-%20Non-Overlapping%20Intervals) | O(N log N) | ✅ Completed |
 | **Day 27** | Merge Without Extra Space | [Code](./Day%2027%20-%20Merge%20Without%20Extra%20Space) | O((N+M) log(N+M)) | ✅ Completed |
 | **Day 28** | Number of Occurrence | [Code](./Day%2028%20-%20Number%20of%20Occurrence) | O(log N) | ✅ Completed |
+| **Day 29** | Sorted and Rotated Minimum | [Code](./Day%2029%20-%20Sorted%20and%20Rotated%20Minimum) | O(log N) | ✅ Completed |
 ---
 
 ## 💡 Key Learnings & Takeaways
@@ -79,3 +80,4 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 * **Day 26:** Sorted intervals by their end times and used a greedy approach to keep track of the end time of the last non-overlapping interval, counting the minimum number of intervals to remove in $O(N \log N)$ time and $O(1)$ auxiliary space.
 * **Day 27:** Merged two sorted arrays in-place without using extra space by using the Gap Method (Shell Sort variant) to compare and swap elements across both arrays in $O((N + M) \log(N + M))$ time and $O(1)$ auxiliary space.
 * **Day 28:** Used Binary Search to find the first and last occurrences of the target element, calculating its total frequency in $O(\log N)$ time and $O(1)$ auxiliary space.
+* **Day 29:** Used Binary Search to find the minimum element in a sorted and rotated array in $O(\log N)$ time and $O(1)$ auxiliary space by comparing the middle element with the rightmost boundary to eliminate the sorted half.
