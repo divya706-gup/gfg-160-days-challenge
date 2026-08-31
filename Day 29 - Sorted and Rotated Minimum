@@ -1,0 +1,21 @@
+```cpp
+// Day 29 - Sorted and Rotated Minimum
+
+// Approach:
+// 1. Sort the given array in ascending order.
+// 2. The first element after sorting is the minimum element.
+// 3. Return arr[0].
+
+// Time Complexity: O(n log n)
+// Space Complexity: O(1)
+
+class Solution {
+public:
+    int findMin(vector<int>& arr) {
+        
+        sort(arr.begin(), arr.end());
+        
+        return arr[0];
+    }
+};
+```
