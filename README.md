@@ -15,8 +15,6 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 
 ## 📅 Daily Problem Log
 
-### 🔹 Week 1: Arrays & Basic Algorithms
-
 | Day | Topic / Problem Name | Solution | Complexity | Status |
 | :---: | :--- | :---: | :---: | :---: |
 | **Day 01** | Second Largest Element | [Code](./Day%2001%20-%20Second%20Largest%20Element) | O(N) | ✅ Completed |
@@ -48,6 +46,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 | **Day 27** | Merge Without Extra Space | [Code](./Day%2027%20-%20Merge%20Without%20Extra%20Space) | O((N+M) log(N+M)) | ✅ Completed |
 | **Day 28** | Number of Occurrence | [Code](./Day%2028%20-%20Number%20of%20Occurrence) | O(log N) | ✅ Completed |
 | **Day 29** | Sorted and Rotated Minimum | [Code](./Day%2029%20-%20Sorted%20and%20Rotated%20Minimum) | O(log N) | ✅ Completed |
+| **Day 30** | Search in Rotated Sorted Array | [Code](./Day%2030%20-%20Search%20in%20Rotated%20Sorted%20Array) | O(log N) | ✅ Completed |
 ---
 
 ## 💡 Key Learnings & Takeaways
@@ -81,3 +80,4 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 * **Day 27:** Merged two sorted arrays in-place without using extra space by using the Gap Method (Shell Sort variant) to compare and swap elements across both arrays in $O((N + M) \log(N + M))$ time and $O(1)$ auxiliary space.
 * **Day 28:** Used Binary Search to find the first and last occurrences of the target element, calculating its total frequency in $O(\log N)$ time and $O(1)$ auxiliary space.
 * **Day 29:** Used Binary Search to find the minimum element in a sorted and rotated array in $O(\log N)$ time and $O(1)$ auxiliary space by comparing the middle element with the rightmost boundary to eliminate the sorted half.
+* **Day 30:** Used Binary Search to find the target in a sorted and rotated array in $O(\log N)$ time and $O(1)$ auxiliary space by determining which half of the array is sorted at each step and narrowing down the search space accordingly.
