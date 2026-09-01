@@ -1,0 +1,44 @@
+Got it — you want the **GitHub `.cpp` file format like before**, ready to copy-paste.
+
+### `Day30_Search_in_Rotated_Sorted_Array.cpp`
+
+```cpp
+// GFG 160 Days Challenge - Day 30
+// Problem: Search in Rotated Sorted Array
+//
+// Approach:
+// 1. Find the rotation point where the next element is smaller
+//    than the current element.
+// 2. Traverse the array and search for the key.
+// 3. Return the index if found, otherwise return -1.
+//
+// Time Complexity: O(n)
+// Space Complexity: O(1)
+
+class Solution {
+public:
+    int search(vector<int>& arr, int key) {
+        int n = arr.size();
+        int findIndex = -1;
+
+        // Find the rotation point
+        for (int i = 0; i < n - 1; i++) {
+            if (arr[i + 1] < arr[i]) {
+                findIndex = i;
+                break;
+            }
+        }
+
+        // Search for the key
+        for (int i = 0; i < n; i++) {
+            if (arr[i] == key) {
+                return i;
+            }
+        }
+
+        return -1;
+    }
+};
+```
+
+**File name:** `Day30_Search_in_Rotated_Sorted_Array.cpp`
