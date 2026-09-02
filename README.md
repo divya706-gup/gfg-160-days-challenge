@@ -10,7 +10,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 
 | Progress | Status |
 | :--- | :--- |
-| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢... | **Day 30 / 160 Completed** |
+| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢... | **Day 31 / 160 Completed** |
 ---
 
 ## 📅 Daily Problem Log
@@ -47,6 +47,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 | **Day 28** | Number of Occurrence | [Code](./Day%2028%20-%20Number%20of%20Occurrence) | O(log N) | ✅ Completed |
 | **Day 29** | Sorted and Rotated Minimum | [Code](./Day%2029%20-%20Sorted%20and%20Rotated%20Minimum) | O(log N) | ✅ Completed |
 | **Day 30** | Search in Rotated Sorted Array | [Code](./Day%2030%20-%20Search%20in%20Rotated%20Sorted%20Array) | O(log N) | ✅ Completed |
+| **Day 31** | Peak Element | [Code](./Day%2031%20-%20Peak%20Element) | O(log N) | ✅ Completed |
 ---
 
 ## 💡 Key Learnings & Takeaways
@@ -81,3 +82,4 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 * **Day 28:** Used Binary Search to find the first and last occurrences of the target element, calculating its total frequency in $O(\log N)$ time and $O(1)$ auxiliary space.
 * **Day 29:** Used Binary Search to find the minimum element in a sorted and rotated array in $O(\log N)$ time and $O(1)$ auxiliary space by comparing the middle element with the rightmost boundary to eliminate the sorted half.
 * **Day 30:** Used Binary Search to find the target in a sorted and rotated array in $O(\log N)$ time and $O(1)$ auxiliary space by determining which half of the array is sorted at each step and narrowing down the search space accordingly.
+* **Day 31:** Used Binary Search to find a peak element (an element strictly greater than its neighbors) in O(log N) time and O(1) auxiliary space by comparing the middle element with its right neighbor to move towards a rising slope.
