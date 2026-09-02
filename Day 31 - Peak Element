@@ -1,0 +1,53 @@
+### `Day31_Peak_Element.cpp`
+
+```cpp
+// GFG 160 Days Challenge - Day 31
+// Problem: Peak Element
+//
+// Approach:
+// Use Binary Search to find a peak element.
+// A peak element is greater than its adjacent elements.
+//
+// 1. Find the middle element.
+// 2. Check if the middle element is greater than both neighbors.
+// 3. If the right neighbor is greater, move to the right half.
+// 4. Otherwise, move to the left half.
+// 5. Return the index of any peak element.
+//
+// Time Complexity: O(log n)
+// Space Complexity: O(1)
+
+class Solution {
+public:
+    int peakElement(vector<int>& arr) {
+        int n = arr.size();
+
+        int low = 0;
+        int high = n - 1;
+
+        while (low <= high) {
+            int mid = low + (high - low) / 2;
+
+            bool Lsmall = (mid == 0 || arr[mid] > arr[mid - 1]);
+            bool Rsmall = (mid == n - 1 || arr[mid] > arr[mid + 1]);
+
+            // Current element is a peak
+            if (Lsmall && Rsmall) {
+                return mid;
+            }
+
+            // Move towards the side having a greater element
+            if (mid < n - 1 && arr[mid + 1] > arr[mid]) {
+                low = mid + 1;
+            }
+            else {
+                high = mid - 1;
+            }
+        }
+
+        return 0;
+    }
+};
+```
+
+**File name:** `Day31_Peak_Element.cpp`
