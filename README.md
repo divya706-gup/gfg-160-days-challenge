@@ -10,7 +10,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 
 | Progress | Status |
 | :--- | :--- |
-| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢... | **Day 31 / 160 Completed** |
+| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢... | **Day 32 / 160 Completed** |
 ---
 
 ## 📅 Daily Problem Log
@@ -48,6 +48,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 | **Day 29** | Sorted and Rotated Minimum | [Code](./Day%2029%20-%20Sorted%20and%20Rotated%20Minimum) | O(log N) | ✅ Completed |
 | **Day 30** | Search in Rotated Sorted Array | [Code](./Day%2030%20-%20Search%20in%20Rotated%20Sorted%20Array) | O(log N) | ✅ Completed |
 | **Day 31** | Peak Element | [Code](./Day%2031%20-%20Peak%20Element) | O(log N) | ✅ Completed |
+| **Day 32** | K-th Element of Two Arrays | [Code](./Day%2032%20-%20K-th%20Element%20of%20Two%20Arrays) | O(log(min(N, M))) | ✅ Completed |
 ---
 
 ## 💡 Key Learnings & Takeaways
@@ -83,3 +84,4 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 * **Day 29:** Used Binary Search to find the minimum element in a sorted and rotated array in $O(\log N)$ time and $O(1)$ auxiliary space by comparing the middle element with the rightmost boundary to eliminate the sorted half.
 * **Day 30:** Used Binary Search to find the target in a sorted and rotated array in $O(\log N)$ time and $O(1)$ auxiliary space by determining which half of the array is sorted at each step and narrowing down the search space accordingly.
 * **Day 31:** Used Binary Search to find a peak element (an element strictly greater than its neighbors) in O(log N) time and O(1) auxiliary space by comparing the middle element with its right neighbor to move towards a rising slope.
+* **Day 32:** Applied Binary Search on the smaller array to partition both arrays such that the combined left half contains $k$ elements, finding the $k$-th element in $O(\log(\min(N, M)))$ time and $O(1)$ auxiliary space.
