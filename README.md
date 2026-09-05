@@ -10,7 +10,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 
 | Progress | Status |
 | :--- | :--- |
-| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢... | **Day 33 / 160 Completed** |
+| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢... | **Day 34 / 160 Completed** |
 ---
 
 ## 📅 Daily Problem Log
@@ -50,6 +50,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 | **Day 31** | Peak Element | [Code](./Day%2031%20-%20Peak%20Element) | O(log N) | ✅ Completed |
 | **Day 32** | K-th Element of Two Arrays | [Code](./Day%2032%20-%20K-th%20Element%20of%20Two%20Arrays) | O(log(min(N, M))) | ✅ Completed |
 | ** Day 33 ** | Aggressive Cows | [Code](./Day%2033%20-%20Aggressive%20Cows) | O(N log N + N log(max_dist)) | ✅ Completed |
+| ** Day 34 ** | Allocate Minimum Pages | [Code ](./Day%2034%20-%20Allocate%20Minimum%20Pages) | O(N log(sum - max)) | ✅ Completed |
 ---
 
 ## 💡 Key Learnings & Takeaways
@@ -87,3 +88,4 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 * **Day 31:** Used Binary Search to find a peak element (an element strictly greater than its neighbors) in O(log N) time and O(1) auxiliary space by comparing the middle element with its right neighbor to move towards a rising slope.
 * **Day 32:** Applied Binary Search on the smaller array to partition both arrays such that the combined left half contains $k$ elements, finding the $k$-th element in $O(\log(\min(N, M)))$ time and $O(1)$ auxiliary space.
 - **Day 33:** Applied Binary Search on answer space to maximize the minimum distance between cows, sorting the array in O(N log N) time and checking feasibility in O(N) time per step, achieving an overall complexity of O(N log N + N log(max_dist)).
+* **Day 34:** Applied Binary Search on Answer within the search space $[ \max(\text{arr}), \sum \text{arr} ]$ to check if a mid value can be a valid maximum allocation for $k$ students in $O(N \log(\text{sum} - \text{max}))$ time complexity.
