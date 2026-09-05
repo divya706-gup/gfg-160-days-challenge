@@ -10,7 +10,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 
 | Progress | Status |
 | :--- | :--- |
-| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢... | **Day 34 / 160 Completed** |
+| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢... | **Day 35 / 160 Completed** |
 ---
 
 ## 📅 Daily Problem Log
@@ -49,8 +49,9 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 | **Day 30** | Search in Rotated Sorted Array | [Code](./Day%2030%20-%20Search%20in%20Rotated%20Sorted%20Array) | O(log N) | ✅ Completed |
 | **Day 31** | Peak Element | [Code](./Day%2031%20-%20Peak%20Element) | O(log N) | ✅ Completed |
 | **Day 32** | K-th Element of Two Arrays | [Code](./Day%2032%20-%20K-th%20Element%20of%20Two%20Arrays) | O(log(min(N, M))) | ✅ Completed |
-| ** Day 33 ** | Aggressive Cows | [Code](./Day%2033%20-%20Aggressive%20Cows) | O(N log N + N log(max_dist)) | ✅ Completed |
-| ** Day 34 ** | Allocate Minimum Pages | [Code ](./Day%2034%20-%20Allocate%20Minimum%20Pages) | O(N log(sum - max)) | ✅ Completed |
+| **Day 33** | Aggressive Cows | [Code](./Day%2033%20-%20Aggressive%20Cows) | O(N log N + N log(max_dist)) | ✅ Completed |
+| **Day 34** | Allocate Minimum Pages | [Code ](./Day%2034%20-%20Allocate%20Minimum%20Pages) | O(N log(sum - max)) | ✅ Completed |
+| **Day 35** | Kth Missing Positive Number in a Sorted Array | [Code ](./Day%2035%20%20Kth%20Missing%20Positive%20Number%20in%20a%20Sorted%20Array ) | O(log N) | ✅ Completed |
 ---
 
 ## 💡 Key Learnings & Takeaways
@@ -89,3 +90,4 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 * **Day 32:** Applied Binary Search on the smaller array to partition both arrays such that the combined left half contains $k$ elements, finding the $k$-th element in $O(\log(\min(N, M)))$ time and $O(1)$ auxiliary space.
 - **Day 33:** Applied Binary Search on answer space to maximize the minimum distance between cows, sorting the array in O(N log N) time and checking feasibility in O(N) time per step, achieving an overall complexity of O(N log N + N log(max_dist)).
 * **Day 34:** Applied Binary Search on Answer within the search space $[ \max(\text{arr}), \sum \text{arr} ]$ to check if a mid value can be a valid maximum allocation for $k$ students in $O(N \log(\text{sum} - \text{max}))$ time complexity.
+* **Day 35:** Used binary search to find the position where the missing count $(\text{arr}[i] - (i + 1))$ reaches $k$, determining the $k$-th missing positive number in $O(\log N)$ time and $O(1)$ space.
