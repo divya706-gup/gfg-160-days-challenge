@@ -1,0 +1,71 @@
+```cpp
+// GFG 160 Days Challenge - Day 34
+// Problem: Allocate Minimum Pages
+//
+// Approach:
+// 1. Binary Search on the answer.
+// 2. The minimum possible answer is the maximum pages in a book.
+// 3. The maximum possible answer is the total number of pages.
+// 4. For every mid, check if books can be allocated to k students.
+// 5. If possible, try for a smaller maximum.
+// 6. Otherwise, increase the limit.
+//
+// Time Complexity: O(n log(sum of pages))
+// Space Complexity: O(1)
+
+class Solution {
+public:
+
+    bool isPossible(vector<int>& arr, int k, long long maxPages) {
+        int students = 1;
+        long long pages = 0;
+
+        for (int i = 0; i < arr.size(); i++) {
+
+            if (pages + arr[i] <= maxPages) {
+                pages += arr[i];
+            }
+            else {
+                students++;
+                pages = arr[i];
+
+                if (students > k)
+                    return false;
+            }
+        }
+
+        return true;
+    }
+
+    int findPages(vector<int> &arr, int k) {
+
+        int n = arr.size();
+
+        if (k > n)
+            return -1;
+
+        long long low = *max_element(arr.begin(), arr.end());
+        long long high = 0;
+
+        for (int pages : arr)
+            high += pages;
+
+        long long ans = high;
+
+        while (low <= high) {
+
+            long long mid = low + (high - low) / 2;
+
+            if (isPossible(arr, k, mid)) {
+                ans = mid;
+                high = mid - 1;
+            }
+            else {
+                low = mid + 1;
+            }
+        }
+
+        return ans;
+    }
+};
+```
