@@ -10,7 +10,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 
 | Progress | Status |
 | :--- | :--- |
-| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢... | **Day 35 / 160 Completed** |
+| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢... | **Day 36 / 160 Completed** |
 ---
 
 ## 📅 Daily Problem Log
@@ -52,6 +52,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 | **Day 33** | Aggressive Cows | [Code](./Day%2033%20-%20Aggressive%20Cows) | O(N log N + N log(max_dist)) | ✅ Completed |
 | **Day 34** | Allocate Minimum Pages | [Code ](./Day%2034%20-%20Allocate%20Minimum%20Pages) | O(N log(sum - max)) | ✅ Completed |
 | **Day 35** | Kth Missing Positive Number in a Sorted Array | [Code ](./Day%2035%20%20Kth%20Missing%20Positive%20Number%20in%20a%20Sorted%20Array ) | O(log N) | ✅ Completed |
+| **Day 36** | Spirally Traversing a Matrix | [Code](./Day%2036%20-%20Spirally%20Traversing%20a%20Matrix) | O(N * M) | ✅ Completed |
 ---
 
 ## 💡 Key Learnings & Takeaways
@@ -91,3 +92,4 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 - **Day 33:** Applied Binary Search on answer space to maximize the minimum distance between cows, sorting the array in O(N log N) time and checking feasibility in O(N) time per step, achieving an overall complexity of O(N log N + N log(max_dist)).
 * **Day 34:** Applied Binary Search on Answer within the search space $[ \max(\text{arr}), \sum \text{arr} ]$ to check if a mid value can be a valid maximum allocation for $k$ students in $O(N \log(\text{sum} - \text{max}))$ time complexity.
 * **Day 35:** Used binary search to find the position where the missing count $(\text{arr}[i] - (i + 1))$ reaches $k$, determining the $k$-th missing positive number in $O(\log N)$ time and $O(1)$ space.
+* **Day 36:** Maintained four pointers (`top`, `bottom`, `left`, `right`) to traverse the matrix boundary by boundary in a clockwise order, shrinking the boundaries until all elements were visited in $O(N \times M)$ time and $O(1)$ auxiliary space.
