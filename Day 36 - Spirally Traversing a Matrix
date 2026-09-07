@@ -1,0 +1,66 @@
+### Day 36 — GitHub `.cpp` File
+
+```cpp
+// GFG 160 Days Challenge - Day 36
+// Problem: Spirally Traversing a Matrix
+//
+// Approach:
+// 1. Maintain four boundaries: top, bottom, left and right.
+// 2. Traverse the top row from left to right.
+// 3. Traverse the right column from top to bottom.
+// 4. Traverse the bottom row from right to left.
+// 5. Traverse the left column from bottom to top.
+// 6. After each traversal, update the corresponding boundary.
+// 7. Continue until all elements are visited.
+//
+// Time Complexity: O(n * m)
+// Space Complexity: O(n * m) for the answer array
+
+class Solution {
+public:
+    vector<int> spirallyTraverse(vector<vector<int>>& mat) {
+        vector<int> ans;
+
+        int n = mat.size();
+        int m = mat[0].size();
+
+        int top = 0;
+        int bottom = n - 1;
+        int left = 0;
+        int right = m - 1;
+
+        while (top <= bottom && left <= right) {
+
+            // Traverse top row
+            for (int i = left; i <= right; i++) {
+                ans.push_back(mat[top][i]);
+            }
+            top++;
+
+            // Traverse right column
+            for (int i = top; i <= bottom; i++) {
+                ans.push_back(mat[i][right]);
+            }
+            right--;
+
+            // Traverse bottom row
+            if (top <= bottom) {
+                for (int i = right; i >= left; i--) {
+                    ans.push_back(mat[bottom][i]);
+                }
+                bottom--;
+            }
+
+            // Traverse left column
+            if (left <= right) {
+                for (int i = bottom; i >= top; i--) {
+                    ans.push_back(mat[i][left]);
+                }
+                left++;
+            }
+        }
+
+        return ans;
+    }
+};
+```
