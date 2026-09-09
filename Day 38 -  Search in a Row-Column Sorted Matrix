@@ -1,0 +1,38 @@
+// GFG 160 Days Challenge - Day 38
+// Problem: Search in a Row-Column Sorted Matrix
+//
+// Approach:
+// 1. Start from the top-right corner of the matrix.
+// 2. If the current element is equal to x, return true.
+// 3. If the current element is greater than x, move left.
+// 4. If the current element is smaller than x, move down.
+// 5. Continue until x is found or the boundaries are crossed.
+//
+// Time Complexity: O(n + m)
+// Space Complexity: O(1)
+
+class Solution {
+public:
+    bool matSearch(vector<vector<int>> &arr, int x) {
+        int n = arr.size();
+        int m = arr[0].size();
+
+        int i = 0;
+        int j = m - 1;
+
+        while (i < n && j >= 0) {
+
+            if (arr[i][j] == x) {
+                return true;
+            }
+            else if (arr[i][j] > x) {
+                j--;
+            }
+            else {
+                i++;
+            }
+        }
+
+        return false;
+    }
+};
