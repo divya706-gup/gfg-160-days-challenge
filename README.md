@@ -10,7 +10,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 
 | Progress | Status |
 | :--- | :--- |
-| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢... | **Day 37 / 160 Completed** |
+| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢... | **Day 38 / 160 Completed** |
 ---
 
 ## 📅 Daily Problem Log
@@ -54,6 +54,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 | **Day 35** | Kth Missing Positive Number in a Sorted Array | [Code ](./Day%2035%20%20Kth%20Missing%20Positive%20Number%20in%20a%20Sorted%20Array ) | O(log N) | ✅ Completed |
 | **Day 36** | Spirally Traversing a Matrix | [Code](./Day%2036%20-%20Spirally%20Traversing%20a%20Matrix) | O(N * M) | ✅ Completed |
 | **Day 37** | Rotate by 90 Degree | [Code](./Day%2037%20-%20Rotate%20by%2090%20Degree) | $O(N \times M)$ | ✅ Completed |
+| **Day 38** | Search in a Row-Column Sorted Matrix | [Code](./Day%2038%20-%20Search%20in%20a%20Row-Column%20Sorted%20Matrix) | $O(N + M)$ | ✅ Completed |
 ---
 
 ## 💡 Key Learnings & Takeaways
@@ -95,3 +96,4 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 * **Day 35:** Used binary search to find the position where the missing count $(\text{arr}[i] - (i + 1))$ reaches $k$, determining the $k$-th missing positive number in $O(\log N)$ time and $O(1)$ space.
 * **Day 36:** Maintained four pointers (`top`, `bottom`, `left`, `right`) to traverse the matrix boundary by boundary in a clockwise order, shrinking the boundaries until all elements were visited in $O(N \times M)$ time and $O(1)$ auxiliary space.
 * **Day 37:** Rotated an $N \times M$ matrix by 90 degrees anti-clockwise in-place in $O(N \times M)$ time complexity and $O(1)$ auxiliary space by first reversing each row individually and then transposing the matrix.
+* **Day 38:** Traversed a 2D matrix sorted row-wise and column-wise starting from the top-right (or bottom-left) corner, eliminating a row or column at each step to search for the target in $O(N + M)$ time and $O(1)$ auxiliary space.
