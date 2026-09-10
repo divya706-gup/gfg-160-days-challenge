@@ -1,0 +1,54 @@
+### Day 39 — GitHub `.cpp` File
+
+```cpp
+// GFG 160 Days Challenge - Day 39
+// Problem: Search in a Row-wise Sorted Matrix
+//
+// Approach:
+// 1. Since every row is sorted, apply Binary Search on each row.
+// 2. Search for the target x in every row.
+// 3. If x is found in any row, return true.
+// 4. If all rows are checked and x is not found, return false.
+//
+// Time Complexity: O(n * log(m))
+// Space Complexity: O(1)
+
+class Solution {
+public:
+
+    // Binary Search in a single row
+    bool search(vector<int>& arr, int x) {
+        int s = 0;
+        int e = arr.size() - 1;
+
+        while (s <= e) {
+            int mid = s + (e - s) / 2;
+
+            if (arr[mid] == x) {
+                return true;
+            }
+            else if (x < arr[mid]) {
+                e = mid - 1;
+            }
+            else {
+                s = mid + 1;
+            }
+        }
+
+        return false;
+    }
+
+    bool searchRowMatrix(vector<vector<int>>& mat, int x) {
+        int n = mat.size();
+
+        // Search in every row
+        for (int i = 0; i < n; i++) {
+            if (search(mat[i], x)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+};
+```
