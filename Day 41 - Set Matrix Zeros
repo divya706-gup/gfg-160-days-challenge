@@ -1,0 +1,52 @@
+### Day 41 — GitHub `.cpp` File
+
+```cpp
+// GFG 160 Days Challenge - Day 41
+// Problem: Set Matrix Zeros
+//
+// Approach:
+// 1. Create a temporary copy of the original matrix.
+// 2. Traverse the temporary matrix and find all elements equal to 0.
+// 3. For every zero, set its complete row and column to 0.
+// 4. Using the copy prevents newly created zeroes from affecting
+//    the remaining traversal.
+//
+// Time Complexity: O(n * m * (n + m))
+// Space Complexity: O(n * m)
+
+class Solution {
+public:
+
+    void setzero(vector<vector<int>>& mat, int i, int j) {
+        int n = mat.size();
+        int m = mat[0].size();
+
+        // Set entire column to 0
+        for (int c = 0; c < m; c++) {
+            mat[i][c] = 0;
+        }
+
+        // Set entire row to 0
+        for (int r = 0; r < n; r++) {
+            mat[r][j] = 0;
+        }
+    }
+
+    void setMatrixZeroes(vector<vector<int>>& mat) {
+        int n = mat.size();
+        int m = mat[0].size();
+
+        // Keep the original matrix unchanged while finding zeroes
+        vector<vector<int>> temp = mat;
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+
+                if (temp[i][j] == 0) {
+                    setzero(mat, i, j);
+                }
+            }
+        }
+    }
+};
+```
