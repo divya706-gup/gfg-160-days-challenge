@@ -1,0 +1,42 @@
+### Day 42 — GitHub `.cpp` File
+
+```cpp id="q7x2kp"
+// GFG 160 Days Challenge - Day 42
+// Problem: Two Sum - Pair with Given Sum
+//
+// Approach:
+// 1. Sort the array.
+// 2. Use an unordered_set to store elements already visited.
+// 3. For every element, calculate its complement:
+//       complement = target - arr[i]
+// 4. If the complement is already present in the set,
+//    a valid pair exists.
+// 5. Otherwise, insert the current element into the set.
+//
+// Time Complexity: O(n log n)
+// Space Complexity: O(n)
+
+class Solution {
+public:
+    bool twoSum(vector<int>& arr, int target) {
+        int n = arr.size();
+
+        sort(arr.begin(), arr.end());
+
+        unordered_set<int> s;
+
+        for (int i = 0; i < n; i++) {
+
+            int complement = target - arr[i];
+
+            if (s.find(complement) != s.end()) {
+                return true;
+            }
+
+            s.insert(arr[i]);
+        }
+
+        return false;
+    }
+};
+```
