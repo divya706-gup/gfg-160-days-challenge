@@ -10,7 +10,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 
 | Progress | Status |
 | :--- | :--- |
-| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 41 / 160 Completed** |
+| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 42 / 160 Completed** |
 ---
 
 ## 📅 Daily Problem Log
@@ -58,6 +58,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 | **Day 39** | Search in a Row-wise Sorted Matrix | [Code](./Day%2039%20-%20Search%20in%20a%20Row-wise%20Sorted%20Matrix) | $O(N \log M)$ | ✅ Completed |
 | **Day 40** | Search in a Sorted Matrix | [Code ](./Day%2040%20-%20Search%20in%20a%20Sorted%20Matrix) | $O(\log(N \times M))$ | ✅ Completed |
 | **Day 41** | Set Matrix Zeros | [Code](./Day%2041%20-%20Set%20Matrix%20Zeros) | $O(N \times M)$ | ✅ Completed |
+| **Day 42** | Two Sum - Pair with Given Sum | [Code](./Day%2042%20-%20Two%20Sum%20-%20Pair%20with%20Given%20Sum) | $O(N)$ | ✅ Completed |
 ---
 
 ## 💡 Key Learnings & Takeaways
@@ -103,3 +104,4 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 * **Day 39:** Applied Binary Search on each row individually to find the target element in $O(N \log M)$ time complexity and $O(1)$ auxiliary space.
 * **Day 40:** Flattened the 2D matrix conceptually into a 1D array and applied Binary Search in $O(\log(N \times M))$ time and $O(1)$ space by mapping 1D index `mid` to 2D matrix indices `[mid / M][mid % M]`.
 * **Day 41:** Used the first row and first column as markers in $O(N \times M)$ time and $O(1)$ auxiliary space to set entire rows and columns to zero without extra memory.
+* **Day 42:** Solved the Two Sum problem using a Hash Set to store visited elements, checking if $(target - \text{arr}[i])$ exists in $O(N)$ time and $O(N)$ auxiliary space.
