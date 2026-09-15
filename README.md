@@ -10,7 +10,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 
 | Progress | Status |
 | :--- | :--- |
-| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 43 / 160 Completed** |
+| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 44 / 160 Completed** |
 ---
 
 ## 📅 Daily Problem Log
@@ -58,8 +58,9 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 | **Day 39** | Search in a Row-wise Sorted Matrix | [Code](./Day%2039%20-%20Search%20in%20a%20Row-wise%20Sorted%20Matrix) | $O(N \log M)$ | ✅ Completed |
 | **Day 40** | Search in a Sorted Matrix | [Code ](./Day%2040%20-%20Search%20in%20a%20Sorted%20Matrix) | $O(\log(N \times M))$ | ✅ Completed |
 | **Day 41** | Set Matrix Zeros | [Code](./Day%2041%20-%20Set%20Matrix%20Zeros) | $O(N \times M)$ | ✅ Completed |
-| **Day 42** | Two Sum - Pair with Given Sum | [Code](./Day%2042%20-%20Two%20Sum%20-%20Pair%20with%20Given%20Sum) | $O(N)$ | ✅ Completed |
+| **Day 42** | Two Sum - Pair with Given Sum | [Code](./Day%2042%20-%20Two%20Sum%20-%20Pair%20with%20Given%20Sum) | $O(N)$ | ✅ Completed |All Triplets with Zero Sum
 | **Day 43** | Count Pairs with Given Sum | [Code](./Day%2043%20-%20Count%20Pairs%20with%20Given%20Sum) | $O(N)$ | ✅ Completed |
+| ** Day 44 ** | Find All Triplets with Zero Sum | [Code](./Day%2044%20-%20Find%20All%20Triplets%20with%20Zero%20Sum) | $O(N^2)$ | ✅ Completed |
 ---
 
 ## 💡 Key Learnings & Takeaways
@@ -107,3 +108,4 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 * **Day 41:** Used the first row and first column as markers in $O(N \times M)$ time and $O(1)$ auxiliary space to set entire rows and columns to zero without extra memory.
 * **Day 42:** Solved the Two Sum problem using a Hash Set to store visited elements, checking if $(target - \text{arr}[i])$ exists in $O(N)$ time and $O(N)$ auxiliary space.
 * **Day 43:** Used a frequency hash map to store elements while traversing the array, adding the count of `target - arr[i]` to the answer to count all pairs summing to the target in $O(N)$ time and $O(N)$ auxiliary space.
+* **Day 44:** Found all unique triplets that sum to zero by sorting the array and using a two-pointer approach for each element, running in $O(N^2)$ time and $O(1)$ auxiliary space.
