@@ -1,0 +1,38 @@
+// GFG 160 Days Challenge - Day 46
+// Problem: Union of Arrays with Duplicates
+//
+// Approach:
+// 1. Use an unordered_set to store unique elements.
+// 2. Insert all elements from the first array.
+// 3. Insert all elements from the second array.
+// 4. Traverse the set and store its elements in the result.
+//
+// Time Complexity: O(n + m)
+// Space Complexity: O(n + m)
+
+class Solution {
+public:
+    vector<int> findUnion(vector<int>& a, vector<int>& b) {
+
+        unordered_set<int> st;
+
+        // Insert elements of first array
+        for (int i = 0; i < a.size(); i++) {
+            st.insert(a[i]);
+        }
+
+        // Insert elements of second array
+        for (int i = 0; i < b.size(); i++) {
+            st.insert(b[i]);
+        }
+
+        vector<int> result;
+
+        // Store unique elements
+        for (auto it : st) {
+            result.push_back(it);
+        }
+
+        return result;
+    }
+};
