@@ -10,7 +10,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 
 | Progress | Status |
 | :--- | :--- |
-| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 46 / 160 Completed** |
+| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 47 / 160 Completed** |
 ---
 
 ## 📅 Daily Problem Log
@@ -63,6 +63,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 | ** Day 44 ** | Find All Triplets with Zero Sum | [Code](./Day%2044%20-%20Find%20All%20Triplets%20with%20Zero%20Sum) | $O(N^2)$ | ✅ Completed |
 | **Day 45** | Intersection of Two Arrays with Duplicate Elements | [Code](./Day%2045%20-%20Intersection%20of%20Two%20Arrays%20with%20Duplicate%20Elements) | $O(N + M)$ | ✅ Completed |
 | **Day 46** | Union of Arrays with Duplicates | [Code](./Day%2046%20-%20Union%20of%20Arrays%20with%20Duplicates) | $O(N + M)$ | ✅ Completed |
+| **Day 47** | Longest Consecutive Subsequence | [Code](./Day%2047%20-%20Longest%20Consecutive%20Subsequence) | $O(N)$ | ✅ Completed |
 ---
 
 ## 💡 Key Learnings & Takeaways
@@ -113,3 +114,4 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 * **Day 44:** Found all unique triplets that sum to zero by sorting the array and using a two-pointer approach for each element, running in $O(N^2)$ time and $O(1)$ auxiliary space.
 * **Day 45:** Used a hash set to store elements of the first array and iterated through the second array to collect matching unique elements, finding the intersection in $O(N + M)$ time and $O(N)$ auxiliary space.
 * **Day 46:** Calculated the union of two arrays containing duplicate elements by inserting all elements of both arrays into a hash set to ensure unique entries in $O(N + M)$ time and $O(N + M)$ space.
+* **Day 47:** Inserted all array elements into a Hash Set to remove duplicates and achieve $O(1)$ lookups, then iterated through the set to check for starting elements (where $x - 1$ does not exist) and counted consecutive sequences in total $O(N)$ time and $O(N)$ auxiliary space.
