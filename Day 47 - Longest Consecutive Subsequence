@@ -1,0 +1,45 @@
+### Day 47 — GitHub `.cpp` File
+
+```cpp id="g47consecutive"
+// GFG 160 Days Challenge - Day 47
+// Problem: Longest Consecutive Subsequence
+//
+// Approach:
+// 1. Store all elements in an unordered_set.
+// 2. Start a sequence only when num - 1 is not present.
+// 3. Keep checking for consecutive numbers using num + 1.
+// 4. Update the maximum length of the consecutive sequence.
+//
+// Time Complexity: O(n)
+// Space Complexity: O(n)
+
+class Solution {
+public:
+    int longestConsecutive(vector<int>& arr) {
+
+        unordered_set<int> st(arr.begin(), arr.end());
+
+        int maxLen = 0;
+
+        for (int num : st) {
+
+            // Start only from the beginning of a sequence
+            if (st.find(num - 1) == st.end()) {
+
+                int currNum = num;
+                int currLen = 1;
+
+                // Find consecutive numbers
+                while (st.find(currNum + 1) != st.end()) {
+                    currNum++;
+                    currLen++;
+                }
+
+                maxLen = max(maxLen, currLen);
+            }
+        }
+
+        return maxLen;
+    }
+};
+```
