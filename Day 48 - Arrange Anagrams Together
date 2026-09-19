@@ -1,0 +1,43 @@
+### Day 48 — GitHub `.cpp` File
+
+```cpp
+// GFG 160 Days Challenge - Day 48
+// Problem: Arrange Anagrams Together
+//
+// Approach:
+// 1. Use an unordered_map to group anagrams.
+// 2. Sort the characters of each string to create a common key.
+// 3. Anagrams will have the same sorted key.
+// 4. Store each string in the corresponding group.
+// 5. Return all the groups.
+//
+// Time Complexity: O(n * k log k)
+// Space Complexity: O(n * k)
+
+class Solution {
+public:
+    vector<vector<string>> anagrams(vector<string>& arr) {
+
+        unordered_map<string, vector<string>> mp;
+
+        for (auto s : arr) {
+
+            string key = s;
+
+            // Sort characters to create the anagram key
+            sort(key.begin(), key.end());
+
+            mp[key].push_back(s);
+        }
+
+        vector<vector<string>> ans;
+
+        // Store all anagram groups
+        for (auto it : mp) {
+            ans.push_back(it.second);
+        }
+
+        return ans;
+    }
+};
+```
