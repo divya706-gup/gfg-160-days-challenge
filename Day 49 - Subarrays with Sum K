@@ -1,0 +1,42 @@
+// GFG 160 Days Challenge - Day 49
+// Problem: Subarrays with Sum K
+//
+// Approach:
+// 1. Use prefix sum to calculate the sum up to the current index.
+// 2. Store the frequency of each prefix sum in an unordered_map.
+// 3. For currentSum, check whether (currentSum - k) exists.
+// 4. If it exists, add its frequency to the answer.
+// 5. Update the frequency of currentSum.
+//
+// Time Complexity: O(n)
+// Space Complexity: O(n)
+
+class Solution {
+public:
+    int cntSubarrays(vector<int> &arr, int k) {
+        int n = arr.size();
+
+        unordered_map<int, int> mp;
+
+        // Empty prefix
+        mp[0] = 1;
+
+        int currSum = 0;
+        int count = 0;
+
+        for (int i = 0; i < n; i++) {
+
+            currSum += arr[i];
+
+            // Check if a previous prefix sum exists
+            if (mp.find(currSum - k) != mp.end()) {
+                count += mp[currSum - k];
+            }
+
+            // Store current prefix sum
+            mp[currSum]++;
+        }
+
+        return count;
+    }
+};
