@@ -10,7 +10,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 
 | Progress | Status |
 | :--- | :--- |
-| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 48 / 160 Completed** |
+| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 49 / 160 Completed** |
 ---
 
 ## 📅 Daily Problem Log
@@ -65,6 +65,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 | **Day 46** | Union of Arrays with Duplicates | [Code](./Day%2046%20-%20Union%20of%20Arrays%20with%20Duplicates) | $O(N + M)$ | ✅ Completed |
 | **Day 47** | Longest Consecutive Subsequence | [Code](./Day%2047%20-%20Longest%20Consecutive%20Subsequence) | $O(N)$ | ✅ Completed |
 | **Day 48** | Print Anagrams Together | [Code](./Day%2048%20-%20Print%20Anagrams%20Together) | $O(N \times M \log M)$ | ✅ Completed |
+| **Day 49** | Subarrays with Sum K | [Code](./Day%2049%20-%20Subarrays%20with%20Sum%20K) | $O(N)$ | ✅ Completed |
 ---
 
 ## 💡 Key Learnings & Takeaways
@@ -117,3 +118,4 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 * **Day 46:** Calculated the union of two arrays containing duplicate elements by inserting all elements of both arrays into a hash set to ensure unique entries in $O(N + M)$ time and $O(N + M)$ space.
 * **Day 47:** Inserted all array elements into a Hash Set to remove duplicates and achieve $O(1)$ lookups, then iterated through the set to check for starting elements (where $x - 1$ does not exist) and counted consecutive sequences in total $O(N)$ time and $O(N)$ auxiliary space.
 * **Day 48:** Grouped words with the same frequency of characters together by sorting each word to generate a canonical key and mapping it to its list of anagrams using a hash map in $O(N \times M \log M)$ time, where $N$ is the number of words and $M$ is the maximum length of a word.
+* **Day 49:** Used a Hash Map (Prefix Sum method) to count the total number of subarrays having a sum equal to $K$ in $O(N)$ time and $O(N)$ space by tracking frequencies of prefix sums.
