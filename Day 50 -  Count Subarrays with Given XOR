@@ -1,0 +1,46 @@
+
+```cpp
+// GFG 160 Days Challenge - Day 50
+// Problem: Count Subarrays with Given XOR
+//
+// Approach:
+// 1. Maintain the prefix XOR.
+// 2. For the current prefix XOR, find prefixXOR ^ k.
+// 3. If it exists in the map, add its frequency to the answer.
+// 4. Store the current prefix XOR frequency.
+//
+// Time Complexity: O(n)
+// Space Complexity: O(n)
+
+class Solution {
+public:
+    long subarrayXor(vector<int> &arr, int k) {
+
+        unordered_map<int, int> mp;
+
+        // Empty prefix
+        mp[0] = 1;
+
+        int prefixXOR = 0;
+        long res = 0;
+
+        for (int num : arr) {
+
+            prefixXOR ^= num;
+
+            int required = prefixXOR ^ k;
+
+            if (mp.find(required) != mp.end()) {
+                res += mp[required];
+            }
+
+            mp[prefixXOR]++;
+        }
+
+        return res;
+    }
+};
+```
+
+**Key pattern to remember:**
+`required = prefixXOR ^ k` → **Prefix XOR + HashMap**.
