@@ -1,0 +1,40 @@
+// GFG 160 Days Challenge - Day 52
+// Problem: Pairs with Limited Sum
+//
+// Approach:
+// 1. Sort the array in ascending order.
+// 2. Use two pointers: left and right.
+// 3. If arr[left] + arr[right] < target, then all elements
+//    between left and right form valid pairs with arr[left].
+// 4. Add (right - left) to the count and move left forward.
+// 5. Otherwise, move right backward to reduce the sum.
+//
+// Time Complexity: O(n log n)
+// Space Complexity: O(1)
+
+class Solution {
+public:
+    int countPairs(vector<int>& arr, int target) {
+
+        int n = arr.size();
+
+        sort(arr.begin(), arr.end());
+
+        int left = 0;
+        int right = n - 1;
+        int count = 0;
+
+        while (left < right) {
+
+            if (arr[left] + arr[right] < target) {
+                count += right - left;
+                left++;
+            }
+            else {
+                right--;
+            }
+        }
+
+        return count;
+    }
+};
