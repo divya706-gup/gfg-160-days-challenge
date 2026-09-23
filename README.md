@@ -10,7 +10,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 
 | Progress | Status |
 | :--- | :--- |
-| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 51 / 160 Completed** |
+| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 52 / 160 Completed** |
 ---
 
 ## 📅 Daily Problem Log
@@ -68,6 +68,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 | **Day 49** | Subarrays with Sum K | [Code](./Day%2049%20-%20Subarrays%20with%20Sum%20K) | $O(N)$ | ✅ Completed |
 | **Day 50** | Count Subarrays with Given XOR | [Code](./Day%2050%20-%20Count%20Subarrays%20with%20Given%20XOR) | $O(N)$ | ✅ Completed |
 | **Day 51** | Count all Triplets with Given Sum in Sorted Array | [Code ](./Day%2051%20-%20Count%20all%20Triplets%20with%20Given%20Sum%20in%20Sorted%20Array) | $O(N^2)$ | ✅ Completed |
+| **Day 52** | Count Pairs with Sum Less Than Target | [Code](./Day%2052%20-%20Count%20Pairs%20with%20Sum%20Less%20Than%20Target) | $O(N \log N)$ | ✅ Completed |
 ---
 
 ## 💡 Key Learnings & Takeaways
@@ -123,3 +124,4 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 * **Day 49:** Used a Hash Map (Prefix Sum method) to count the total number of subarrays having a sum equal to $K$ in $O(N)$ time and $O(N)$ space by tracking frequencies of prefix sums.
 * **Day 50:** Maintained a running prefix XOR sum and used a frequency hash map to count occurrences of `prefixXOR ^ k`, achieving $O(N)$ time complexity and $O(N)$ auxiliary space.
 * **Day 51:** Fixed one element and used a two-pointer approach on the remaining sorted subarray to find pairs summing to the target, handling duplicate elements efficiently in $O(N^2)$ time complexity and $O(1)$ auxiliary space.
+* **Day 52:** Sorted the array and used a two-pointer approach ($left$ and $right$) to count all pairs whose sum is strictly less than the target in $O(N \log N)$ time and $O(1)$ space.
