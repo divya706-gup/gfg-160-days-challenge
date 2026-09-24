@@ -1,0 +1,56 @@
+### Day 53 — GitHub `.cpp` File
+
+```cpp
+// GFG 160 Days Challenge - Day 53
+// Problem: Closest Pair Sum
+//
+// Approach:
+// 1. Sort the array in ascending order.
+// 2. Use two pointers: left and right.
+// 3. Calculate the sum of the current pair.
+// 4. Update the answer if the current pair is closer to the target.
+// 5. If the sum is smaller than the target, move left forward.
+// 6. If the sum is greater than the target, move right backward.
+// 7. If the sum equals the target, return the pair.
+//
+// Time Complexity: O(n log n)
+// Space Complexity: O(1)
+
+class Solution {
+public:
+    vector<int> sumClosest(vector<int>& arr, int target) {
+
+        sort(arr.begin(), arr.end());
+
+        vector<int> ans;
+
+        int n = arr.size();
+        int left = 0;
+        int right = n - 1;
+
+        int minDiff = INT_MAX;
+
+        while (left < right) {
+
+            int sum = arr[left] + arr[right];
+
+            if (abs(target - sum) < minDiff) {
+                minDiff = abs(target - sum);
+                ans = {arr[left], arr[right]};
+            }
+
+            if (sum < target) {
+                left++;
+            }
+            else if (sum > target) {
+                right--;
+            }
+            else {
+                return ans;
+            }
+        }
+
+        return ans;
+    }
+};
+```
