@@ -1,0 +1,67 @@
+// GFG 160 Days Challenge - Day 54
+// Problem: Count Sum Pairs in Sorted Array
+//
+// Approach:
+// 1. Use two pointers, left and right.
+// 2. If the sum is smaller than target, move left forward.
+// 3. If the sum is greater than target, move right backward.
+// 4. When the sum equals target, count duplicate elements.
+// 5. If both values are same, use combinations to count all pairs.
+//
+// Time Complexity: O(n)
+// Space Complexity: O(1)
+
+class Solution {
+public:
+    int countPairs(vector<int>& arr, int target) {
+
+        int n = arr.size();
+        int left = 0;
+        int right = n - 1;
+        int count = 0;
+
+        while (left < right) {
+
+            int sum = arr[left] + arr[right];
+
+            if (sum < target) {
+                left++;
+            }
+            else if (sum > target) {
+                right--;
+            }
+            else {
+
+                if (arr[left] == arr[right]) {
+
+                    int k = right - left + 1;
+                    count += k * (k - 1) / 2;
+
+                    break;
+                }
+                else {
+
+                    int cnt1 = 0;
+                    int cnt2 = 0;
+
+                    int e1 = arr[left];
+                    int e2 = arr[right];
+
+                    while (left <= right && arr[left] == e1) {
+                        left++;
+                        cnt1++;
+                    }
+
+                    while (left <= right && arr[right] == e2) {
+                        right--;
+                        cnt2++;
+                    }
+
+                    count += cnt1 * cnt2;
+                }
+            }
+        }
+
+        return count;
+    }
+};
