@@ -10,7 +10,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 
 | Progress | Status |
 | :--- | :--- |
-| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 54 / 160 Completed** |
+| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 55 / 160 Completed** |
 ---
 
 ## 📅 Daily Problem Log
@@ -71,6 +71,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 | **Day 52** | Count Pairs with Sum Less Than Target | [Code](./Day%2052%20-%20Count%20Pairs%20with%20Sum%20Less%20Than%20Target) | $O(N \log N)$ | ✅ Completed |
 | **Day 53** | Closest Pair Sum | [Code](./Day%2053%20-%20Closest%20Pair%20Sum) | $O(N)$ | ✅ Completed |
 | **Day 54** | Count Pairs in Sorted Array | [Code](./Day%2054%20-%20Count%20Pairs%20in%20Sorted%20Array) | $O(N)$ | ✅ Completed |
+| **Day 55** | Count the Number of Possible Triangles | [Code](./Day%2055%20-%20Count%20the%20Number%20of%20Possible%20Triangles) | $O(N^2)$ | ✅ Completed |
 ---
 
 ## 💡 Key Learnings & Takeaways
@@ -129,3 +130,4 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 * **Day 52:** Sorted the array and used a two-pointer approach ($left$ and $right$) to count all pairs whose sum is strictly less than the target in $O(N \log N)$ time and $O(1)$ space.
 * **Day 53:** Used a two-pointer approach on a sorted array to find a pair with sum closest to target, updating the maximum absolute difference between pair elements on ties, running in $O(N)$ time and $O(1)$ space.
 * **Day 54:** Used the two-pointer approach to count pairs with a target sum in a sorted array in $O(N)$ time and $O(1)$ auxiliary space.
+* **Day 55:** Sorted the array and used a two-pointer approach, fixing the largest side from right to left and counting valid pairs in $O(N^2)$ time and $O(1)$ auxiliary space.
