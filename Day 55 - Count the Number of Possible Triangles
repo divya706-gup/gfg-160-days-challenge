@@ -1,0 +1,49 @@
+// GFG 160 Days Challenge - Day 55
+// Problem: Count the Number of Possible Triangles
+//
+// Approach:
+// 1. Sort the array in ascending order.
+// 2. Fix the largest side arr[i].
+// 3. Use two pointers: left and right.
+// 4. If arr[left] + arr[right] > arr[i], then all elements
+//    from left to right-1 can form valid triangles with arr[i].
+// 5. Add (right - left) to the count and decrease right.
+// 6. Otherwise, increase left to get a larger sum.
+//
+// Time Complexity: O(n^2)
+// Space Complexity: O(1)
+
+class Solution {
+public:
+    int countTriangles(vector<int>& arr) {
+
+        int n = arr.size();
+        int count = 0;
+
+        sort(arr.begin(), arr.end());
+
+        for (int i = n - 1; i >= 2; i--) {
+
+            int left = 0;
+            int right = i - 1;
+
+            while (left < right) {
+
+                int sum = arr[left] + arr[right];
+
+                if (sum > arr[i]) {
+
+                    // All elements between left and right
+                    // can form a valid triangle with arr[i].
+                    count += right - left;
+                    right--;
+                }
+                else {
+                    left++;
+                }
+            }
+        }
+
+        return count;
+    }
+};
