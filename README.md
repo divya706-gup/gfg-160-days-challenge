@@ -10,7 +10,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 
 | Progress | Status |
 | :--- | :--- |
-| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 56 / 160 Completed** |
+| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 57 / 160 Completed** |
 ---
 
 ## 📅 Daily Problem Log
@@ -73,6 +73,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 | **Day 54** | Count Pairs in Sorted Array | [Code](./Day%2054%20-%20Count%20Pairs%20in%20Sorted%20Array) | $O(N)$ | ✅ Completed |
 | **Day 55** | Count the Number of Possible Triangles | [Code](./Day%2055%20-%20Count%20the%20Number%20of%20Possible%20Triangles) | $O(N^2)$ | ✅ Completed |
 | **Day 56** | Indexes of Subarray Sum | [Code](./Day%2056%20-%20Indexes%20of%20Subarray%20Sum) | $O(N)$ | ✅ Completed |
+| **Day 57** | Count Distinct Elements in Every Window | [Code](./Day%2057%20-%20Count%20Distinct%20Elements%20in%20Every%20Window) | $O(N)$ | ✅ Completed |
 ---
 
 ## 💡 Key Learnings & Takeaways
@@ -133,3 +134,4 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 * **Day 54:** Used the two-pointer approach to count pairs with a target sum in a sorted array in $O(N)$ time and $O(1)$ auxiliary space.
 * **Day 55:** Sorted the array and used a two-pointer approach, fixing the largest side from right to left and counting valid pairs in $O(N^2)$ time and $O(1)$ auxiliary space.
 * **Day 56:** Maintained a sliding window using two pointers (`left` and `right`) to find a contiguous subarray with a given sum in $O(N)$ time and $O(1)$ auxiliary space.
+* **Day 57:** Maintained a sliding window using a hash map to track element frequencies, updating distinct element counts efficiently in $O(N)$ time and $O(K)$ space as the window slides across the array.
