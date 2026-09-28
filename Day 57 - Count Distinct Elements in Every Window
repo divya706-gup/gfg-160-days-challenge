@@ -1,0 +1,54 @@
+// GFG 160 Days Challenge - Day 57
+// Problem: Count Distinct Elements in Every Window
+//
+// Approach:
+// 1. Use an unordered_map to store the frequency of elements
+//    in the current window.
+// 2. Insert the first k elements into the map.
+// 3. Store the number of distinct elements in the first window.
+// 4. Slide the window:
+//    - Add the new element.
+//    - Decrease the frequency of the outgoing element.
+//    - If its frequency becomes 0, remove it from the map.
+// 5. The size of the map gives the number of distinct elements
+//    in the current window.
+//
+// Time Complexity: O(n)
+// Space Complexity: O(k)
+
+class Solution {
+public:
+    vector<int> countDistinct(vector<int> &arr, int k) {
+
+        int n = arr.size();
+        vector<int> ans;
+
+        unordered_map<int, int> mp;
+
+        // First window
+        for (int i = 0; i < k; i++) {
+            mp[arr[i]]++;
+        }
+
+        ans.push_back(mp.size());
+
+        // Slide the window
+        for (int i = k; i < n; i++) {
+
+            // Add new element
+            mp[arr[i]]++;
+
+            // Remove outgoing element
+            mp[arr[i - k]]--;
+
+            // Erase if frequency becomes zero
+            if (mp[arr[i - k]] == 0) {
+                mp.erase(arr[i - k]);
+            }
+
+            ans.push_back(mp.size());
+        }
+
+        return ans;
+    }
+};
