@@ -1,0 +1,43 @@
+// GFG 160 Days Challenge - Day 58
+// Problem: Longest Substring with Distinct Characters
+//
+// Approach:
+// 1. Use the Sliding Window / Two Pointer technique.
+// 2. Maintain a boolean array to track characters in the current window.
+// 3. If a duplicate character is found, move the left pointer
+//    until the duplicate is removed.
+// 4. Add the current character to the window.
+// 5. Update the maximum length of the valid substring.
+//
+// Time Complexity: O(n)
+// Space Complexity: O(1)
+
+class Solution {
+public:
+    int longestUniqueSubstr(string &s) {
+
+        int n = s.length();
+
+        int left = 0;
+        int maxLen = 0;
+
+        vector<bool> vis(256, false);
+
+        for (int right = 0; right < n; right++) {
+
+            // Remove characters until current character is unique
+            while (vis[s[right]]) {
+                vis[s[left]] = false;
+                left++;
+            }
+
+            // Add current character
+            vis[s[right]] = true;
+
+            // Update maximum length
+            maxLen = max(maxLen, right - left + 1);
+        }
+
+        return maxLen;
+    }
+};
