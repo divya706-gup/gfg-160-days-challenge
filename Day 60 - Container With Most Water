@@ -1,0 +1,44 @@
+// GFG 160 Days Challenge - Day 60
+// Problem: Container With Most Water
+//
+// Approach:
+// 1. Use the Two Pointer technique.
+// 2. Place one pointer at the beginning and one at the end.
+// 3. Calculate the area using:
+//    min(arr[left], arr[right]) * (right - left)
+// 4. Move the pointer having the smaller height.
+// 5. Keep track of the maximum area.
+//
+// Time Complexity: O(n)
+// Space Complexity: O(1)
+
+class Solution {
+public:
+    int maxWater(vector<int> &arr) {
+
+        int left = 0;
+        int right = arr.size() - 1;
+
+        int ans = 0;
+
+        while (left < right) {
+
+            int height = min(arr[left], arr[right]);
+            int width = right - left;
+
+            int water = height * width;
+
+            ans = max(ans, water);
+
+            // Move the pointer with smaller height
+            if (arr[left] < arr[right]) {
+                left++;
+            }
+            else {
+                right--;
+            }
+        }
+
+        return ans;
+    }
+};
