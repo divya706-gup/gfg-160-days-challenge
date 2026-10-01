@@ -10,7 +10,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 
 | Progress | Status |
 | :--- | :--- |
-| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 59 / 160 Completed** |
+| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 60 / 160 Completed** |
 ---
 
 ## 📅 Daily Problem Log
@@ -76,6 +76,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 | **Day 57** | Count Distinct Elements in Every Window | [Code](./Day%2057%20-%20Count%20Distinct%20Elements%20in%20Every%20Window) | $O(N)$ | ✅ Completed |
 | **Day 58** | Longest Substring with Distinct Characters | [Code ](./Day%2058%20-%20Longest%20Substring%20with%20Distinct%20Characters) | $O(N)$ | ✅ Completed |
 | **Day 59** | Trapping Rain Water | [Code](./Day%2060%20-%20Trapping%20Rain%20Water) | $O(N)$ | ✅ Completed |
+| **Day 60** | Container With Most Water | [Code](./Day%2060%20-%20Container%20With%20Most%20Water) | $O(N)$ | ✅ Completed |
 ---
 
 ## 💡 Key Learnings & Takeaways
@@ -139,3 +140,4 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 * **Day 57:** Maintained a sliding window using a hash map to track element frequencies, updating distinct element counts efficiently in $O(N)$ time and $O(K)$ space as the window slides across the array.
 * **Day 58:** Used a sliding window technique with a last-seen index map to find the length of the longest substring with distinct characters in $O(N)$ time and $O(1)$ auxiliary space (bounded by character set size).
 * **Day 59:** Used a two-pointer approach tracking maximum left and right heights to calculate trapped water at each position in $O(N)$ time and $O(1)$ auxiliary space.
+* **Day 60:** Used a two-pointer approach starting from both ends of the array, calculating the area bounded by the shorter line, and moving the inner pointer of the shorter height inward to maximize the area in $O(N)$ time and $O(1)$ auxiliary space.
