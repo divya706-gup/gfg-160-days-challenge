@@ -10,7 +10,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 
 | Progress | Status |
 | :--- | :--- |
-| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 60 / 160 Completed** |
+| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 61 / 160 Completed** |
 ---
 
 ## 📅 Daily Problem Log
@@ -77,6 +77,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 | **Day 58** | Longest Substring with Distinct Characters | [Code ](./Day%2058%20-%20Longest%20Substring%20with%20Distinct%20Characters) | $O(N)$ | ✅ Completed |
 | **Day 59** | Trapping Rain Water | [Code](./Day%2060%20-%20Trapping%20Rain%20Water) | $O(N)$ | ✅ Completed |
 | **Day 60** | Container With Most Water | [Code](./Day%2060%20-%20Container%20With%20Most%20Water) | $O(N)$ | ✅ Completed |
+| **Day 61** | Equilibrium Point | [Code](./Day%2061%20-%20Equilibrium%20Point) | $O(N)$ | ✅ Completed |
 ---
 
 ## 💡 Key Learnings & Takeaways
@@ -141,3 +142,4 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 * **Day 58:** Used a sliding window technique with a last-seen index map to find the length of the longest substring with distinct characters in $O(N)$ time and $O(1)$ auxiliary space (bounded by character set size).
 * **Day 59:** Used a two-pointer approach tracking maximum left and right heights to calculate trapped water at each position in $O(N)$ time and $O(1)$ auxiliary space.
 * **Day 60:** Used a two-pointer approach starting from both ends of the array, calculating the area bounded by the shorter line, and moving the inner pointer of the shorter height inward to maximize the area in $O(N)$ time and $O(1)$ auxiliary space.
+* **Day 61:** Calculated total array sum first, then iterated through elements while maintaining running prefix sum to find the index where prefix sum equals total sum minus prefix sum minus current element in $O(N)$ time and $O(1)$ space.
