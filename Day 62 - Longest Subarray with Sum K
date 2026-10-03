@@ -1,0 +1,47 @@
+// GFG 160 Days Challenge - Day 62
+// Problem: Longest Subarray with Sum K
+//
+// Approach:
+// 1. Maintain a running prefix sum while traversing the array.
+// 2. Store the first index of every prefix sum in a hash map.
+// 3. For the current prefix sum, check if (prefixSum - k) exists.
+// 4. If it exists, the subarray between that index and the current
+//    index has sum equal to k.
+// 5. Update the maximum length.
+// 6. Store only the first occurrence of each prefix sum.
+//
+// Time Complexity: O(n)
+// Space Complexity: O(n)
+
+class Solution {
+public:
+    int longestSubarray(vector<int> &arr, int k) {
+        
+        unordered_map<int, int> mp;
+        
+        int prefixSum = 0;
+        int res = 0;
+        
+        for (int i = 0; i < arr.size(); i++) {
+            
+            prefixSum += arr[i];
+            
+            // Subarray starts from index 0
+            if (prefixSum == k) {
+                res = max(res, i + 1);
+            }
+            
+            // Check if required prefix sum exists
+            if (mp.find(prefixSum - k) != mp.end()) {
+                res = max(res, i - mp[prefixSum - k]);
+            }
+            
+            // Store only the first occurrence
+            if (mp.find(prefixSum) == mp.end()) {
+                mp[prefixSum] = i;
+            }
+        }
+        
+        return res;
+    }
+};
