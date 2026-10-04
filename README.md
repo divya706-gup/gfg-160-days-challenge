@@ -10,7 +10,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 
 | Progress | Status |
 | :--- | :--- |
-| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 62 / 160 Completed** |
+| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 63 / 160 Completed** |
 ---
 
 ## 📅 Daily Problem Log
@@ -79,6 +79,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 | **Day 60** | Container With Most Water | [Code](./Day%2060%20-%20Container%20With%20Most%20Water) | $O(N)$ | ✅ Completed |
 | **Day 61** | Equilibrium Point | [Code](./Day%2061%20-%20Equilibrium%20Point) | $O(N)$ | ✅ Completed |
 | **Day 62** | Longest Subarray with Sum K | [Code](./Day%2062%20-%20Longest%20Subarray%20with%20Sum%20K) | $O(N)$ | ✅ Completed |
+| **Day 63** | Largest Subarray of Equal 0's and 1's | [Code](./Day%2063%20-%20Largest%20Subarray%20of%20Equal%200's%20and%201's) | $O(N)$ | ✅ Completed |
 ---
 
 ## 💡 Key Learnings & Takeaways
@@ -145,3 +146,4 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 * **Day 60:** Used a two-pointer approach starting from both ends of the array, calculating the area bounded by the shorter line, and moving the inner pointer of the shorter height inward to maximize the area in $O(N)$ time and $O(1)$ auxiliary space.
 * **Day 61:** Calculated total array sum first, then iterated through elements while maintaining running prefix sum to find the index where prefix sum equals total sum minus prefix sum minus current element in $O(N)$ time and $O(1)$ space.
 * **Day 62:** Used a Hash Map to store the prefix sum and its earliest occurrence index to find the longest subarray with sum $K$ in $O(N)$ time and $O(N)$ auxiliary space.
+* **Day 63:** Replaced 0s with -1s and used a Hash Map to find the longest subarray with a sum of 0 in $O(N)$ time and $O(N)$ auxiliary space.
