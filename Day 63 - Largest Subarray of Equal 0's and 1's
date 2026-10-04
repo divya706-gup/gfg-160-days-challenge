@@ -1,0 +1,49 @@
+// GFG 160 Days Challenge - Day 63
+// Problem: Largest Subarray of Equal 0's and 1's
+//
+// Approach:
+// 1. Replace every 0 with -1 and every 1 with +1.
+// 2. Maintain a running prefix sum.
+// 3. Store the first index where each prefix sum occurs.
+// 4. If the same prefix sum appears again, the subarray between
+//    those indices has an equal number of 0's and 1's.
+// 5. Update the maximum length found.
+//
+// Time Complexity: O(n)
+// Space Complexity: O(n)
+
+class Solution {
+public:
+    int maxLen(vector<int> &arr) {
+        
+        int n = arr.size();
+        unordered_map<int, int> mp;
+        
+        int prefSum = 0;
+        int res = 0;
+        
+        for (int i = 0; i < n; i++) {
+            
+            // Treat 0 as -1 and 1 as +1
+            prefSum += (arr[i] == 0) ? -1 : 1;
+            
+            // If prefix sum becomes 0,
+            // subarray from index 0 has equal 0s and 1s
+            if (prefSum == 0) {
+                res = i + 1;
+            }
+            
+            // If same prefix sum appeared before,
+            // the elements between have equal 0s and 1s
+            if (mp.find(prefSum) != mp.end()) {
+                res = max(res, i - mp[prefSum]);
+            }
+            else {
+                // Store only the first occurrence
+                mp[prefSum] = i;
+            }
+        }
+        
+        return res;
+    }
+};
