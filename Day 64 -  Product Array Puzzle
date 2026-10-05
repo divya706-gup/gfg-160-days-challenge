@@ -1,0 +1,55 @@
+// GFG 160 Days Challenge - Day 64
+// Problem: Product Array Puzzle
+//
+// Approach:
+// 1. Calculate the product of all non-zero elements.
+// 2. Count the number of zeroes in the array.
+// 3. If there are no zeroes, divide the total product by arr[i]
+//    for every position.
+// 4. If there is exactly one zero, only the zero position gets
+//    the total product.
+// 5. If there are more than one zeroes, all result elements are 0.
+//
+// Time Complexity: O(n)
+// Space Complexity: O(n)
+
+class Solution {
+public:
+    vector<int> productExceptSelf(vector<int>& arr) {
+        
+        int zeroes = 0;
+        int idx = -1;
+        int prod = 1;
+        
+        // Calculate product of non-zero elements
+        for (int i = 0; i < arr.size(); i++) {
+            
+            if (arr[i] == 0) {
+                zeroes++;
+                idx = i;
+            }
+            else {
+                prod *= arr[i];
+            }
+        }
+        
+        vector<int> ans(arr.size(), 0);
+        
+        // Case 1: No zero
+        if (zeroes == 0) {
+            for (int i = 0; i < arr.size(); i++) {
+                ans[i] = prod / arr[i];
+            }
+        }
+        
+        // Case 2: Exactly one zero
+        else if (zeroes == 1) {
+            ans[idx] = prod;
+        }
+        
+        // Case 3: More than one zero
+        // All elements remain 0
+        
+        return ans;
+    }
+};
