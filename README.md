@@ -10,7 +10,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 
 | Progress | Status |
 | :--- | :--- |
-| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 65 / 160 Completed** |
+| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 66 / 160 Completed** |
 ---
 
 ## 📅 Daily Problem Log
@@ -82,6 +82,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 | **Day 63** | Largest Subarray of Equal 0's and 1's | [Code](./Day%2063%20-%20Largest%20Subarray%20of%20Equal%200's%20and%201's) | $O(N)$ | ✅ Completed |
 | **Day 64** | Product Array Puzzle | [Code](./Day%2064%20-%20Product%20Array%20Puzzle) | $O(N)$ | ✅ Completed |
 | **Day 65** | Distinct Permutations of String | [Code](./Day%2065%20-%20Distinct%20Permutations%20of%20String) | $O(N \cdot N!)$ | ✅ Completed |
+| **Day 66** | Implement Pow | [Code](./Day%2066%20-%20Implement%20Pow) | $O(\log N)$ | ✅ Completed |
 ---
 
 ## 💡 Key Learnings & Takeaways
@@ -151,3 +152,4 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 * **Day 63:** Replaced 0s with -1s and used a Hash Map to find the longest subarray with a sum of 0 in $O(N)$ time and $O(N)$ auxiliary space.
 * **Day 64:** Solved the Product Array Puzzle without using the division operator by precomputing prefix and suffix products (or maintaining a running product) in $O(N)$ time and $O(N)$ auxiliary space.
 * **Day 65:** Generated all unique permutations of a given string using backtracking/recursion paired with a set or frequency array to prevent duplicate recursive calls, running in $O(N \cdot N!)$ time complexity.
+* **Day 66:** Calculated $b^e$ efficiently using Binary Exponentiation (Divide and Conquer), handling negative exponents by inverting the base and taking absolute exponent values in $O(\log N)$ time and $O(1)$ space.
