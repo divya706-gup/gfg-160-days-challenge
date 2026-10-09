@@ -10,7 +10,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 
 | Progress | Status |
 | :--- | :--- |
-| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 67 / 160 Completed** |
+| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 68 / 160 Completed** |
 ---
 
 ## 📅 Daily Problem Log
@@ -84,6 +84,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 | **Day 65** | Distinct Permutations of String | [Code](./Day%2065%20-%20Distinct%20Permutations%20of%20String) | $O(N \cdot N!)$ | ✅ Completed |
 | **Day 66** | Implement Pow | [Code](./Day%2066%20-%20Implement%20Pow) | $O(\log N)$ | ✅ Completed |
 | **Day 67** | N-Queen Problem | [Code](./Day%2067%20-%20N-Queen%20Problem) | $O(N!)$ | ✅ Completed |
+| **Day 68** | Solve the Sudoku | [Code](./Day%2068%20-%20Solve%20the%20Sudoku) | $O(9^{N^2})$ | ✅ Completed |
 ---
 
 ## 💡 Key Learnings & Takeaways
@@ -155,3 +156,4 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 * **Day 65:** Generated all unique permutations of a given string using backtracking/recursion paired with a set or frequency array to prevent duplicate recursive calls, running in $O(N \cdot N!)$ time complexity.
 * **Day 66:** Calculated $b^e$ efficiently using Binary Exponentiation (Divide and Conquer), handling negative exponents by inverting the base and taking absolute exponent values in $O(\log N)$ time and $O(1)$ space.
 * **Day 67:** Used Backtracking to place $N$ queens on an $N \times N$ chessboard such that no two queens attack each other, tracking safe rows and diagonals in $O(N!)$ time and $O(N)$ auxiliary space.
+* **Day 68:** Solved the Sudoku puzzle using Backtracking by placing valid digits (1–9) in empty cells and recursively checking row, column, and 3x3 subgrid constraints.
