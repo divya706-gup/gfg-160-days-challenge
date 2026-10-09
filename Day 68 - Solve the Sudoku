@@ -1,0 +1,68 @@
+// GFG 160 Days Challenge - Day 68
+// Problem: Solve the Sudoku
+//
+// Approach:
+// 1. Traverse the Sudoku grid to find an empty cell (value 0).
+// 2. Try placing digits from 1 to 9 in the empty cell.
+// 3. Check whether the digit is valid in its row, column,
+//    and 3x3 subgrid.
+// 4. If valid, place the digit and recursively solve the grid.
+// 5. If the choice fails, reset the cell to 0 and try another digit.
+// 6. If all cells are filled successfully, the Sudoku is solved.
+//
+// Time Complexity: O(9^E), where E is the number of empty cells
+// Space Complexity: O(E), due to the recursion stack
+
+class Solution {
+public:
+    bool isSafe(vector<vector<int>>& mat, int row, int col, int num) {
+        // Check the row and column
+        for (int x = 0; x < 9; x++) {
+            if (mat[row][x] == num || mat[x][col] == num) {
+                return false;
+            }
+        }
+
+        // Check the 3x3 subgrid
+        int startRow = row - row % 3;
+        int startCol = col - col % 3;
+
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (mat[startRow + i][startCol + j] == num) {
+                    return false;
+                }
+            }
+        }
+
+        return true;
+    }
+
+    bool solve(vector<vector<int>>& mat) {
+        for (int row = 0; row < 9; row++) {
+            for (int col = 0; col < 9; col++) {
+                if (mat[row][col] == 0) {
+                    for (int num = 1; num <= 9; num++) {
+                        if (isSafe(mat, row, col, num)) {
+                            mat[row][col] = num;
+
+                            if (solve(mat)) {
+                                return true;
+                            }
+
+                            // Backtrack
+                            mat[row][col] = 0;
+                        }
+                    }
+                    return false;
+                }
+            }
+        }
+
+        return true;
+    }
+
+    void solveSudoku(vector<vector<int>>& mat) {
+        solve(mat);
+    }
+};
