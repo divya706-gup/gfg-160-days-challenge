@@ -1,0 +1,61 @@
+// GFG 160 Days Challenge - Day 71
+// Problem: Rotate a Linked List
+//
+// Approach:
+// 1. Calculate the length of the linked list.
+// 2. Reduce k using k % length.
+// 3. If k becomes 0, return the original head.
+// 4. Find the kth node and the last node.
+// 5. Connect the last node to the head to form a circular list.
+// 6. Set the next node of the kth node to NULL.
+// 7. Return the new head.
+//
+// Time Complexity: O(n)
+// Space Complexity: O(1)
+
+class Solution {
+public:
+    Node* rotate(Node* head, int k) {
+        if (head == NULL || head->next == NULL || k == 0) {
+            return head;
+        }
+
+        Node* curr = head;
+        int len = 1;
+
+        // Calculate linked list length
+        while (curr->next != NULL) {
+            curr = curr->next;
+            len++;
+        }
+
+        // Reduce unnecessary rotations
+        k = k % len;
+
+        if (k == 0) {
+            return head;
+        }
+
+        // Find the kth node
+        curr = head;
+        for (int i = 1; i < k; i++) {
+            curr = curr->next;
+        }
+
+        // New head is the node after kth node
+        Node* newHead = curr->next;
+
+        // Connect the last node to the original head
+        Node* tail = newHead;
+        while (tail->next != NULL) {
+            tail = tail->next;
+        }
+
+        tail->next = head;
+
+        // Break the circular connection
+        curr->next = NULL;
+
+        return newHead;
+    }
+};
