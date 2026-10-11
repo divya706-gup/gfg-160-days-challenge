@@ -1,0 +1,32 @@
+// GFG 160 Days Challenge - Day 70
+// Problem: Reverse a Linked List
+//
+// Approach:
+// 1. Initialize three pointers: prev, curr, and nextNode.
+// 2. Store the next node before changing the current link.
+// 3. Reverse the link by pointing curr->next to prev.
+// 4. Move prev and curr one step forward.
+// 5. Repeat until curr becomes NULL.
+// 6. Return prev as the new head.
+//
+// Time Complexity: O(n)
+// Space Complexity: O(1)
+
+class Solution {
+public:
+    Node* reverseList(Node* head) {
+        Node* prev = NULL;
+        Node* curr = head;
+
+        while (curr != NULL) {
+            Node* nextNode = curr->next;
+
+            curr->next = prev;
+
+            prev = curr;
+            curr = nextNode;
+        }
+
+        return prev;
+    }
+};
