@@ -1,0 +1,67 @@
+// GFG 160 Days Challenge - Day 69
+// Problem: Word Search
+//
+// Approach:
+// 1. Traverse the matrix to find the first character of the word.
+// 2. Use DFS and backtracking to explore adjacent cells.
+// 3. Search in four directions: up, down, left, and right.
+// 4. Mark the current cell as visited while exploring.
+// 5. Restore the cell after recursion to allow other paths.
+// 6. Return true if the complete word is found.
+//
+// Time Complexity: O(N * M * 4^L)
+// Space Complexity: O(L), recursion stack
+// N = rows, M = columns, L = word length
+
+class Solution {
+public:
+    bool findMatch(vector<vector<char>>& mat, int i, int j,
+                   string& word, int index) {
+
+        if (index == word.length()) {
+            return true;
+        }
+
+        int n = mat.size();
+        int m = mat[0].size();
+
+        if (i < 0 || i >= n || j < 0 || j >= m ||
+            mat[i][j] != word[index]) {
+            return false;
+        }
+
+        char temp = mat[i][j];
+        mat[i][j] = '#';  // Mark as visited
+
+        bool found =
+            findMatch(mat, i + 1, j, word, index + 1) ||
+            findMatch(mat, i - 1, j, word, index + 1) ||
+            findMatch(mat, i, j + 1, word, index + 1) ||
+            findMatch(mat, i, j - 1, word, index + 1);
+
+        mat[i][j] = temp;  // Backtrack
+
+        return found;
+    }
+
+    bool isWordExist(vector<vector<char>>& mat, string& word) {
+        int n = mat.size();
+        int m = mat[0].size();
+
+        if (word.length() > n * m) {
+            return false;
+        }
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                if (mat[i][j] == word[0]) {
+                    if (findMatch(mat, i, j, word, 0)) {
+                        return true;
+                    }
+                }
+            }
+        }
+
+        return false;
+    }
+};
