@@ -10,7 +10,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 
 | Progress | Status |
 | :--- | :--- |
-| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 68 / 160 Completed** |
+| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 70 / 160 Completed** |
 ---
 
 ## 📅 Daily Problem Log
@@ -85,6 +85,8 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 | **Day 66** | Implement Pow | [Code](./Day%2066%20-%20Implement%20Pow) | $O(\log N)$ | ✅ Completed |
 | **Day 67** | N-Queen Problem | [Code](./Day%2067%20-%20N-Queen%20Problem) | $O(N!)$ | ✅ Completed |
 | **Day 68** | Solve the Sudoku | [Code](./Day%2068%20-%20Solve%20the%20Sudoku) | $O(9^{N^2})$ | ✅ Completed |
+| **Day 69** | Word Search | [Code](-./Day%2069%20-%20Word%20Search) | $O(N \cdot M \cdot 4^L)$ | ✅ Completed |
+| **Day 70** | Reverse a Linked List | [Code](./Day%2070%20-%20Reverse%20a%20Linked%20List) | $O(N)$ | ✅ Completed |
 ---
 
 ## 💡 Key Learnings & Takeaways
@@ -157,3 +159,5 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 * **Day 66:** Calculated $b^e$ efficiently using Binary Exponentiation (Divide and Conquer), handling negative exponents by inverting the base and taking absolute exponent values in $O(\log N)$ time and $O(1)$ space.
 * **Day 67:** Used Backtracking to place $N$ queens on an $N \times N$ chessboard such that no two queens attack each other, tracking safe rows and diagonals in $O(N!)$ time and $O(N)$ auxiliary space.
 * **Day 68:** Solved the Sudoku puzzle using Backtracking by placing valid digits (1–9) in empty cells and recursively checking row, column, and 3x3 subgrid constraints.
+* **Day 69:** Used Depth-First Search (DFS) with backtracking to search for a word in a 2D board of characters, checking all four adjacent directions while preventing cells from being reused in the same path, running in $O(N \cdot M \cdot 4^L)$ time and $O(L)$ auxiliary space.
+* **Day 70:** Reversed a linked list iteratively by maintaining three pointers (`prev`, `curr`, and `next`) to reverse the direction of pointers in-place, achieving $O(N)$ time complexity and $O(1)$ auxiliary space.
