@@ -87,7 +87,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 | **Day 68** | Solve the Sudoku | [Code](./Day%2068%20-%20Solve%20the%20Sudoku) | $O(9^{N^2})$ | ✅ Completed |
 | **Day 69** | Word Search | [Code](-./Day%2069%20-%20Word%20Search) | $O(N \cdot M \cdot 4^L)$ | ✅ Completed |
 | **Day 70** | Reverse a Linked List | [Code](./Day%2070%20-%20Reverse%20a%20Linked%20List) | $O(N)$ | ✅ Completed |
-| **Day 71** | Rotate a Linked List | [Code](. /Day%2071%20-%20Rotate%20a%20Linked%20List) | $O(N)$ | ✅ Completed |
+| **Day 71** | Rotate a Linked List | [Code](./Day%2071%20-%20Rotate%20a%20Linked%20List) | $O(N)$ | ✅ Completed |
 ---
 
 ## 💡 Key Learnings & Takeaways
