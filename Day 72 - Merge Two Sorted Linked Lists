@@ -1,0 +1,44 @@
+// GFG 160 Days Challenge - Day 72
+// Problem: Merge Two Sorted Linked Lists
+//
+// Approach:
+// 1. Create a dummy node to simplify merging.
+// 2. Compare the data of both linked lists.
+// 3. Attach the smaller node to the merged list.
+// 4. Move the pointer forward in the selected list.
+// 5. Attach the remaining nodes.
+//
+// Time Complexity: O(n + m)
+// Space Complexity: O(1) auxiliary space
+
+class Solution {
+public:
+    Node* sortedMerge(Node* head1, Node* head2) {
+        Node* dummy = new Node(-1);
+        Node* curr = dummy;
+
+        while (head1 != NULL && head2 != NULL) {
+            if (head1->data <= head2->data) {
+                curr->next = head1;
+                head1 = head1->next;
+            } else {
+                curr->next = head2;
+                head2 = head2->next;
+            }
+
+            curr = curr->next;
+        }
+
+        // Attach the remaining nodes
+        if (head1 != NULL) {
+            curr->next = head1;
+        } else {
+            curr->next = head2;
+        }
+
+        Node* mergedHead = dummy->next;
+        delete dummy;
+
+        return mergedHead;
+    }
+};
