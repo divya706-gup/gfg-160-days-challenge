@@ -1,0 +1,41 @@
+// GFG 160 Days Challenge - Day 73
+// Problem: Linked List Group Reverse
+//
+// Approach:
+// 1. Reverse the first k nodes of the linked list.
+// 2. Recursively reverse the remaining linked list.
+// 3. Connect the original head to the reversed remaining list.
+// 4. Return the new head of the reversed group.
+//
+// Time Complexity: O(n)
+// Space Complexity: O(n) due to recursion
+
+class Solution {
+public:
+    Node* reverseKGroup(Node* head, int k) {
+        if (head == NULL || k <= 1) {
+            return head;
+        }
+
+        Node* curr = head;
+        Node* prev = NULL;
+        Node* next = NULL;
+        int count = 0;
+
+        // Reverse the current group of k nodes
+        while (curr != NULL && count < k) {
+            next = curr->next;
+            curr->next = prev;
+            prev = curr;
+            curr = next;
+            count++;
+        }
+
+        // Connect this group to the next reversed group
+        if (next != NULL) {
+            head->next = reverseKGroup(next, k);
+        }
+
+        return prev;
+    }
+};
