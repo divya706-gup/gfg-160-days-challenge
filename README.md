@@ -10,7 +10,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 
 | Progress | Status |
 | :--- | :--- |
-| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 73 / 160 Completed** |
+| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 74 / 160 Completed** |
 ---
 
 ## 📅 Daily Problem Log
@@ -90,6 +90,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 | **Day 71** | Rotate a Linked List | [Code](./Day%2071%20-%20Rotate%20a%20Linked%20List) | $O(N)$ | ✅ Completed |
 | **Day 72** | Merge Two Sorted Linked Lists | [Code](./Day%2072%20-%20Merge%20Two%20Sorted%20Linked%20Lists) | $O(N + M)$ | ✅ Completed |
 | **Day 73** | Linked List Group Reverse | [Code](./Day%2073%20-%20Linked%20List%20Group%20Reverse) | $O(N)$ | ✅ Completed |
+| **Day 74** | Add Number Linked Lists | [Code](./Day%2074%20-%20Add%20Number%20Linked%20Lists) | $O(N + M)$ | ✅ Completed |
 ---
 
 ## 💡 Key Learnings & Takeaways
@@ -167,3 +168,4 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 * **Day 71:** Rotated a linked list counter-clockwise by $k$ nodes in $O(N)$ time and $O(1)$ auxiliary space by finding the length, connecting the tail to the head to make it circular, and breaking the loop at the new $k$-th node.
 * **Day 72:** Merged two sorted linked lists by using a dummy node and a two-pointer approach to compare nodes, attaching the smaller one iteratively in $O(N + M)$ time and $O(1)$ auxiliary space.
 * **Day 73:** Reversed nodes of a linked list in groups of size $k$ by iteratively reversing sub-lists using pointer manipulation in $O(N)$ time and $O(1)$ auxiliary space.
+* **Day 74:** Handled linked list addition by reversing the lists or using a stack to process digits from least to most significant, managing carry-over values efficiently in $O(N + M)$ time.
