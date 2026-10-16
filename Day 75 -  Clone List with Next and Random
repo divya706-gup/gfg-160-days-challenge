@@ -1,0 +1,60 @@
+// GFG 160 Days Challenge - Day 75
+// Problem: Clone List with Next and Random
+//
+// Approach:
+// 1. Create a copy of each node and insert it after the original node.
+// 2. Assign random pointers to the copied nodes.
+// 3. Separate the cloned list from the original list.
+// 4. Return the head of the cloned list.
+//
+// Time Complexity: O(n)
+// Space Complexity: O(1) auxiliary space
+
+class Solution {
+public:
+    Node* cloneLinkedList(Node* head) {
+        if (head == NULL) {
+            return NULL;
+        }
+
+        Node* curr = head;
+
+        // Step 1: Insert cloned nodes after original nodes
+        while (curr != NULL) {
+            Node* newNode = new Node(curr->data);
+            newNode->next = curr->next;
+            curr->next = newNode;
+            curr = newNode->next;
+        }
+
+        // Step 2: Assign random pointers
+        curr = head;
+
+        while (curr != NULL) {
+            Node* clone = curr->next;
+
+            if (curr->random != NULL) {
+                clone->random = curr->random->next;
+            }
+
+            curr = clone->next;
+        }
+
+        // Step 3: Separate original and cloned lists
+        curr = head;
+        Node* cloneHead = head->next;
+
+        while (curr != NULL) {
+            Node* clone = curr->next;
+            curr->next = clone->next;
+
+            if (clone->next != NULL) {
+                clone->next = clone->next->next;
+            }
+
+            curr = curr->next;
+        }
+
+        return cloneHead;
+    }
+};
