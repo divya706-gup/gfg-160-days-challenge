@@ -10,7 +10,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 
 | Progress | Status |
 | :--- | :--- |
-| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 74 / 160 Completed** |
+| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 75 / 160 Completed** |
 ---
 
 ## 📅 Daily Problem Log
@@ -91,6 +91,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 | **Day 72** | Merge Two Sorted Linked Lists | [Code](./Day%2072%20-%20Merge%20Two%20Sorted%20Linked%20Lists) | $O(N + M)$ | ✅ Completed |
 | **Day 73** | Linked List Group Reverse | [Code](./Day%2073%20-%20Linked%20List%20Group%20Reverse) | $O(N)$ | ✅ Completed |
 | **Day 74** | Add Number Linked Lists | [Code](./Day%2074%20-%20Add%20Number%20Linked%20Lists) | $O(N + M)$ | ✅ Completed |
+| **Day 75** | Clone List with Next and Random | [Code ] (./Day%2075%20-%20Clone%20List%20with%20Next%20and%20Random ) | $O(N)$ | ✅ Completed |
 ---
 
 ## 💡 Key Learnings & Takeaways
@@ -169,3 +170,4 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 * **Day 72:** Merged two sorted linked lists by using a dummy node and a two-pointer approach to compare nodes, attaching the smaller one iteratively in $O(N + M)$ time and $O(1)$ auxiliary space.
 * **Day 73:** Reversed nodes of a linked list in groups of size $k$ by iteratively reversing sub-lists using pointer manipulation in $O(N)$ time and $O(1)$ auxiliary space.
 * **Day 74:** Handled linked list addition by reversing the lists or using a stack to process digits from least to most significant, managing carry-over values efficiently in $O(N + M)$ time.
+* **Day 75:** Learned how to clone a linked list with both next and random pointers using an optimized approach without extra hash map space by weaving copied nodes into the original list.
