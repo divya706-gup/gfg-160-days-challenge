@@ -1,0 +1,31 @@
+// GFG 160 Days Challenge - Day 76
+// Problem: Detect Loop in Linked List
+//
+// Approach:
+// 1. Use Floyd's Cycle Detection Algorithm.
+// 2. Initialize slow and fast pointers at the head.
+// 3. Move slow by one step and fast by two steps.
+// 4. If both pointers meet, a loop exists.
+// 5. If fast reaches NULL, no loop exists.
+//
+// Time Complexity: O(n)
+// Space Complexity: O(1)
+
+class Solution {
+public:
+    bool detectLoop(Node* head) {
+        Node* slow = head;
+        Node* fast = head;
+
+        while (fast != NULL && fast->next != NULL) {
+            slow = slow->next;
+            fast = fast->next->next;
+
+            if (slow == fast) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+};
