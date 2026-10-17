@@ -10,7 +10,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 
 | Progress | Status |
 | :--- | :--- |
-| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 75 / 160 Completed** |
+| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 76 / 160 Completed** |
 ---
 
 ## 📅 Daily Problem Log
@@ -92,6 +92,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 | **Day 73** | Linked List Group Reverse | [Code](./Day%2073%20-%20Linked%20List%20Group%20Reverse) | $O(N)$ | ✅ Completed |
 | **Day 74** | Add Number Linked Lists | [Code](./Day%2074%20-%20Add%20Number%20Linked%20Lists) | $O(N + M)$ | ✅ Completed |
 | **Day 75** | Clone List with Next and Random | [Code ] (./Day%2075%20-%20Clone%20List%20with%20Next%20and%20Random ) | $O(N)$ | ✅ Completed |
+| **Day 76** | Detect Loop in Linked List | [Code ] (./Day%2076%20-%20Detect%20Loop%20in%20Linked%20List ) | $O(N)$ | ✅ Completed |
 ---
 
 ## 💡 Key Learnings & Takeaways
@@ -171,3 +172,4 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 * **Day 73:** Reversed nodes of a linked list in groups of size $k$ by iteratively reversing sub-lists using pointer manipulation in $O(N)$ time and $O(1)$ auxiliary space.
 * **Day 74:** Handled linked list addition by reversing the lists or using a stack to process digits from least to most significant, managing carry-over values efficiently in $O(N + M)$ time.
 * **Day 75:** Learned how to clone a linked list with both next and random pointers using an optimized approach without extra hash map space by weaving copied nodes into the original list.
+* **Day 76:** Detected a loop in a linked list in $O(N)$ time and $O(1)$ space using Floyd’s Cycle-Finding Algorithm (Tortoise and Hare approach) with slow and fast pointers.
