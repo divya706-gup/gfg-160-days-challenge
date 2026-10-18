@@ -10,7 +10,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 
 | Progress | Status |
 | :--- | :--- |
-| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 76 / 160 Completed** |
+| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 77 / 160 Completed** |
 ---
 
 ## 📅 Daily Problem Log
@@ -93,6 +93,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 | **Day 74** | Add Number Linked Lists | [Code](./Day%2074%20-%20Add%20Number%20Linked%20Lists) | $O(N + M)$ | ✅ Completed |
 | **Day 75** | Clone List with Next and Random | [Code ] (./Day%2075%20-%20Clone%20List%20with%20Next%20and%20Random ) | $O(N)$ | ✅ Completed |
 | **Day 76** | Detect Loop in Linked List | [Code ] (./Day%2076%20-%20Detect%20Loop%20in%20Linked%20List ) | $O(N)$ | ✅ Completed |
+| **Day 77** | First Node of Loop in Linked List | [Code ] (./Day%2077%20-%20First%20Node%20of%20Loop%20in%20Linked%20List ) | $O(N)$ | ✅ Completed |
 ---
 
 ## 💡 Key Learnings & Takeaways
@@ -173,3 +174,4 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 * **Day 74:** Handled linked list addition by reversing the lists or using a stack to process digits from least to most significant, managing carry-over values efficiently in $O(N + M)$ time.
 * **Day 75:** Learned how to clone a linked list with both next and random pointers using an optimized approach without extra hash map space by weaving copied nodes into the original list.
 * **Day 76:** Detected a loop in a linked list in $O(N)$ time and $O(1)$ space using Floyd’s Cycle-Finding Algorithm (Tortoise and Hare approach) with slow and fast pointers.
+* **Day 77:** Found the first node of a loop in a linked list in $O(N)$ time and $O(1)$ auxiliary space by using Floyd’s Cycle-Finding Algorithm (Tortoise and Hare) to detect the cycle, then resetting one pointer to the head and moving both one step at a time until they meet at the cycle's starting node.
