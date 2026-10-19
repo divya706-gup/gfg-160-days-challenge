@@ -1,0 +1,53 @@
+// GFG 160 Days Challenge - Day 78
+// Problem: Remove Cycle in Linked List
+//
+// Approach:
+// 1. Use Floyd's Cycle Detection Algorithm.
+// 2. Detect whether a cycle exists.
+// 3. Find the starting point of the cycle.
+// 4. Find the last node in the cycle.
+// 5. Set its next pointer to NULL.
+//
+// Time Complexity: O(n)
+// Space Complexity: O(1)
+
+class Solution {
+public:
+    void removeLoop(Node* head) {
+        if (head == NULL || head->next == NULL) {
+            return;
+        }
+
+        Node* slow = head;
+        Node* fast = head;
+
+        // Detect the cycle
+        do {
+            if (fast == NULL || fast->next == NULL) {
+                return;
+            }
+
+            slow = slow->next;
+            fast = fast->next->next;
+
+        } while (slow != fast);
+
+        // Find the starting point of the cycle
+        slow = head;
+
+        if (slow == fast) {
+            // Special case: cycle starts at the head
+            while (fast->next != slow) {
+                fast = fast->next;
+            }
+        } else {
+            while (slow->next != fast->next) {
+                slow = slow->next;
+                fast = fast->next;
+            }
+        }
+
+        // Remove the cycle
+        fast->next = NULL;
+    }
+};
