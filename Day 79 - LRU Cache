@@ -1,0 +1,65 @@
+// GFG 160 Days Challenge - Day 79
+// Problem: LRU Cache
+//
+// Approach:
+// 1. Use a doubly linked list to maintain usage order.
+// 2. Use an unordered_map for O(1) key lookup.
+// 3. Move recently accessed keys to the front.
+// 4. Remove the least recently used key from the back
+//    when capacity is exceeded.
+//
+// Time Complexity: O(1) per operation
+// Space Complexity: O(capacity)
+
+class LRUCache {
+private:
+    int capacity;
+    list<pair<int, int>> li;
+    unordered_map<int, list<pair<int, int>>::iterator> mp;
+
+public:
+    LRUCache(int cap) {
+        capacity = cap;
+    }
+
+    int get(int key) {
+        auto it = mp.find(key);
+
+        if (it == mp.end()) {
+            return -1;
+        }
+
+        // Save the value and mark the key as recently used
+        int value = it->second->second;
+        li.erase(it->second);
+        li.push_front({key, value});
+        mp[key] = li.begin();
+
+        return value;
+    }
+
+    void put(int key, int value) {
+        if (capacity <= 0) {
+            return;
+        }
+
+        auto it = mp.find(key);
+
+        // Update existing key
+        if (it != mp.end()) {
+            li.erase(it->second);
+            mp.erase(it);
+        }
+
+        // Evict least recently used item if full
+        if ((int)li.size() == capacity) {
+            int lruKey = li.back().first;
+            li.pop_back();
+            mp.erase(lruKey);
+        }
+
+        // Insert as most recently used
+        li.push_front({key, value});
+        mp[key] = li.begin();
+    }
+};
