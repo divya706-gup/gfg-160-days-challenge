@@ -10,7 +10,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 
 | Progress | Status |
 | :--- | :--- |
-| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 78 / 160 Completed** |
+| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 79 / 160 Completed** |
 ---
 
 ## 📅 Daily Problem Log
@@ -95,6 +95,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 | **Day 76** | Detect Loop in Linked List | [Code ] (./Day%2076%20-%20Detect%20Loop%20in%20Linked%20List ) | $O(N)$ | ✅ Completed |
 | **Day 77** | First Node of Loop in Linked List | [Code ] (./Day%2077%20-%20First%20Node%20of%20Loop%20in%20Linked%20List ) | $O(N)$ | ✅ Completed |
 | **Day 78** | Remove Cycle in Linked List | [Code](./Day%2078%20-%20Remove%20Cycle%20in%20Linked%20List) | $O(N)$ | ✅ Completed |
+| **Day 79** | LRU Cache | [Code](-./Day%2079%20-%20LRU%20Cache) | $O(1)$ | ✅ Completed |
 ---
 
 ## 💡 Key Learnings & Takeaways
@@ -177,3 +178,4 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 * **Day 76:** Detected a loop in a linked list in $O(N)$ time and $O(1)$ space using Floyd’s Cycle-Finding Algorithm (Tortoise and Hare approach) with slow and fast pointers.
 * **Day 77:** Found the first node of a loop in a linked list in $O(N)$ time and $O(1)$ auxiliary space by using Floyd’s Cycle-Finding Algorithm (Tortoise and Hare) to detect the cycle, then resetting one pointer to the head and moving both one step at a time until they meet at the cycle's starting node.
 * **Day 78:** Detected a loop in a linked list using Floyd’s Cycle-Finding Algorithm (slow and fast pointers), then traversed back from the meeting point and head to find the start node of the cycle and broke the link to remove it in $O(N)$ time and $O(1)$ auxiliary space.
+* **Day 79:** Implemented an LRU (Least Recently Used) Cache with $O(1)$ time complexity for both `get` and `put` operations by combining a Hash Map with a doubly linked list to track access order and evict the least recently used item when capacity is exceeded.
