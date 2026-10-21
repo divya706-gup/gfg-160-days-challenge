@@ -1,0 +1,43 @@
+// GFG 160 Days Challenge - Day 80
+// Problem: Level Order Traversal
+//
+// Approach:
+// 1. Use a queue for Breadth-First Search (BFS).
+// 2. Insert the root node into the queue.
+// 3. Process each node and store its data.
+// 4. Push the left and right children into the queue.
+// 5. Continue until the queue becomes empty.
+//
+// Time Complexity: O(n)
+// Space Complexity: O(n)
+
+class Solution {
+public:
+    vector<int> levelOrder(Node* root) {
+        vector<int> res;
+
+        if (root == NULL) {
+            return res;
+        }
+
+        queue<Node*> q;
+        q.push(root);
+
+        while (!q.empty()) {
+            Node* curr = q.front();
+            q.pop();
+
+            res.push_back(curr->data);
+
+            if (curr->left != NULL) {
+                q.push(curr->left);
+            }
+
+            if (curr->right != NULL) {
+                q.push(curr->right);
+            }
+        }
+
+        return res;
+    }
+};
