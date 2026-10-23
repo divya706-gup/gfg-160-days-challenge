@@ -1,0 +1,25 @@
+// GFG 160 Days Challenge - Day 81
+// Problem: Height of Binary Tree
+//
+// Approach:
+// 1. If the node is NULL, return -1.
+// 2. Recursively calculate the left subtree height.
+// 3. Recursively calculate the right subtree height.
+// 4. Return 1 + max(left, right).
+//
+// Time Complexity: O(n)
+// Space Complexity: O(h), where h is the tree height.
+
+class Solution {
+public:
+    int height(Node* root) {
+        if (root == NULL) {
+            return -1;
+        }
+
+        int left = height(root->left);
+        int right = height(root->right);
+
+        return 1 + max(left, right);
+    }
+};
