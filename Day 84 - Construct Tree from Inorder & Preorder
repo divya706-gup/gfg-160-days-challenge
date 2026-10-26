@@ -1,0 +1,48 @@
+// GFG 160 Days Challenge - Day 84
+// Problem: Construct Tree from Inorder & Preorder
+//
+// Approach:
+// 1. The current preorder element is the root.
+// 2. Find the root's position in inorder using a hash map.
+// 3. Recursively build the left subtree.
+// 4. Recursively build the right subtree.
+//
+// Time Complexity: O(n)
+// Space Complexity: O(n)
+
+class Solution {
+public:
+    unordered_map<int, int> pos;
+    int preIndex;
+
+    Node* solve(int left, int right,
+                vector<int>& inorder,
+                vector<int>& preorder) {
+        if (left > right) {
+            return NULL;
+        }
+
+        int rootVal = preorder[preIndex++];
+        Node* root = new Node(rootVal);
+
+        int mid = pos[rootVal];
+
+        root->left = solve(left, mid - 1, inorder, preorder);
+        root->right = solve(mid + 1, right, inorder, preorder);
+
+        return root;
+    }
+
+    Node* buildTree(vector<int>& inorder, vector<int>& preorder) {
+        pos.clear();
+
+        for (int i = 0; i < (int)inorder.size(); i++) {
+            pos[inorder[i]] = i;
+        }
+
+        preIndex = 0;
+
+        return solve(0, (int)inorder.size() - 1,
+                     inorder, preorder);
+    }
+};
