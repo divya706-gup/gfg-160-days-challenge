@@ -97,6 +97,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 | **Day 78** | Remove Cycle in Linked List | [Code](./Day%2078%20-%20Remove%20Cycle%20in%20Linked%20List) | $O(N)$ | ✅ Completed |
 | **Day 79** | LRU Cache | [Code](-./Day%2079%20-%20LRU%20Cache) | $O(1)$ | ✅ Completed |
 | **Day 80** | Level Order Traversal | [Code](./Day%2080%20-%20Level%20Order%20Traversal) | O(N) | ✅ Completed |
+| **Day 82** | Diameter of Binary Tree | [Code ] (./Day%2082%20-%20Diameter%20of%20Binary%20Tree ) | $O(N)$ | ✅ Completed |
 | **Day 83** | Convert to Mirror Tree | [Code](./Day%2083%20-%20Convert%20to%20Mirror%20Tree) | $O(N)$ | ✅ Completed |
 ---
 
@@ -182,4 +183,5 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 * **Day 78:** Detected a loop in a linked list using Floyd’s Cycle-Finding Algorithm (slow and fast pointers), then traversed back from the meeting point and head to find the start node of the cycle and broke the link to remove it in $O(N)$ time and $O(1)$ auxiliary space.
 * **Day 79:** Implemented an LRU (Least Recently Used) Cache with $O(1)$ time complexity for both `get` and `put` operations by combining a Hash Map with a doubly linked list to track access order and evict the least recently used item when capacity is exceeded.
 * **Day 80:** Performed Level Order Traversal on a binary tree using a queue (Breadth-First Search) to visit nodes level by level, running in $O(N)$ time and $O(N)$ auxiliary space.
+* **Day 82:** Calculated the diameter of a binary tree in $O(N)$ time and $O(H)$ auxiliary space by computing the height of the left and right subtrees recursively for each node and tracking the maximum path length. 
 * **Day 83:** Inverted a binary tree by recursively swapping the left and right children for every node, achieving an optimal $O(N)$ time complexity and $O(H)$ auxiliary space where $H$ is the height of the tree.
