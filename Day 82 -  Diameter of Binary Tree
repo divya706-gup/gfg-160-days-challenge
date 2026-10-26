@@ -1,0 +1,51 @@
+// GFG 160 Days Challenge - Day 82
+// Problem: Diameter of Binary Tree
+//
+// Approach:
+// 1. Calculate the height of the left and right subtrees.
+// 2. Update the diameter using left height + right height.
+// 3. Return the height of the current subtree.
+// 4. Use a global variable to track the maximum diameter.
+//
+// Time Complexity: O(n)
+// Space Complexity: O(h), where h is the height of the tree.
+
+/*
+Structure of Binary Tree Node
+class Node {
+public:
+    int data;
+    Node* left;
+    Node* right;
+
+    Node(int val) {
+        data = val;
+        left = right = nullptr;
+    }
+};
+*/
+
+class Solution {
+public:
+    int diameterValue = 0;
+
+    int height(Node* root) {
+        if (root == nullptr) {
+            return 0;
+        }
+
+        int leftHeight = height(root->left);
+        int rightHeight = height(root->right);
+
+        // Update diameter in terms of edges
+        diameterValue = max(diameterValue, leftHeight + rightHeight);
+
+        return 1 + max(leftHeight, rightHeight);
+    }
+
+    int diameter(Node* root) {
+        diameterValue = 0;
+        height(root);
+        return diameterValue;
+    }
+};
