@@ -1,0 +1,29 @@
+// GFG 160 Days Challenge - Day 85
+// Problem: Inorder Traversal
+//
+// Approach:
+// 1. Traverse the left subtree.
+// 2. Visit the current node.
+// 3. Traverse the right subtree.
+//
+// Time Complexity: O(n)
+// Space Complexity: O(h), excluding the output vector.
+
+class Solution {
+public:
+    void inorderHelper(Node* root, vector<int>& ans) {
+        if (root == NULL) {
+            return;
+        }
+
+        inorderHelper(root->left, ans);
+        ans.push_back(root->data);
+        inorderHelper(root->right, ans);
+    }
+
+    vector<int> inOrder(Node* root) {
+        vector<int> ans;
+        inorderHelper(root, ans);
+        return ans;
+    }
+};
