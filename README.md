@@ -10,7 +10,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 
 | Progress | Status |
 | :--- | :--- |
-| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 83 / 160 Completed** |
+| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 85 / 160 Completed** |
 ---
 
 ## 📅 Daily Problem Log
@@ -100,6 +100,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 | **Day 81** | Height of Binary Tree | [Code ] (./Day%2081%20-%20Height%20of%20Binary%20Tree ) | $O(N)$ | ✅ Completed |
 | **Day 82** | Diameter of Binary Tree | [Code ] (./Day%2082%20-%20Diameter%20of%20Binary%20Tree ) | $O(N)$ | ✅ Completed |
 | **Day 83** | Convert to Mirror Tree | [Code](./Day%2083%20-%20Convert%20to%20Mirror%20Tree) | $O(N)$ | ✅ Completed |
+| **Day 84** | Construct Tree from Inorder & Preorder | [Code](./Day%2084%20-%20Construct%20Tree%20from%20Inorder%20&%20Preorder) | O(N) | ✅ Completed |
 ---
 
 ## 💡 Key Learnings & Takeaways
@@ -187,3 +188,4 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 * **Day 81:** Computed the height of a binary tree in $O(N)$ time and $O(H)$ auxiliary space by recursively finding the maximum depth of the left and right subtrees.
 * **Day 82:** Calculated the diameter of a binary tree in $O(N)$ time and $O(H)$ auxiliary space by computing the height of the left and right subtrees recursively for each node and tracking the maximum path length. 
 * **Day 83:** Inverted a binary tree by recursively swapping the left and right children for every node, achieving an optimal $O(N)$ time complexity and $O(H)$ auxiliary space where $H$ is the height of the tree.
+* **Day 84:** Built a binary tree from Inorder and Preorder traversals in $O(N)$ time by using a hash map to store inorder indices for $O(1)$ root lookups and maintaining a preorder index pointer.
