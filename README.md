@@ -10,7 +10,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 
 | Progress | Status |
 | :--- | :--- |
-| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 85 / 160 Completed** |
+| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 86 / 160 Completed** |
 ---
 
 ## 📅 Daily Problem Log
@@ -102,6 +102,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 | **Day 83** | Convert to Mirror Tree | [Code](./Day%2083%20-%20Convert%20to%20Mirror%20Tree) | $O(N)$ | ✅ Completed |
 | **Day 84** | Construct Tree from Inorder & Preorder | [Code](./Day%2084%20-%20Construct%20Tree%20from%20Inorder%20&%20Preorder) | O(N) | ✅ Completed |
 | **Day 85** | Inorder Traversal | [Code](./Day%2085%20-%20Inorder%20Traversal) | O(N) | ✅ Completed |
+| **Day 86** | Tree Boundary Traversal | [Code ] (./Day%2086%20-%20Tree%20Boundary%20Traversal ) | $O(N)$ | ✅ Completed |
 ---
 
 ## 💡 Key Learnings & Takeaways
@@ -191,3 +192,4 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 * **Day 83:** Inverted a binary tree by recursively swapping the left and right children for every node, achieving an optimal $O(N)$ time complexity and $O(H)$ auxiliary space where $H$ is the height of the tree.
 * **Day 84:** Built a binary tree from Inorder and Preorder traversals in $O(N)$ time by using a hash map to store inorder indices for $O(1)$ root lookups and maintaining a preorder index pointer.
 * **Day 85:** Implemented Binary Tree Inorder Traversal (Left, Root, Right) using both recursive and iterative approaches with an explicit stack, achieving $O(N)$ time and $O(H)$ space complexity.
+* **Day 86:** Learned how to perform Tree Boundary Traversal by breaking it down into three parts—traversing the left boundary (excluding leaves), collecting all leaf nodes using a preorder traversal, and traversing the right boundary in reverse order—achieving an optimal $O(N)$ time complexity and $O(H)$ auxiliary space.
