@@ -1,0 +1,40 @@
+// GFG 160 Days Challenge - Day 87
+// Problem: Maximum Path Sum
+//
+// Approach:
+// 1. Use postorder traversal.
+// 2. Calculate maximum left and right subtree contributions.
+// 3. Ignore negative contributions using max(0, sum).
+// 4. Update the global maximum path sum.
+// 5. Return the maximum one-sided path sum.
+//
+// Time Complexity: O(n)
+// Space Complexity: O(h), where h is the tree height.
+
+class Solution {
+public:
+    int maxi;
+
+    int sumPath(Node* root) {
+        if (root == NULL) {
+            return 0;
+        }
+
+        int leftSum = max(0, sumPath(root->left));
+        int rightSum = max(0, sumPath(root->right));
+
+        // Maximum path passing through the current node
+        int currSum = root->data + leftSum + rightSum;
+
+        maxi = max(maxi, currSum);
+
+        // Return maximum one-sided path sum
+        return root->data + max(leftSum, rightSum);
+    }
+
+    int findMaxSum(Node* root) {
+        maxi = INT_MIN;
+        sumPath(root);
+        return maxi;
+    }
+};
