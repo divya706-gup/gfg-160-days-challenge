@@ -1,0 +1,54 @@
+// GFG 160 Days Challenge - Day 88
+// Problem: K Sum Paths
+//
+// Approach:
+// 1. Use DFS to traverse the binary tree.
+// 2. Maintain the running prefix sum.
+// 3. Store prefix sum frequencies in an unordered_map.
+// 4. Check whether (currentSum - k) exists.
+// 5. Recursively count paths in left and right subtrees.
+// 6. Backtrack by decrementing the current prefix sum frequency.
+//
+// Time Complexity: O(n) average
+// Space Complexity: O(h) auxiliary space, excluding the map.
+
+class Solution {
+public:
+    int countSum(Node* root, int k, long long currSum,
+                 unordered_map<long long, int>& mp) {
+
+        if (root == NULL) {
+            return 0;
+        }
+
+        currSum += root->data;
+
+        int pathCount = 0;
+
+        // Check for paths ending at the current node
+        if (mp.find(currSum - k) != mp.end()) {
+            pathCount += mp[currSum - k];
+        }
+
+        // Store the current prefix sum
+        mp[currSum]++;
+
+        // Explore left and right subtrees
+        pathCount += countSum(root->left, k, currSum, mp);
+        pathCount += countSum(root->right, k, currSum, mp);
+
+        // Backtrack to avoid affecting other paths
+        mp[currSum]--;
+
+        return pathCount;
+    }
+
+    int countAllPaths(Node* root, int k) {
+        unordered_map<long long, int> mp;
+
+        // Empty prefix sum
+        mp[0] = 1;
+
+        return countSum(root, k, 0, mp);
+    }
+};
