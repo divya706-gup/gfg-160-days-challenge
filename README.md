@@ -10,7 +10,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 
 | Progress | Status |
 | :--- | :--- |
-| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 87 / 160 Completed** |
+| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 88 / 160 Completed** |
 ---
 
 ## 📅 Daily Problem Log
@@ -104,6 +104,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 | **Day 85** | Inorder Traversal | [Code](./Day%2085%20-%20Inorder%20Traversal) | O(N) | ✅ Completed |
 | **Day 86** | Tree Boundary Traversal | [Code ] (./Day%2086%20-%20Tree%20Boundary%20Traversal ) | $O(N)$ | ✅ Completed |
 | **Day 87** | Maximum Path Sum | [Code](./Day%2087%20-%20Maximum%20Path%20Sum) | $O(N)$ | ✅ Completed |
+| **Day 88** | K Sum Paths | [Code ] (./Day%2088%20-%20K%20Sum%20Paths ) | $O(N)$ | ✅ Completed |
 ---
 
 ## 💡 Key Learnings & Takeaways
@@ -195,3 +196,4 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 * **Day 85:** Implemented Binary Tree Inorder Traversal (Left, Root, Right) using both recursive and iterative approaches with an explicit stack, achieving $O(N)$ time and $O(H)$ space complexity.
 * **Day 86:** Learned how to perform Tree Boundary Traversal by breaking it down into three parts—traversing the left boundary (excluding leaves), collecting all leaf nodes using a preorder traversal, and traversing the right boundary in reverse order—achieving an optimal $O(N)$ time complexity and $O(H)$ auxiliary space.
 * **Day 87:** Solved the binary tree Maximum Path Sum problem by using a recursive post-order traversal to compute the maximum gain from left and right subtrees, updating a global maximum path sum that can pass through any node as a root, running in $O(N)$ time and $O(H)$ auxiliary space.
+* **Day 88:** Solved the K Sum Paths problem in a binary tree using a recursive DFS traversal combined with a prefix sum approach to count paths summing to $K$, running in $O(N)$ time complexity and $O(H)$ auxiliary space.
