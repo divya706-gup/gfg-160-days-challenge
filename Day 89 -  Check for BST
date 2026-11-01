@@ -1,0 +1,32 @@
+// GFG 160 Days Challenge - Day 89
+// Problem: Check for BST
+//
+// Approach:
+// 1. Use recursion with a valid minimum and maximum range.
+// 2. Every node must lie strictly within this range.
+// 3. For the left subtree, update the maximum to the current node's value.
+// 4. For the right subtree, update the minimum to the current node's value.
+// 5. Return true only if both subtrees satisfy BST properties.
+//
+// Time Complexity: O(n)
+// Space Complexity: O(h), where h is the height of the tree.
+
+class Solution {
+public:
+    bool solve(Node* root, long long low, long long high) {
+        if (root == NULL) {
+            return true;
+        }
+
+        if (root->data <= low || root->data >= high) {
+            return false;
+        }
+
+        return solve(root->left, low, root->data) &&
+               solve(root->right, root->data, high);
+    }
+
+    bool isBST(Node* root) {
+        return solve(root, LLONG_MIN, LLONG_MAX);
+    }
+};
