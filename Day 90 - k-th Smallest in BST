@@ -1,0 +1,59 @@
+// GFG 160 Days Challenge - Day 90
+// Problem: k-th Smallest in BST
+//
+// Approach:
+// 1. Perform Morris Inorder Traversal.
+// 2. Visit nodes in sorted order.
+// 3. Maintain a counter for visited nodes.
+// 4. Store the kth node's value.
+// 5. Continue traversal to restore all temporary links.
+//
+// Time Complexity: O(n)
+// Space Complexity: O(1)
+
+class Solution {
+public:
+    int kthSmallest(Node* root, int k) {
+        Node* curr = root;
+        int cnt = 0;
+        int ans = -1;
+
+        while (curr != nullptr) {
+
+            if (curr->left == nullptr) {
+                cnt++;
+
+                if (cnt == k) {
+                    ans = curr->data;
+                }
+
+                curr = curr->right;
+            }
+            else {
+                Node* prev = curr->left;
+
+                while (prev->right != nullptr &&
+                       prev->right != curr) {
+                    prev = prev->right;
+                }
+
+                if (prev->right == nullptr) {
+                    prev->right = curr;
+                    curr = curr->left;
+                }
+                else {
+                    prev->right = nullptr;
+                    cnt++;
+
+                    if (cnt == k) {
+                        ans = curr->data;
+                    }
+
+                    curr = curr->right;
+                }
+            }
+        }
+
+        return ans;
+    }
+};
