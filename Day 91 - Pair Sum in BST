@@ -1,0 +1,53 @@
+// GFG 160 Days Challenge - Day 91
+// Problem: Pair Sum in BST
+//
+// Approach:
+// 1. Perform inorder traversal of the BST.
+// 2. Store elements in a sorted vector.
+// 3. Apply the two-pointer technique.
+// 4. If the sum equals target, return true.
+// 5. If sum is smaller, move left pointer forward.
+// 6. Otherwise, move right pointer backward.
+//
+// Time Complexity: O(n)
+// Space Complexity: O(n)
+
+class Solution {
+public:
+    void inorderTraversal(Node* root, vector<int>& inorder) {
+        if (root == nullptr) {
+            return;
+        }
+
+        inorderTraversal(root->left, inorder);
+        inorder.push_back(root->data);
+        inorderTraversal(root->right, inorder);
+    }
+
+    bool findTarget(Node* root, int target) {
+        vector<int> inorder;
+
+        inorderTraversal(root, inorder);
+
+        int left = 0;
+        int right = inorder.size() - 1;
+
+        while (left < right) {
+            long long currSum = 
+                (long long)inorder[left] + inorder[right];
+
+            if (currSum == target) {
+                return true;
+            }
+
+            if (currSum < target) {
+                left++;
+            } 
+            else {
+                right--;
+            }
+        }
+
+        return false;
+    }
+};
