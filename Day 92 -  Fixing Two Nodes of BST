@@ -1,0 +1,56 @@
+// GFG 160 Days Challenge - Day 92
+// Problem: Fixing Two Nodes of BST
+//
+// Approach:
+// 1. Perform inorder traversal.
+// 2. Identify violations in the sorted inorder sequence.
+// 3. Store the misplaced nodes.
+// 4. Swap their values to restore the BST.
+//
+// Time Complexity: O(n)
+// Space Complexity: O(h)
+
+class Solution {
+private:
+    Node* first = nullptr;
+    Node* middle = nullptr;
+    Node* last = nullptr;
+    Node* prev = nullptr;
+
+    void inorder(Node* root) {
+        if (root == nullptr) {
+            return;
+        }
+
+        inorder(root->left);
+
+        if (prev != nullptr && root->data < prev->data) {
+            if (first == nullptr) {
+                first = prev;
+                middle = root;
+            } else {
+                last = root;
+            }
+        }
+
+        prev = root;
+
+        inorder(root->right);
+    }
+
+public:
+    Node* correctBST(Node* root) {
+        first = middle = last = prev = nullptr;
+
+        inorder(root);
+
+        if (first != nullptr && last != nullptr) {
+            swap(first->data, last->data);
+        }
+        else if (first != nullptr && middle != nullptr) {
+            swap(first->data, middle->data);
+        }
+
+        return root;
+    }
+};
