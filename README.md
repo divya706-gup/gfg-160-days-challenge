@@ -10,7 +10,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 
 | Progress | Status |
 | :--- | :--- |
-| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 92 / 160 Completed** |
+| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 93 / 160 Completed** |
 ---
 
 ## 📅 Daily Problem Log
@@ -109,6 +109,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 | **Day 90** | K-th Smallest in BST | [Code ] (./Day%2090%20-%20K-th%20Smallest%20in%20BST ) | $O(N)$ | ✅ Completed |
 | **Day 91** | Pair Sum in BST | [Code ] (./Day%2091%20-%20Pair%20Sum%20in%20BST ) | $O(N)$ | ✅ Completed |
 | **Day 92** | Fix Two Nodes of BST | [Code](./Day%2092%20-%20Fix%20Two%20Nodes%20of%20BST) | $O(N)$ | ✅ Completed |
+| **Day 93** | Lowest Common Ancestor in a BST | [Code ] (./Day%2093%20-%20Lowest%20Common%20Ancestor%20in%20a%20BST ) | $O(H)$ | ✅ Completed |
 ---
 
 ## 💡 Key Learnings & Takeaways
@@ -205,3 +206,4 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 * **Day 90:** Performed an in-order traversal of the Binary Search Tree (BST) to visit nodes in ascending order, keeping track of the count to find the $k$-th smallest element in $O(N)$ time and $O(H)$ auxiliary space (where $H$ is the height of the tree).
 * **Day 91:** Used an in-order traversal with a two-pointer approach or a hash set to find if there exists a pair with a given sum in a BST in $O(N)$ time and $O(N)$ auxiliary space.
 * **Day92:** Identified the two swapped nodes in a Binary Search Tree during an inorder traversal by tracking first, middle, last, and prev pointers, swapping their values back in $O(N)$ time and $O(H)$ space.
+* **Day 93:** Leveraged BST properties to find the Lowest Common Ancestor in $O(H)$ time and $O(1)$ space by moving left if both nodes are smaller, right if both are greater, or stopping at the split point.
