@@ -1,0 +1,36 @@
+// GFG 160 Days Challenge - Day 93
+// Problem: Lowest Common Ancestor in a BST
+//
+// Approach:
+// 1. Start from the root.
+// 2. If both nodes are smaller, move left.
+// 3. If both nodes are greater, move right.
+// 4. Otherwise, the current node is the LCA.
+//
+// Time Complexity: O(h)
+// Space Complexity: O(1)
+
+class Solution {
+public:
+    Node* findLCA(Node* root, Node* n1, Node* n2) {
+
+        while (root != nullptr) {
+
+            if (root->data > n1->data &&
+                root->data > n2->data) {
+
+                root = root->left;
+            }
+            else if (root->data < n1->data &&
+                     root->data < n2->data) {
+
+                root = root->right;
+            }
+            else {
+                return root;
+            }
+        }
+
+        return nullptr;
+    }
+};
