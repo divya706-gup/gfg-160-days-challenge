@@ -1,0 +1,72 @@
+// GFG 160 Days Challenge - Day 95
+// Problem: k Largest Elements
+//
+// Approach:
+// 1. Find the (n-k)th index using Quickselect.
+// 2. Partition the array around a pivot.
+// 3. Extract the k largest elements.
+// 4. Sort them in decreasing order.
+//
+// Average Time Complexity: O(n + k log k)
+// Worst Time Complexity: O(n^2)
+// Space Complexity: O(log n) recursion stack.
+
+class Solution {
+public:
+    int partition(vector<int>& arr, int start, int end) {
+        int pivot = arr[end];
+        int i = start;
+
+        for (int j = start; j < end; j++) {
+            if (arr[j] <= pivot) {
+                swap(arr[i], arr[j]);
+                i++;
+            }
+        }
+
+        swap(arr[i], arr[end]);
+        return i;
+    }
+
+    void quickSelect(vector<int>& arr, int start,
+                     int end, int target) {
+
+        if (start > end) {
+            return;
+        }
+
+        int pivotIndex = partition(arr, start, end);
+
+        if (pivotIndex == target) {
+            return;
+        }
+        else if (pivotIndex < target) {
+            quickSelect(arr, pivotIndex + 1, end, target);
+        }
+        else {
+            quickSelect(arr, start, pivotIndex - 1, target);
+        }
+    }
+
+    vector<int> kLargest(vector<int>& arr, int k) {
+        int n = arr.size();
+
+        if (k <= 0 || k > n) {
+            return {};
+        }
+
+        int target = n - k;
+
+        quickSelect(arr, 0, n - 1, target);
+
+        vector<int> ans;
+
+        for (int i = target; i < n; i++) {
+            ans.push_back(arr[i]);
+        }
+
+        sort(ans.begin(), ans.end(), greater<int>());
+
+        return ans;
+    }
+};
