@@ -10,7 +10,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 
 | Progress | Status |
 | :--- | :--- |
-| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 94 / 160 Completed** |
+| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 95 / 160 Completed** |
 ---
 
 ## 📅 Daily Problem Log
@@ -111,6 +111,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 | **Day 92** | Fix Two Nodes of BST | [Code](./Day%2092%20-%20Fix%20Two%20Nodes%20of%20BST) | $O(N)$ | ✅ Completed |
 | **Day 93** | Lowest Common Ancestor in a BST | [Code ] (./Day%2093%20-%20Lowest%20Common%20Ancestor%20in%20a%20BST ) | $O(H)$ | ✅ Completed |
 | **Day 94** | Serialize and Deserialize a Binary Tree | [Code ] (./Day%2094%20-%20Serialize%20and%20Deserialize%20a%20Binary%20Tree ) | $O(N)$ | ✅ Completed |
+| **Day 95** | k Largest Elements | [Code](-./Day%2095%20-%20k%20Largest%20Elements) | $O(N \log K)$ | ✅ Completed |
 ---
 
 ## 💡 Key Learnings & Takeaways
@@ -209,3 +210,4 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 * **Day92:** Identified the two swapped nodes in a Binary Search Tree during an inorder traversal by tracking first, middle, last, and prev pointers, swapping their values back in $O(N)$ time and $O(H)$ space.
 * **Day 93:** Leveraged BST properties to find the Lowest Common Ancestor in $O(H)$ time and $O(1)$ space by moving left if both nodes are smaller, right if both are greater, or stopping at the split point.
 * **Day 94:** Learned how to serialize and deserialize a binary tree into a string representation using level-order (BFS) traversal with queue-based null-node tracking, enabling tree reconstruction in $O(N)$ time and $O(N)$ auxiliary space.
+* **Day 95:** Used a min-heap of size $K$ to find the $k$ largest elements efficiently in $O(N \log K)$ time and $O(K)$ auxiliary space by retaining only the $k$ largest elements seen so far.
