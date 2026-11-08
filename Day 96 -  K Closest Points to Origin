@@ -1,0 +1,49 @@
+// GFG 160 Days Challenge - Day 96
+// Problem: K Closest Points to Origin
+//
+// Approach:
+// 1. Calculate squared Euclidean distance for each point.
+// 2. Use a Max Heap to maintain the k closest points.
+// 3. If heap size is less than k, insert the point.
+// 4. Otherwise, compare with the farthest point.
+// 5. Replace the farthest point if the new point is closer.
+// 6. Extract the k closest points.
+//
+// Time Complexity: O(n log k)
+// Space Complexity: O(k)
+
+class Solution {
+public:
+    long long squaredDist(vector<int>& point) {
+        return 1LL * point[0] * point[0] +
+               1LL * point[1] * point[1];
+    }
+
+    vector<vector<int>> kClosest(vector<vector<int>>& points, int k) {
+
+        // Max Heap: stores distance and corresponding point
+        priority_queue<pair<long long, vector<int>>> pq;
+
+        for (int i = 0; i < points.size(); i++) {
+
+            long long dist = squaredDist(points[i]);
+
+            if (pq.size() < k) {
+                pq.push({dist, points[i]});
+            }
+            else if (dist < pq.top().first) {
+                pq.pop();
+                pq.push({dist, points[i]});
+            }
+        }
+
+        vector<vector<int>> ans;
+
+        while (!pq.empty()) {
+            ans.push_back(pq.top().second);
+            pq.pop();
+        }
+
+        return ans;
+    }
+};
