@@ -1,0 +1,56 @@
+// GFG 160 Days Challenge - Day 98
+// Problem: Median in Stream
+//
+// Approach:
+// 1. Use two heaps: Max Heap and Min Heap.
+// 2. Max Heap stores the smaller half of elements.
+// 3. Min Heap stores the larger half of elements.
+// 4. Balance both heaps after inserting each element.
+// 5. Calculate the median based on heap sizes.
+//
+// Time Complexity: O(n log n)
+// Space Complexity: O(n)
+
+class Solution {
+public:
+    vector<double> getMedian(vector<int>& arr) {
+
+        priority_queue<int> maxHeap;
+
+        priority_queue<int, vector<int>, greater<int>> minHeap;
+
+        vector<double> result;
+
+        for (int x : arr) {
+
+            // Insert element into the appropriate heap
+            if (maxHeap.empty() || x <= maxHeap.top()) {
+                maxHeap.push(x);
+            }
+            else {
+                minHeap.push(x);
+            }
+
+            // Balance the heaps
+            if (maxHeap.size() > minHeap.size() + 1) {
+                minHeap.push(maxHeap.top());
+                maxHeap.pop();
+            }
+            else if (minHeap.size() > maxHeap.size()) {
+                maxHeap.push(minHeap.top());
+                minHeap.pop();
+            }
+
+            // Calculate median
+            if (maxHeap.size() == minHeap.size()) {
+                double median = (maxHeap.top() + (double)minHeap.top()) / 2.0;
+                result.push_back(median);
+            }
+            else {
+                result.push_back(maxHeap.top());
+            }
+        }
+
+        return result;
+    }
+};
