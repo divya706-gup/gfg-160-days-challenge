@@ -10,7 +10,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 
 | Progress | Status |
 | :--- | :--- |
-| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 97 / 160 Completed** |
+| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 98 / 160 Completed** |
 ---
 
 ## 📅 Daily Problem Log
@@ -114,6 +114,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 | **Day 95** | k Largest Elements | [Code](-./Day%2095%20-%20k%20Largest%20Elements) | $O(N \log K)$ | ✅ Completed |
 | **Day 96**  | K Closest Points to Origin | [Code ] (./Day%2096%20-%20K%20Closest%20Points%20to%20Origin ) | $O(N \log K)$ | ✅ Completed |
 | **Day 97** | Merge K Sorted Linked Lists | [Code ] (./Day%2097%20-%20Merge%20K%20Sorted%20Linked%20Lists ) | $O(N \log K)$ | ✅ Completed |
+| **Day 98** | Median in Stream | [Code ] (./Day%2098%20-%20Median%20in%20Stream ) | $O(N \log N)$ | ✅ Completed |
 ---
 
 ## 💡 Key Learnings & Takeaways
@@ -215,3 +216,4 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 * **Day 95:** Used a min-heap of size $K$ to find the $k$ largest elements efficiently in $O(N \log K)$ time and $O(K)$ auxiliary space by retaining only the $k$ largest elements seen so far.
 * **Day 96:** Used a max-heap (or min-heap of size $K$) to find the $K$ closest points to the origin in $O(N \log K)$ time and $O(K)$ auxiliary space by computing Euclidean distances without taking the square root.
 * **Day 97:** Learned how to merge $K$ sorted linked lists efficiently in $O(N \log K)$ time and $O(K)$ auxiliary space using a min-heap (priority queue) to track the smallest current element among all lists.
+* **Day 98:** Implemented a data stream median tracker using two heaps (a max-heap for the lower half and a min-heap for the upper half) to dynamically maintain and retrieve the median in $O(\log N)$ time per insertion and $O(1)$ time for retrieval.
