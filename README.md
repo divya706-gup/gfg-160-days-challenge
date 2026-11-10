@@ -91,30 +91,30 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 | **Day 72** | Merge Two Sorted Linked Lists | [Code](./Day%2072%20-%20Merge%20Two%20Sorted%20Linked%20Lists) | $O(N + M)$ | ✅ Completed |
 | **Day 73** | Linked List Group Reverse | [Code](./Day%2073%20-%20Linked%20List%20Group%20Reverse) | $O(N)$ | ✅ Completed |
 | **Day 74** | Add Number Linked Lists | [Code](./Day%2074%20-%20Add%20Number%20Linked%20Lists) | $O(N + M)$ | ✅ Completed |
-| **Day 75** | Clone List with Next and Random | [Code ] (./Day%2075%20-%20Clone%20List%20with%20Next%20and%20Random ) | $O(N)$ | ✅ Completed |
-| **Day 76** | Detect Loop in Linked List | [Code ] (./Day%2076%20-%20Detect%20Loop%20in%20Linked%20List ) | $O(N)$ | ✅ Completed |
-| **Day 77** | First Node of Loop in Linked List | [Code ] (./Day%2077%20-%20First%20Node%20of%20Loop%20in%20Linked%20List ) | $O(N)$ | ✅ Completed |
+| **Day 75** | Clone List with Next and Random | [Code ](./Day%2075%20-%20Clone%20List%20with%20Next%20and%20Random ) | $O(N)$ | ✅ Completed |
+| **Day 76** | Detect Loop in Linked List | [Code ](./Day%2076%20-%20Detect%20Loop%20in%20Linked%20List ) | $O(N)$ | ✅ Completed |
+| **Day 77** | First Node of Loop in Linked List | [Code ](./Day%2077%20-%20First%20Node%20of%20Loop%20in%20Linked%20List ) | $O(N)$ | ✅ Completed |
 | **Day 78** | Remove Cycle in Linked List | [Code](./Day%2078%20-%20Remove%20Cycle%20in%20Linked%20List) | $O(N)$ | ✅ Completed |
 | **Day 79** | LRU Cache | [Code](-./Day%2079%20-%20LRU%20Cache) | $O(1)$ | ✅ Completed |
 | **Day 80** | Level Order Traversal | [Code](./Day%2080%20-%20Level%20Order%20Traversal) | O(N) | ✅ Completed |
-| **Day 81** | Height of Binary Tree | [Code ] (./Day%2081%20-%20Height%20of%20Binary%20Tree ) | $O(N)$ | ✅ Completed |
-| **Day 82** | Diameter of Binary Tree | [Code ] (./Day%2082%20-%20Diameter%20of%20Binary%20Tree ) | $O(N)$ | ✅ Completed |
+| **Day 81** | Height of Binary Tree | [Code ](./Day%2081%20-%20Height%20of%20Binary%20Tree ) | $O(N)$ | ✅ Completed |
+| **Day 82** | Diameter of Binary Tree | [Code ](./Day%2082%20-%20Diameter%20of%20Binary%20Tree ) | $O(N)$ | ✅ Completed |
 | **Day 83** | Convert to Mirror Tree | [Code](./Day%2083%20-%20Convert%20to%20Mirror%20Tree) | $O(N)$ | ✅ Completed |
 | **Day 84** | Construct Tree from Inorder & Preorder | [Code](./Day%2084%20-%20Construct%20Tree%20from%20Inorder%20&%20Preorder) | O(N) | ✅ Completed |
 | **Day 85** | Inorder Traversal | [Code](./Day%2085%20-%20Inorder%20Traversal) | O(N) | ✅ Completed |
-| **Day 86** | Tree Boundary Traversal | [Code ] (./Day%2086%20-%20Tree%20Boundary%20Traversal ) | $O(N)$ | ✅ Completed |
+| **Day 86** | Tree Boundary Traversal | [Code ](./Day%2086%20-%20Tree%20Boundary%20Traversal ) | $O(N)$ | ✅ Completed |
 | **Day 87** | Maximum Path Sum | [Code](./Day%2087%20-%20Maximum%20Path%20Sum) | $O(N)$ | ✅ Completed |
-| **Day 88** | K Sum Paths | [Code ] (./Day%2088%20-%20K%20Sum%20Paths ) | $O(N)$ | ✅ Completed |
+| **Day 88** | K Sum Paths | [Code ](./Day%2088%20-%20K%20Sum%20Paths ) | $O(N)$ | ✅ Completed |
 | **Day 89** | Check for BST | [Code](./Day%2089%20-%20Check%20for%20BST) | $O(N)$ | ✅ Completed |
-| **Day 90** | K-th Smallest in BST | [Code ] (./Day%2090%20-%20K-th%20Smallest%20in%20BST ) | $O(N)$ | ✅ Completed |
-| **Day 91** | Pair Sum in BST | [Code ] (./Day%2091%20-%20Pair%20Sum%20in%20BST ) | $O(N)$ | ✅ Completed |
+| **Day 90** | K-th Smallest in BST | [Code ](./Day%2090%20-%20K-th%20Smallest%20in%20BST ) | $O(N)$ | ✅ Completed |
+| **Day 91** | Pair Sum in BST | [Code ](./Day%2091%20-%20Pair%20Sum%20in%20BST ) | $O(N)$ | ✅ Completed |
 | **Day 92** | Fix Two Nodes of BST | [Code](./Day%2092%20-%20Fix%20Two%20Nodes%20of%20BST) | $O(N)$ | ✅ Completed |
-| **Day 93** | Lowest Common Ancestor in a BST | [Code ] (./Day%2093%20-%20Lowest%20Common%20Ancestor%20in%20a%20BST ) | $O(H)$ | ✅ Completed |
-| **Day 94** | Serialize and Deserialize a Binary Tree | [Code ] (./Day%2094%20-%20Serialize%20and%20Deserialize%20a%20Binary%20Tree ) | $O(N)$ | ✅ Completed |
+| **Day 93** | Lowest Common Ancestor in a BST | [Code ](./Day%2093%20-%20Lowest%20Common%20Ancestor%20in%20a%20BST ) | $O(H)$ | ✅ Completed |
+| **Day 94** | Serialize and Deserialize a Binary Tree | [Code ](./Day%2094%20-%20Serialize%20and%20Deserialize%20a%20Binary%20Tree ) | $O(N)$ | ✅ Completed |
 | **Day 95** | k Largest Elements | [Code](-./Day%2095%20-%20k%20Largest%20Elements) | $O(N \log K)$ | ✅ Completed |
-| **Day 96**  | K Closest Points to Origin | [Code ] (./Day%2096%20-%20K%20Closest%20Points%20to%20Origin ) | $O(N \log K)$ | ✅ Completed |
-| **Day 97** | Merge K Sorted Linked Lists | [Code ] (./Day%2097%20-%20Merge%20K%20Sorted%20Linked%20Lists ) | $O(N \log K)$ | ✅ Completed |
-| **Day 98** | Median in Stream | [Code ] (./Day%2098%20-%20Median%20in%20Stream ) | $O(N \log N)$ | ✅ Completed |
+| **Day 96**  | K Closest Points to Origin | [Code ](./Day%2096%20-%20K%20Closest%20Points%20to%20Origin ) | $O(N \log K)$ | ✅ Completed |
+| **Day 97** | Merge K Sorted Linked Lists | [Code ](./Day%2097%20-%20Merge%20K%20Sorted%20Linked%20Lists ) | $O(N \log K)$ | ✅ Completed |
+| **Day 98** | Median in Stream | [Code ](./Day%2098%20-%20Median%20in%20Stream ) | $O(N \log N)$ | ✅ Completed |
 ---
 
 ## 💡 Key Learnings & Takeaways
