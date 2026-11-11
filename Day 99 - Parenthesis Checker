@@ -1,0 +1,46 @@
+// GFG 160 Days Challenge - Day 99
+// Problem: Parenthesis Checker
+//
+// Approach:
+// 1. Use a stack to store opening brackets.
+// 2. Push (, {, [ onto the stack.
+// 3. For every closing bracket, check the stack's top.
+// 4. If the brackets do not match, return false.
+// 5. Finally, return true only if the stack is empty.
+//
+// Time Complexity: O(n)
+// Space Complexity: O(n)
+
+class Solution {
+public:
+    bool isBalanced(string& s) {
+        stack<char> st;
+
+        for (char ch : s) {
+
+            // Store opening brackets
+            if (ch == '(' || ch == '{' || ch == '[') {
+                st.push(ch);
+            }
+            else {
+                // No matching opening bracket
+                if (st.empty()) {
+                    return false;
+                }
+
+                char top = st.top();
+                st.pop();
+
+                // Check matching bracket pairs
+                if ((ch == ')' && top != '(') ||
+                    (ch == '}' && top != '{') ||
+                    (ch == ']' && top != '[')) {
+                    return false;
+                }
+            }
+        }
+
+        // All brackets must be matched
+        return st.empty();
+    }
+};
