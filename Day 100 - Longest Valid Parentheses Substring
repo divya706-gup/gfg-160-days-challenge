@@ -1,0 +1,44 @@
+// GFG 160 Days Challenge - Day 100
+// Problem: Longest Valid Parentheses Substring
+//
+// Approach:
+// 1. Use a stack to store indices of parentheses.
+// 2. Initially push -1 as the base index.
+// 3. Push indices of opening parentheses.
+// 4. For closing parentheses, pop the stack.
+// 5. If the stack becomes empty, push the current index.
+// 6. Otherwise, update the maximum valid length.
+//
+// Time Complexity: O(n)
+// Space Complexity: O(n)
+
+class Solution {
+public:
+    int maxLength(string& s) {
+        int n = s.length();
+
+        stack<int> st;
+        st.push(-1);
+
+        int maxLen = 0;
+
+        for (int i = 0; i < n; i++) {
+
+            if (s[i] == '(') {
+                st.push(i);
+            }
+            else {
+                st.pop();
+
+                if (st.empty()) {
+                    st.push(i);
+                }
+                else {
+                    maxLen = max(maxLen, i - st.top());
+                }
+            }
+        }
+
+        return maxLen;
+    }
+};
