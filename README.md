@@ -10,7 +10,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 
 | Progress | Status |
 | :--- | :--- |
-| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 101 / 160 Completed** |
+| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 102 / 160 Completed** |
 ---
 
 ## 📅 Daily Problem Log
@@ -118,6 +118,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 | **Day 99** | Parenthesis Checker | [Code](./Day%2099%20-%20Parenthesis%20Checker) | $O(N)$ | ✅ Completed |
 | **Day 100** | Longest Valid Parentheses Substring | [Code](./Day%20100%20-%20Longest%20Valid%20Parentheses%20Substring) | $O(N)$ | ✅ Completed |
 | **Day 101** | Next Greater Element | [Code ](./Day%20101%20-%20Next%20Greater%20Element ) | $O(N)$ | ✅ Completed |
+| **Day 102** | Stock Span Problem | [Code](./Day%20102%20-%20Stock%20Span%20Problem) | $O(N)$ | ✅ Completed |
 ---
 
 ## 💡 Key Learnings & Takeaways
@@ -223,3 +224,4 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 * **Day 99:** Implemented a Parenthesis Checker using a stack to validate balanced brackets, ensuring that every opening bracket has a corresponding closing bracket in the correct order, achieving an optimal $O(N)$ time complexity and $O(N)$ auxiliary space.
 * **Day 100:** Found the length of the longest valid parentheses substring in $O(N)$ time and $O(N)$ space using a stack to store indices of opening brackets, computing lengths whenever a valid matching pair is found.
 * **Day 101:** Used a monotonic stack to find the next greater element for each array element in $O(N)$ time and $O(N)$ space.
+* **Day 102:** Used a monotonic stack to track indices of previous greater elements, calculating the stock span for each day in a single $O(N)$ pass and $O(N)$ auxiliary space.
