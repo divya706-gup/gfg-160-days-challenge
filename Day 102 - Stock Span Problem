@@ -1,0 +1,41 @@
+// GFG 160 Days Challenge - Day 102
+// Problem: Stock Span Problem
+//
+// Approach:
+// 1. Use a monotonic decreasing stack to store indices.
+// 2. Remove indices whose stock prices are less than or equal
+//    to the current day's price.
+// 3. If the stack is empty, span = i + 1.
+// 4. Otherwise, span = i - st.top().
+// 5. Push the current index into the stack.
+//
+// Time Complexity: O(n)
+// Space Complexity: O(n)
+
+class Solution {
+public:
+    vector<int> calculateSpan(vector<int>& arr) {
+        int n = arr.size();
+
+        vector<int> span(n);
+        stack<int> st;
+
+        for (int i = 0; i < n; i++) {
+
+            while (!st.empty() && arr[st.top()] <= arr[i]) {
+                st.pop();
+            }
+
+            if (st.empty()) {
+                span[i] = i + 1;
+            }
+            else {
+                span[i] = i - st.top();
+            }
+
+            st.push(i);
+        }
+
+        return span;
+    }
+};
