@@ -1,0 +1,47 @@
+// GFG 160 Days Challenge - Day 103
+// Problem: Histogram Max Rectangular Area
+//
+// Approach:
+// 1. Use a monotonic increasing stack to store indices.
+// 2. Traverse the histogram and pop elements when the current
+//    height is smaller than or equal to the stack's top height.
+// 3. Calculate the rectangle area using the popped height.
+// 4. Calculate width using the current index and stack top.
+// 5. Process remaining elements using a sentinel iteration.
+//
+// Time Complexity: O(n)
+// Space Complexity: O(n)
+
+class Solution {
+public:
+    int getMaxArea(vector<int>& arr) {
+        int n = arr.size();
+        stack<int> st;
+        int maxArea = 0;
+
+        for (int i = 0; i <= n; i++) {
+
+            while (!st.empty() &&
+                   (i == n || arr[st.top()] >= arr[i])) {
+
+                int height = arr[st.top()];
+                st.pop();
+
+                int width;
+
+                if (st.empty()) {
+                    width = i;
+                }
+                else {
+                    width = i - st.top() - 1;
+                }
+
+                maxArea = max(maxArea, height * width);
+            }
+
+            st.push(i);
+        }
+
+        return maxArea;
+    }
+};
