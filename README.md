@@ -10,7 +10,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 
 | Progress | Status |
 | :--- | :--- |
-| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 103 / 160 Completed** |
+| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 104 / 160 Completed** |
 ---
 
 ## 📅 Daily Problem Log
@@ -120,6 +120,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 | **Day 101** | Next Greater Element | [Code ](./Day%20101%20-%20Next%20Greater%20Element ) | $O(N)$ | ✅ Completed |
 | **Day 102** | Stock Span Problem | [Code](./Day%20102%20-%20Stock%20Span%20Problem) | $O(N)$ | ✅ Completed |
 | **Day 103** | Histogram Max Rectangular Area | [Code](./Day%20103%20-%20Histogram%20Max%20Rectangular%20Area) | $O(N)$ | ✅ Completed |
+| **Day 104** | Max of Min for Every Window Size | [Code](./Day%20104%20-%20Max%20of%20Min%20for%20Every%20Window%20Size) | $O(N)$ | ✅ Completed |
 ---
 
 ## 💡 Key Learnings & Takeaways
@@ -227,3 +228,4 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 * **Day 101:** Used a monotonic stack to find the next greater element for each array element in $O(N)$ time and $O(N)$ space.
 * **Day 102:** Used a monotonic stack to track indices of previous greater elements, calculating the stock span for each day in a single $O(N)$ pass and $O(N)$ auxiliary space.
 * **Day 103:** Used a monotonic increasing stack to find the nearest smaller elements to the left and right for each bar, calculating the maximum rectangular area in a histogram in $O(N)$ time and $O(N)$ auxiliary space.
+* **Day 104:** Used a monotonic stack to find the previous smaller and next smaller elements for each element in an array, determining the maximum of minimums for every window size in an optimal $O(N)$ time complexity and $O(N)$ auxiliary space.
