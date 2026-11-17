@@ -1,0 +1,59 @@
+// GFG 160 Days Challenge - Day 105
+// Problem: Get Min from Stack
+//
+// Approach:
+// 1. Use two stacks: main stack and minimum stack.
+// 2. Push elements into the main stack.
+// 3. Maintain the minimum element in the minimum stack.
+// 4. When popping, update the minimum stack if required.
+// 5. Retrieve the minimum in O(1) time.
+//
+// Time Complexity: O(1) per operation
+// Space Complexity: O(n)
+
+class SpecialStack {
+    stack<int> st;
+    stack<int> minSt;
+
+public:
+    void push(int x) {
+        st.push(x);
+
+        if (minSt.empty() || x <= minSt.top()) {
+            minSt.push(x);
+        }
+    }
+
+    void pop() {
+        if (st.empty()) {
+            return;
+        }
+
+        int t = st.top();
+        st.pop();
+
+        if (t == minSt.top()) {
+            minSt.pop();
+        }
+    }
+
+    int peek() {
+        if (st.empty()) {
+            return -1;
+        }
+
+        return st.top();
+    }
+
+    bool isEmpty() {
+        return st.empty();
+    }
+
+    int getMin() {
+        if (minSt.empty()) {
+            return -1;
+        }
+
+        return minSt.top();
+    }
+};
