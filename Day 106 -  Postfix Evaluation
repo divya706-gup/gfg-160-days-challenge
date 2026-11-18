@@ -1,0 +1,62 @@
+// GFG 160 Days Challenge - Day 106
+// Problem: Postfix Evaluation
+//
+// Approach:
+// 1. Use a stack to store operands.
+// 2. Push numbers onto the stack.
+// 3. For an operator, pop the top two operands.
+// 4. Perform the operation and push the result.
+// 5. The final stack element is the answer.
+//
+// Time Complexity: O(n)
+// Space Complexity: O(n)
+
+class Solution {
+public:
+    // Handles floor division for negative numbers
+    int floorDiv(int a, int b) {
+        if (a * b < 0 && a % b != 0) {
+            return a / b - 1;
+        }
+        return a / b;
+    }
+
+    int evaluatePostfix(vector<string>& arr) {
+        stack<int> st;
+
+        for (auto& t : arr) {
+
+            // Check whether the token is a number
+            if (isdigit(t[0]) ||
+                (t.size() > 1 && t[0] == '-')) {
+
+                st.push(stoi(t));
+            }
+            else {
+                int b = st.top();
+                st.pop();
+
+                int a = st.top();
+                st.pop();
+
+                if (t == "+") {
+                    st.push(a + b);
+                }
+                else if (t == "-") {
+                    st.push(a - b);
+                }
+                else if (t == "*") {
+                    st.push(a * b);
+                }
+                else if (t == "/") {
+                    st.push(floorDiv(a, b));
+                }
+                else if (t == "^") {
+                    st.push((int)pow(a, b));
+                }
+            }
+        }
+
+        return st.top();
+    }
+};
