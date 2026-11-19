@@ -1,0 +1,60 @@
+// GFG 160 Days Challenge - Day 107
+// Problem: Decode the String
+//
+// Approach:
+// 1. Use two stacks: one for repetition counts and
+//    another for previously built strings.
+// 2. Build the count when digits are encountered.
+// 3. On '[', push the count and current string.
+// 4. On ']', repeat the current substring and append
+//    it to the previous string.
+// 5. Return the decoded string.
+//
+// Time Complexity: O(n + m)
+// Space Complexity: O(n + m)
+// n = encoded string length, m = decoded string length
+
+class Solution {
+public:
+    string decodedString(string &s) {
+        stack<int> st;
+        stack<string> stringStack;
+
+        int curCount = 0;
+        string ans = "";
+
+        for (char ch : s) {
+
+            if (isdigit(ch)) {
+                curCount = curCount * 10 + (ch - '0');
+            }
+            else if (ch == '[') {
+                st.push(curCount);
+                stringStack.push(ans);
+
+                curCount = 0;
+                ans = "";
+            }
+            else if (ch == ']') {
+                int t = st.top();
+                st.pop();
+
+                string prev = stringStack.top();
+                stringStack.pop();
+
+                string decoded = "";
+
+                for (int i = 0; i < t; i++) {
+                    decoded += ans;
+                }
+
+                ans = prev + decoded;
+            }
+            else {
+                ans += ch;
+            }
+        }
+
+        return ans;
+    }
+};
