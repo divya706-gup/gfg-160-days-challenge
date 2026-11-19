@@ -10,7 +10,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 
 | Progress | Status |
 | :--- | :--- |
-| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 106 / 160 Completed** |
+| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 107 / 160 Completed** |
 ---
 
 ## 📅 Daily Problem Log
@@ -123,6 +123,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 | **Day 104** | Max of Min for Every Window Size | [Code](./Day%20104%20-%20Max%20of%20Min%20for%20Every%20Window%20Size) | $O(N)$ | ✅ Completed |
 | **Day 105** | Get Min from Stack | [Code](./Day%20105%20-%20Get%20Min%20from%20Stack) | $O(1)$ | ✅ Completed |
 | **Day 106** | Postfix Evaluation | [Code ](./Day%20106%20-%20Postfix%20Evaluation ) | $O(N)$ | ✅ Completed |
+| **Day 107** | Decode the String | [Code](./Day%20107%20-%20Decode%20the%20String) | $O(N)$ | ✅ Completed |
 ---
 
 ## 💡 Key Learnings & Takeaways
@@ -233,3 +234,4 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 * **Day 104:** Used a monotonic stack to find the previous smaller and next smaller elements for each element in an array, determining the maximum of minimums for every window size in an optimal $O(N)$ time complexity and $O(N)$ auxiliary space.
 * **Day 105:** Implemented a custom stack supporting `getMin()` in $O(1)$ time and $O(1)$ auxiliary space using mathematical encoding ($2x - \text{minEle}$) to track previous minimums without an extra stack.
 * **Day 106:** Evaluated postfix expressions using a stack by pushing operands and applying operators when encountered, running in $O(N)$ time and $O(N)$ auxiliary space.
+* **Day 107:** Used two stacks (or a single stack) to decode nested `k[encoded_string]` patterns in $O(N)$ time and space by pushing counts and partial strings upon encountering `[` and expanding them when hitting `]`.
