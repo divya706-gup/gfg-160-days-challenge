@@ -1,0 +1,71 @@
+// GFG 160 Days Challenge - Day 109
+// Problem: Longest Subarray With Limited Pairwise Difference
+//
+// Approach:
+// 1. Use two deques to maintain minimum and maximum indices.
+// 2. Expand the window using the right pointer.
+// 3. Shrink the window from the left if max - min exceeds x.
+// 4. Update the longest valid subarray.
+// 5. Return the subarray with the earliest starting index in case of a tie.
+//
+// Time Complexity: O(n)
+// Space Complexity: O(n)
+
+class Solution {
+public:
+    vector<int> longestSubarray(vector<int>& arr, int x) {
+        int n = arr.size();
+
+        deque<int> dq1, dq2;
+
+        int s = 0, e = 0;
+        int rs = 0, re = -1;
+
+        while (e < n) {
+
+            // Maintain increasing deque for minimum
+            while (!dq1.empty() && arr[dq1.back()] > arr[e]) {
+                dq1.pop_back();
+            }
+
+            // Maintain decreasing deque for maximum
+            while (!dq2.empty() && arr[dq2.back()] < arr[e]) {
+                dq2.pop_back();
+            }
+
+            dq1.push_back(e);
+            dq2.push_back(e);
+
+            // Shrink window if difference exceeds x
+            while (arr[dq2.front()] - arr[dq1.front()] > x) {
+
+                if (dq1.front() == s) {
+                    dq1.pop_front();
+                }
+
+                if (dq2.front() == s) {
+                    dq2.pop_front();
+                }
+
+                s++;
+            }
+
+            // Update only if a strictly longer window is found.
+            // This preserves the earliest starting index on ties.
+            if ((e - s) > (re - rs)) {
+                rs = s;
+                re = e;
+            }
+
+            e++;
+        }
+
+        vector<int> res;
+
+        for (int i = rs; i <= re; i++) {
+            res.push_back(arr[i]);
+        }
+
+        return res;
+    }
+};
