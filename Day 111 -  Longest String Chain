@@ -1,0 +1,51 @@
+// GFG 160 Days Challenge - Day 111
+// Problem: Longest String Chain
+//
+// Approach:
+// 1. Sort words by increasing length.
+// 2. Use a Hash Map for Dynamic Programming.
+// 3. Remove one character at every possible position.
+// 4. If the remaining word exists in the map,
+//    extend the current chain.
+// 5. Track the maximum chain length.
+//
+// Time Complexity: O(n * L^2 + n log n)
+// Space Complexity: O(n)
+
+class Solution {
+public:
+    int longestStringChain(vector<string>& words) {
+
+        sort(words.begin(), words.end(),
+             [](const string& a, const string& b) {
+                 return a.size() < b.size();
+             });
+
+        unordered_map<string, int> dp;
+
+        int mx = 1;
+
+        for (const string& word : words) {
+
+            int best = 1;
+
+            // Remove one character at each position
+            for (int i = 0; i < word.size(); i++) {
+
+                string prev = word.substr(0, i) +
+                              word.substr(i + 1);
+
+                auto it = dp.find(prev);
+
+                if (it != dp.end()) {
+                    best = max(best, it->second + 1);
+                }
+            }
+
+            dp[word] = best;
+            mx = max(mx, best);
+        }
+
+        return mx;
+    }
+};
