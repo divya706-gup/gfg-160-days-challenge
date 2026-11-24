@@ -10,7 +10,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 
 | Progress | Status |
 | :--- | :--- |
-| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 111 / 160 Completed** |
+| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 112 / 160 Completed** |
 ---
 
 ## 📅 Daily Problem Log
@@ -128,6 +128,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 | **Day 109** | Longest Subarray With Limited Pairwise Difference | [Code](./Day%20109%20-%20Longest%20Subarray%20With%20Limited%20Pairwise%20Difference) | $O(N)$ | ✅ Completed |
 | **Day 110** | Longest Increasing Subsequence | [Code](./Day%20110%20-%20Longest%20Increasing%20Subsequence) | $O(N \log N)$ | ✅ Completed |
 | **Day 111** | Longest String Chain | [Code](./Day%20111%20-%20Longest%20String%20Chain) | $O(N \log N + N \cdot L^2)$ | ✅ Completed |
+| **Day 112** | Longest Common Subsequence | [Code](./Day%20112%20-%20Longest%20Common%20Subsequence) | $O(N \cdot M)$ | ✅ Completed |
 ---
 
 ## 💡 Key Learnings & Takeaways
@@ -243,3 +244,4 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 * **Day 109 – Longest Subarray With Limited Pairwise Difference:** Combined sliding window with two monotonic deques (max and min) to track the current window extremes in amortized $O(1)$ per element, shrinking the left pointer whenever the difference exceeds the limit for an $O(N)$ time and $O(N)$ space solution in C++.
 * **Day 110:** Found the length of the Longest Increasing Subsequence in $O(N \log N)$ time and $O(N)$ auxiliary space using Dynamic Programming with Binary Search (`lower_bound`) to maintain optimal tail elements.
 * **Day 111:** Sorted words by length and used a hash map with Dynamic Programming to check all single-character deletions for each word, tracking the longest chain ending at each string in $O(N \log N + N \cdot L^2)$ time (where $L$ is the maximum word length).
+* **Day 112:** Solved the Longest Common Subsequence problem using dynamic programming to find the length of the longest common subsequence between two strings in $O(N \cdot M)$ time.
