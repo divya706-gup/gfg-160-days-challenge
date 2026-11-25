@@ -10,7 +10,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 
 | Progress | Status |
 | :--- | :--- |
-| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 112 / 160 Completed** |
+| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 113 / 160 Completed** |
 ---
 
 ## 📅 Daily Problem Log
@@ -129,6 +129,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 | **Day 110** | Longest Increasing Subsequence | [Code](./Day%20110%20-%20Longest%20Increasing%20Subsequence) | $O(N \log N)$ | ✅ Completed |
 | **Day 111** | Longest String Chain | [Code](./Day%20111%20-%20Longest%20String%20Chain) | $O(N \log N + N \cdot L^2)$ | ✅ Completed |
 | **Day 112** | Longest Common Subsequence | [Code](./Day%20112%20-%20Longest%20Common%20Subsequence) | $O(N \cdot M)$ | ✅ Completed |
+| **Day 113** | Longest Palindromic Subsequence | [Code](./Day%20113%20-%20Longest%20Palindromic%20Subsequence) | $O(N^2)$ | ✅ Completed |
 ---
 
 ## 💡 Key Learnings & Takeaways
@@ -245,3 +246,4 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 * **Day 110:** Found the length of the Longest Increasing Subsequence in $O(N \log N)$ time and $O(N)$ auxiliary space using Dynamic Programming with Binary Search (`lower_bound`) to maintain optimal tail elements.
 * **Day 111:** Sorted words by length and used a hash map with Dynamic Programming to check all single-character deletions for each word, tracking the longest chain ending at each string in $O(N \log N + N \cdot L^2)$ time (where $L$ is the maximum word length).
 * **Day 112:** Solved the Longest Common Subsequence problem using dynamic programming to find the length of the longest common subsequence between two strings in $O(N \cdot M)$ time.
+* **Day 113:** Solved the Longest Palindromic Subsequence problem by finding the Longest Common Subsequence (LCS) between the given string and its reversed self using Dynamic Programming, achieving $O(N^2)$ time complexity and $O(N^2)$ auxiliary space (or $O(N)$ with space optimization).
