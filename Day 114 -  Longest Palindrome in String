@@ -1,0 +1,49 @@
+// GFG 160 Days Challenge - Day 114
+// Problem: Longest Palindrome in String
+//
+// Approach:
+// 1. Use Expand Around Center technique.
+// 2. Check odd-length palindromes (i, i).
+// 3. Check even-length palindromes (i, i + 1).
+// 4. Expand while characters on both sides match.
+// 5. Update the starting index and maximum length.
+//
+// Time Complexity: O(n * n)
+// Space Complexity: O(1)
+
+class Solution {
+public:
+    string longestPalindrome(string &s) {
+        if (s.empty()) {
+            return "";
+        }
+
+        int start = 0;
+        int maxLen = 1;
+        int n = s.size();
+
+        auto expand = [&](int l, int r) {
+            while (l >= 0 && r < n && s[l] == s[r]) {
+                int currLen = r - l + 1;
+
+                if (currLen > maxLen) {
+                    start = l;
+                    maxLen = currLen;
+                }
+
+                l--;
+                r++;
+            }
+        };
+
+        for (int i = 0; i < n; i++) {
+            // Odd-length palindrome
+            expand(i, i);
+
+            // Even-length palindrome
+            expand(i, i + 1);
+        }
+
+        return s.substr(start, maxLen);
+    }
+};
