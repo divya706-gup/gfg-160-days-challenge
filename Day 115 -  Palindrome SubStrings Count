@@ -1,0 +1,42 @@
+// GFG 160 Days Challenge - Day 115
+// Problem: Palindrome SubStrings Count
+//
+// Approach: Expand Around Center
+// 1. Consider every index as a palindrome center.
+// 2. Expand in both directions while characters match.
+// 3. Handle odd and even length palindromes.
+// 4. Count only palindromic substrings of length >= 2.
+//
+// Time Complexity: O(n^2)
+// Space Complexity: O(1)
+
+class Solution {
+public:
+    int countPS(string &s) {
+        int n = s.size();
+        int count = 0;
+
+        auto expand = [&](int left, int right) {
+            while (left >= 0 && right < n &&
+                   s[left] == s[right]) {
+
+                if (right - left + 1 >= 2) {
+                    count++;
+                }
+
+                left--;
+                right++;
+            }
+        };
+
+        for (int i = 0; i < n; i++) {
+            // Odd-length palindromes
+            expand(i, i);
+
+            // Even-length palindromes
+            expand(i, i + 1);
+        }
+
+        return count;
+    }
+};
