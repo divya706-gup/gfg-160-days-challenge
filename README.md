@@ -10,7 +10,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 
 | Progress | Status |
 | :--- | :--- |
-| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 115 / 160 Completed** |
+| 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢.. | **Day 116 / 160 Completed** |
 ---
 
 ## 📅 Daily Problem Log
@@ -132,6 +132,7 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 | **Day 113** | Longest Palindromic Subsequence | [Code](./Day%20113%20-%20Longest%20Palindromic%20Subsequence) | $O(N^2)$ | ✅ Completed |
 | **Day 114** | Longest Palindrome in String | [Code](./Day%20114%20-%20Longest%20Palindrome%20in%20String) | $O(N^2)$ | ✅ Completed |
 | **Day 115** | Palindrome SubStrings Count | [Code](./Day%20115%20-%20Palindrome%20SubStrings%20Count) | $O(N^2)$ | ✅ Completed |
+| **Day 116** | Edit Distance | [Code](./Day%20116%20-%20Edit%20Distance) | $O(N \cdot M)$ | ✅ Completed |
 ---
 
 ## 💡 Key Learnings & Takeaways
@@ -251,3 +252,4 @@ Here, I document my daily progress, problem solutions, and key learnings as I so
 * **Day 113:** Solved the Longest Palindromic Subsequence problem by finding the Longest Common Subsequence (LCS) between the given string and its reversed self using Dynamic Programming, achieving $O(N^2)$ time complexity and $O(N^2)$ auxiliary space (or $O(N)$ with space optimization).
 * **Day 114:** Found the longest palindromic substring by expanding outward from every character (handling both odd and even length centres) in $O(N^2)$ time and $O(1)$ auxiliary space.
 * **Day 115:** Counted all palindromic substrings of length $\ge 2$ by expanding outward from every character (for odd lengths) and adjacent character pair (for even lengths) in $O(N^2)$ time and $O(1)$ auxiliary space.
+* **Day 116:** Solved the Edit Distance problem using 2D dynamic programming (or space-optimized 1D DP) to compute the minimum insertions, deletions, and replacements to convert string `s1` of length $N$ into string `s2` of length $M$ in $O(N \cdot M)$ time.
