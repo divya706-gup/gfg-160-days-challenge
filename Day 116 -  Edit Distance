@@ -1,0 +1,63 @@
+// GFG 160 Days Challenge - Day 116
+// Problem: Edit Distance
+//
+// Approach: Dynamic Programming (Top-Down + Memoization)
+//
+// 1. Compare characters of both strings.
+// 2. If characters match, move to previous indices.
+// 3. If they don't match, consider three operations:
+//    - Insert
+//    - Delete
+//    - Replace
+// 4. Take the minimum cost and add 1.
+// 5. Store results in the DP table to avoid recomputation.
+//
+// Time Complexity: O(n * m)
+// Space Complexity: O(n * m) for DP + O(n + m) recursion stack.
+
+class Solution {
+public:
+    int solve(int i, int j, string &s1, string &s2,
+              vector<vector<int>> &dp) {
+
+        // If first string becomes empty
+        if (i == 0) {
+            return j;
+        }
+
+        // If second string becomes empty
+        if (j == 0) {
+            return i;
+        }
+
+        // Return already calculated result
+        if (dp[i][j] != -1) {
+            return dp[i][j];
+        }
+
+        // If characters match
+        if (s1[i - 1] == s2[j - 1]) {
+            return dp[i][j] =
+                solve(i - 1, j - 1, s1, s2, dp);
+        }
+
+        // Insert, Delete, Replace
+        int insertOp = solve(i, j - 1, s1, s2, dp);
+        int deleteOp = solve(i - 1, j, s1, s2, dp);
+        int replaceOp = solve(i - 1, j - 1, s1, s2, dp);
+
+        return dp[i][j] =
+            1 + min({insertOp, deleteOp, replaceOp});
+    }
+
+    int editDistance(string s1, string s2) {
+        int n = s1.size();
+        int m = s2.size();
+
+        vector<vector<int>> dp(
+            n + 1, vector<int>(m + 1, -1)
+        );
+
+        return solve(n, m, s1, s2, dp);
+    }
+};
